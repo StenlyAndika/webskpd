@@ -65,7 +65,7 @@ sru.reveal('.pop-up',{});
       scrollToTop.fadeOut(100);
     }
   });
-	// scroll-to-top
+	// // scroll-to-top
   $('.scroll-top-to').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
@@ -74,7 +74,7 @@ sru.reveal('.pop-up',{});
   });
 
   $(document).ready(function() {
-
+    
     // navbarDropdown
     if ($(window).width() < 992) {
       $('.main-nav .dropdown-toggle').on('click', function () {

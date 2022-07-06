@@ -4,12 +4,6 @@
             <h3 class="text-white font-weight-bold">Copyright &#169; 2022 Pemerintah Kota Sungai Penuh. All rigths reserved</h3 class="text-secondary">
         </div>
     </footer>
-
-
-    <!-- To Top -->
-    <div class="scroll-top-to">
-        <i class="ti-angle-up"></i>
-    </div>
   
     <!-- JAVASCRIPTS -->
     <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>

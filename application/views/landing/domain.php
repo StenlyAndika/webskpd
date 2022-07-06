@@ -6,11 +6,11 @@
             padding-left: 10%;
             padding-right: 10%;
         }
-        table, tr, td {
+        tr, td {
             padding: 10px;
         }
     </style>
-    <div class="table-responsive title1 asd">
+    <div class="table-responsive asd">
         <table id="datatable" class="table-bordered cxz" width="100%">
             <thead>
                 <tr>

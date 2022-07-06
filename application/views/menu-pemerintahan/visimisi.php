@@ -1,4 +1,4 @@
-<section class="section-child bg-blue" id="visi-misi">
+<section class="section bg-blue" id="visi-misi">
     <div class="aac">
         <h2 class="font-weight-bold mb-4" style="text-align: center;">Visi dan Misi<br>Pemerintahan Kota Sungai Penuh</h2>
         <p class="mb-2" style="text-align: center; font-size: 36px; font-weight: bold; color: black;">VISI</p>

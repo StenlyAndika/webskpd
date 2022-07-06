@@ -31,22 +31,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>?">Beranda</a>
+                <li class="nav-item @@contact">
+                    <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
                 </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Tentang Kami<span><i class="ti-angle-down"></i></span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Tentang Kami</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item active" href="index.html">Sejarah Kota Sungai Penuh</a></li>
-                        <li><a class="dropdown-item" href="homepage-2.html">Pusat Pendidikan</a></li>
-                        <li><a class="dropdown-item active3" href="homepage-3.html">Layanan Kesehatan</a></li>
-                        <li><a class="dropdown-item active3" href="homepage-3.html">Perbankan dan Layanan Keuangan</a></li>
-                        <li><a class="dropdown-item active3" href="homepage-3.html">Pusat Perbelanjaan</a></li>
-                        <li><a class="dropdown-item active3" href="homepage-3.html">Hotel</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/sejarah">Sejarah Kota Sungai Penuh</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/pendidikan">Pusat Pendidikan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/kesehatan">Layanan Kesehatan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/keuangan">Perbankan dan Layanan Keuangan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/perbelanjaan">Pusat Perbelanjaan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/hotel">Hotel</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/wisata">Tempat Wisata</a></li>
                     </ul>
-                </li>
-                <li class="nav-item @@about">
-                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item @@contact">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -58,4 +56,3 @@
         <div class="wave" id="wave3" style="--i:3;"></div>
         <div class="wave" id="wave4" style="--i:4;"></div>
     </nav>
-    

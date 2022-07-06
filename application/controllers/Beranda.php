@@ -7,15 +7,20 @@ class Beranda extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
-		$this->load->model('Sopd_model');
+		$this->load->model('Sopd_model', 'sopd');
+		$this->load->model('Services_model', 'services');
 	}
 
 	public function index()
 	{
-		$data['sopd'] = $this->Sopd_model->getAllSopd();
+		$data['sopd'] = $this->sopd->getAllSopd();
+		$data['services'] = $this->services->getAllServices();
 		$this->load->view('template/header.php');
 		$this->load->view('landing/menu.php');
+		$this->load->view('landing/smart_services.php', $data);
+		$this->load->view('landing/carousel_berita.php');
 		$this->load->view('landing/domain.php', $data);
+		$this->load->view('template/scroll.php');
 		$this->load->view('template/footer.php');
 	}
 

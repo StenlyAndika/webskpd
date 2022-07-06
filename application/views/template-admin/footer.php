@@ -1,13 +1,11 @@
 </div>
 </body>
-<!-- Fontawesome -->
+<!-- JAVASCRIPTS -->
+<script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/datatables/datatables.min.js"></script>
+<script src="<?= base_url() ?>assets/plugins/datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/d6482bd15d.js" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!-- JQuery  -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<!-- Datatables -->
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
 <script>
     const list = document.querySelectorAll('.list');

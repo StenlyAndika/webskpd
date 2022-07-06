@@ -6,7 +6,7 @@
             justify-content: center;
         }
     </style>
-    <section class="section gradient-banner">
+    <section class="section gradient-banner" id="menu">
         <div class="shapes-container">
             <div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
             <div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>

@@ -52,14 +52,6 @@
                         <div class="skills__bar skills__html"></div>
                     </div>
                 </a>
-                <a href="#domain">
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <span class="font-weight-bold">Domain dan Sub Domain Kota Sungai Penuh</span>
-                        </div>
-                        <div class="skills__bar skills__html"></div>
-                    </div>
-                </a>
             </div>
         </div>
     </div>

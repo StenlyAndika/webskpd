@@ -1,4 +1,4 @@
-<section class="section-child bg-blue" id="lambang">
+<section class="section bg-blue" id="lambang">
     <div class="aac">
         <br>
         <h2 class="font-weight-bold mb-4" style="text-align: center;">Lambang dan Identitas<br>Pemerintahan Kota Sungai Penuh</h2>
