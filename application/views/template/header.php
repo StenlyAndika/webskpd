@@ -46,6 +46,22 @@
                         <li><a class="dropdown-item" href="<?= base_url() ?>tentang/wisata">Tempat Wisata</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/video">Video</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/penghargaan">Penghargaan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/foto">Foto</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Dokumen Daerah</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/anggaran">Transparansi Anggaran</a></li>
+                        <li><a class="dropdown-item" href="http://jdih.sungaipenuhkota.go.id/" target="_blank">Peraturan</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/rpjmd">RPJMD</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item @@contact">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
