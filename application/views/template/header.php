@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datepicker/css/bootstrap-datepicker.css">
 
     <!-- CUSTOM CSS -->
-    <link href="<?= base_url()?>assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
 </head>
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-top">

@@ -11,17 +11,33 @@ class Beranda extends CI_Controller {
 		$this->load->model('Services_model', 'services');
 	}
 
+	public function dashboard() 
+	{
+		$this->load->view('template-admin/header.php');
+		$this->load->view('template-admin/footer.php');
+	}
+
 	public function index()
 	{
-		$data['sopd'] = $this->sopd->getAllSopd();
-		$data['services'] = $this->services->getAllServices();
-		$this->load->view('template/header.php');
-		$this->load->view('landing/menu.php');
-		$this->load->view('landing/smart_services.php', $data);
-		$this->load->view('landing/carousel_berita.php');
-		$this->load->view('landing/domain.php', $data);
-		$this->load->view('template/scroll.php');
-		$this->load->view('template/footer.php');
+		// $data = [
+		// 	'username' => 'admin',
+		// 	'login' => true
+		// ];
+		// $this->session->set_userdata($data);
+		// if ( $this->session->userdata('login') == false ) {
+			$data['sopd'] = $this->sopd->getAllSopd();
+			$data['services'] = $this->services->getAllServices();
+			$this->load->view('template/header.php');
+			$this->load->view('landing/menu.php');
+			$this->load->view('landing/smart_services.php', $data);
+			$this->load->view('landing/carousel_berita.php');
+			$this->load->view('landing/domain.php', $data);
+			$this->load->view('template/scroll.php');
+			$this->load->view('template/footer.php');
+		// } else {
+		// 	$this->load->view('template-admin/header.php');
+		// 	$this->load->view('template-admin/footer.php');
+		// }
 	}
 
 	public function pemerintahan()

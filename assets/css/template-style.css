@@ -8,7 +8,7 @@
 }
 :root
 {
-	--primary: #596DA4;
+	--primary: #3A5BA0;
     --secondary: #DFDFDE;
     --blue: #22577E;
 	--white: #FAF5E4;
@@ -45,7 +45,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 101%;
     padding-left: 5px;
     padding-top: 60px;
 }
@@ -111,6 +111,7 @@ body{
     display: block;
     min-width: 60px;
     height: 45px;
+    left: -5px;
     line-height: 50px;
     text-align: center;
 }
@@ -126,7 +127,8 @@ body{
 {
     position: relative;
     display: block;
-    padding-left: 10px;
+    left: -10px;
+    overflow: hidden;
     height: 45px;
     line-height: 45px;
     white-space: nowrap;
