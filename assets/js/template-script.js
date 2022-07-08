@@ -8,8 +8,10 @@ function activeLink() {
 }
 
 list.forEach(
-    (item) => item.addEventListener('click', activeLink)
+    (item) => item.addEventListener('mouseover', activeLink),
 );
+
+
 
 let toggle = document.querySelector('.toggle');
 let menu = document.querySelector('.menu-bar');

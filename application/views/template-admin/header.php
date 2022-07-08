@@ -21,7 +21,7 @@
             <a href="<?= base_url() ?>"><img style=" width: 220px;" src="<?= base_url() ?>assets/img/logo.png"></a>
         </h1>
         <ul class="nav">
-            <li class="list active">
+            <li class="list">
                 <a href="<?= base_url() ?>berita">
                     <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
                     <span class="title">Berita</span>

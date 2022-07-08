@@ -15,18 +15,17 @@
 
 		public function add()
 		{
-			$upload_image = $_FILES['file']['name'];
+			$upload_image = $_FILES['namafile']['name'];
 
 			if ($upload_image) {
 				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['max_size'] = '2048';
 				$config['upload_path'] = './upload/rpjmd/';
 
 				$this->load->library('upload', $config);
 
-				if ($this->upload->do_upload('file')) {
+				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');
-					$this->db->set('file', $new_image);
+					$this->db->set('namafile', $new_image);
 				} else {
 					echo $this->upload->display_errors();
 				}
@@ -38,18 +37,17 @@
 
 		public function update()
 		{
-			$upload_image = $_FILES['file']['name'];
+			$upload_image = $_FILES['namafile']['name'];
 
 			if ($upload_image) {
 				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['max_size'] = '2048';
 				$config['upload_path'] = './upload/rpjmd/';
 
 				$this->load->library('upload', $config);
 
-				if ($this->upload->do_upload('file')) {
+				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');
-					$this->db->set('file', $new_image);
+					$this->db->set('namafile', $new_image);
 				} else {
 					echo $this->upload->display_errors();
 				}

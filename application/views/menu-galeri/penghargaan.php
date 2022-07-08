@@ -3,7 +3,9 @@
         <br>
         <h2 class="font-weight-bold mb-2" style="text-align: left;">Penghargaan</h2>
         <div class="table-responsive">
-            <iframe src="https://drive.google.com/file/d/10O0AOsJ9XCurYrIF9pFS0JDI-mroPc8b/preview" width="940" height="780"></iframe>
+            <?php foreach ($penghargaan as $row) : ?>
+                <embed type="application/pdf" src="<?= base_url('upload/penghargaan/') .$row['namafile'] ?>" width="940" height="780"></embed>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

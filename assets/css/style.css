@@ -585,6 +585,7 @@ button:focus,
   transition: 0.3s;
   z-index: 999556;
   cursor: pointer;
+  border-radius: 5px;
   display: none;
 }
 
@@ -604,6 +605,7 @@ button:focus,
   color: #fff;
   transition: 0.3s;
   z-index: 999556;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -623,6 +625,7 @@ button:focus,
   color: #fff;
   transition: 0.3s;
   z-index: 999556;
+  border-radius: 5px;
   cursor: pointer;
 }
 

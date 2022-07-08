@@ -7,6 +7,7 @@ class Galeri extends CI_Controller {
     {
         parent::__construct();
         $this->load->database();
+        $this->load->model('Penghargaan_model', 'penghargaan');
     }
 
     public function video()
@@ -18,8 +19,9 @@ class Galeri extends CI_Controller {
 
     public function penghargaan()
     {
+        $data['penghargaan'] = $this->penghargaan->getAllPenghargaan();
         $this->load->view('template/header.php');
-        $this->load->view('menu-galeri/penghargaan.php');
+        $this->load->view('menu-galeri/penghargaan.php', $data);
         $this->load->view('template/footer.php');
     }
 

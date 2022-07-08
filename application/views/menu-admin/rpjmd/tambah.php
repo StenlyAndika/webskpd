@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<strong>TAMBAH RPJMD</strong>
+						<strong>TAMBAH DATA RPJMD</strong>
 					</div>
 					<div class="card-body card-block">
 						<?= form_open_multipart('rpjmd/tambah'); ?>
@@ -15,8 +15,8 @@
 							</div>
                             <div class="form-group">
 								<label>File</label>
-								<input type="file" name="file" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('file'); ?></small>
+								<input type="file" class="form-control" name="namafile" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('namafile'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>
