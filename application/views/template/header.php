@@ -31,7 +31,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item @@contact">
+                <li class="nav-item">
                     <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -62,8 +62,11 @@
                         <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/rpjmd">RPJMD</a></li>
                     </ul>
                 </li>
-                <li class="nav-item @@contact">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Masuk</a>
                 </li>
             </ul>
         </div>

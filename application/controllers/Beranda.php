@@ -9,6 +9,7 @@ class Beranda extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Sopd_model', 'sopd');
 		$this->load->model('Services_model', 'services');
+		$this->load->model('Pengumuman_model', 'pengumuman');
 	}
 
 	public function dashboard() 
@@ -76,6 +77,14 @@ class Beranda extends CI_Controller {
 	{
 		$this->load->view('template/header.php');
 		$this->load->view('landing/perencanaan_pembangunan.php');
+		$this->load->view('template/footer.php');
+	}
+
+	public function pengumuman()
+	{
+		$data['pengumuman'] = $this->pengumuman->getAllPengumuman();
+		$this->load->view('template/header.php');
+		$this->load->view('landing/pengumuman.php', $data);
 		$this->load->view('template/footer.php');
 	}
 

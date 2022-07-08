@@ -1,4 +1,4 @@
-<section class="service section">
+<section class="section">
     <div class="container">
         <br>
         <h2 class="font-weight-bold mb-2" style="text-align: left;">Penghargaan</h2>

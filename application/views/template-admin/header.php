@@ -22,7 +22,7 @@
         </h1>
         <ul class="nav">
             <li class="list">
-                <a href="<?= base_url() ?>berita">
+                <a href="<?= base_url() ?>berita" style="color: red;">
                     <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
                     <span class="title">Berita</span>
                 </a>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>anggaran">
+                <a href="<?= base_url() ?>anggaran" style="color: red;">
                     <span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
                     <span class="title">Transparasi Anggaran</span>
                 </a>
@@ -64,13 +64,13 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>foto">
+                <a href="<?= base_url() ?>foto" style="color: red;">
                     <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
                     <span class="title">Foto</span>
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>video">
+                <a href="<?= base_url() ?>video" style="color: red;">
                     <span class="icon"><i class="fa-solid fa-video"></i></span>
                     <span class="title">Video</span>
                 </a>
