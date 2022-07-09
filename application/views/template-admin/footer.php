@@ -11,6 +11,13 @@
 
     <script>
         $(document).ready(function() {
+            $("#tgl").datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true,
+                todayHighlight: true,
+                language : 'id'
+            });
+            
             $('#datatable').DataTable({
                 'paging': true,
                 'lengthChange': true,

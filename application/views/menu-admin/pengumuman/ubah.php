@@ -16,8 +16,8 @@
 							</div>
 							<div class="form-group">
 								<label>File</label>
-								<input type="file" name="foto" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('file'); ?></small>
+								<input type="file" name="namafile" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('namafile'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>
