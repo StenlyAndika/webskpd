@@ -8,6 +8,7 @@ class Galeri extends CI_Controller {
         parent::__construct();
         $this->load->database();
         $this->load->model('Penghargaan_model', 'penghargaan');
+        $this->load->model('Foto_model', 'foto');
     }
 
     public function video()
@@ -27,8 +28,9 @@ class Galeri extends CI_Controller {
 
     public function foto()
     {
+        $data['foto'] = $this->foto->getAllFoto();
         $this->load->view('template/header.php');
-        $this->load->view('menu-galeri/foto.php');
+        $this->load->view('menu-galeri/foto.php', $data);
         $this->load->view('template/footer.php');
     }
 }

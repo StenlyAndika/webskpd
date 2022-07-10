@@ -8,12 +8,14 @@ class Dokumen extends CI_Controller {
         parent::__construct();
         $this->load->database();
         $this->load->model('Rpjmd_model', 'rpjmd');
+        $this->load->model('Anggaran_model', 'anggaran');
     }
 
     public function anggaran()
     {
+        $data['anggaran'] = $this->anggaran->getAllAnggaran();
         $this->load->view('template/header.php');
-        $this->load->view('menu-dokumen-daerah/anggaran.php');
+        $this->load->view('menu-dokumen-daerah/anggaran.php', $data);
         $this->load->view('template/footer.php');
     }
 

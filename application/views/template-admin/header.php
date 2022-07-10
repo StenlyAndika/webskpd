@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>anggaran" style="color: red;">
+                <a href="<?= base_url() ?>anggaran">
                     <span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
                     <span class="title">Transparasi Anggaran</span>
                 </a>
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>foto" style="color: red;">
+                <a href="<?= base_url() ?>foto">
                     <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
                     <span class="title">Foto</span>
                 </a>

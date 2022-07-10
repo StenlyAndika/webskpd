@@ -1,7 +1,7 @@
        
     <footer>
         <div class="text-center bg-dark py-4">
-            <h3 class="text-white font-weight-bold">Copyright &#169; 2022 Pemerintah Kota Sungai Penuh. All rigths reserved</h3 class="text-secondary">
+            <h3 class="text-white font-weight-bold">Copyright &#169; <?= date('Y'); ?> Pemerintah Kota Sungai Penuh. All rigths reserved</h3 class="text-secondary">
         </div>
     </footer>
   
