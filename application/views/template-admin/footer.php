@@ -6,7 +6,7 @@
     <script src="<?= base_url() ?>assets/plugins/datatables/datatables.min.js"></script>
     <script src="<?= base_url() ?>assets/plugins/datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/d6482bd15d.js" crossorigin="anonymous"></script>
-
+    <script src="<?= base_url() ?>assets/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
     <script src="<?= base_url() ?>assets/js/template-script.js"></script>
 
     <script>

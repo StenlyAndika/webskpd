@@ -8,6 +8,14 @@
 			return $this->db->get('anggaran')->result_array();
 		}
 
+		public function getAllAnggaranSort()
+		{
+			$this->db->from('anggaran');
+			$this->db->order_by("tahun", "desc");
+			$query = $this->db->get(); 
+			return $query->result_array();
+		}
+
 		public function getAnggaranById($id)
 		{
 			return $this->db->get_where('anggaran', ['id' => $id])->row_array();

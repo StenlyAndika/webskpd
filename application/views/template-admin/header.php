@@ -70,12 +70,6 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>video" style="color: red;">
-                    <span class="icon"><i class="fa-solid fa-video"></i></span>
-                    <span class="title">Video</span>
-                </a>
-            </li>
-            <li class="list">
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
                     <span class="title">Keluar</span>

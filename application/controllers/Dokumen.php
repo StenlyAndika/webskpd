@@ -13,7 +13,7 @@ class Dokumen extends CI_Controller {
 
     public function anggaran()
     {
-        $data['anggaran'] = $this->anggaran->getAllAnggaran();
+        $data['anggaran'] = $this->anggaran->getAllAnggaranSort();
         $this->load->view('template/header.php');
         $this->load->view('menu-dokumen-daerah/anggaran.php', $data);
         $this->load->view('template/footer.php');
