@@ -22,18 +22,18 @@
 							</div>
                             <div class="form-group">
 								<label>Gambar 1</label>
-								<input type="file" class="form-control" name="namafile1" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('namafile1'); ?></small>
+								<input type="file" class="form-control" name="gambar1" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('gambar1'); ?></small>
 							</div>
 							<div class="form-group">
 								<label>Gambar 2</label>
-								<input type="file" class="form-control" name="namafile2" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('namafile2'); ?></small>
+								<input type="file" class="form-control" name="gambar2" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('gambar2'); ?></small>
 							</div>
 							<div class="form-group">
 								<label>Gambar 3</label>
-								<input type="file" class="form-control" name="namafile3" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('namafile3'); ?></small>
+								<input type="file" class="form-control" name="gambar3" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('gambar3'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>

@@ -14,6 +14,7 @@
     <script src="<?= base_url() ?>assets/plugins/aos/aos.js"></script>
     <script src="<?= base_url() ?>assets/plugins/datatables/datatables.min.js"></script>
     <script src="<?= base_url() ?>assets/plugins/datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="<?= base_url() ?>assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/d6482bd15d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -21,6 +22,11 @@
 
     <script>
         $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                items: 1
+            });
+
             $('#datatable').DataTable({
                 'paging': true,
                 'lengthChange': true,

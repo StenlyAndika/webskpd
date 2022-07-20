@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/aos/aos.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables/datatables.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datepicker/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/owl-carousel/assets/owl.carousel.min.css">
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">

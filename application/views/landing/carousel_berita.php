@@ -3,29 +3,33 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-12">
-				<div class="testimonial-slider owl-carousel owl-theme">
+				<style>
+					.kntlz {
+						width: 100%;
+						height: 300px;
+						object-fit: cover;
+					}
+					.zzzx {
+						font-size: 18px;
+						color: black;
+					}
+				</style>
+				<div class="testimonial-slider">
+					<?php foreach ($berita as $row) : ?>
                     <div class="item">
                         <div class="block shadow">
-							<img src="https://picsum.photos/seed/picsum/450/200" class="d-block w-100">
-							<p style="font-size: 18px;">
-                                Judul
+							<img src="<?= base_url('./upload/berita/').$row['gambar1'] ?>" class="kntlz">
+							<h3 class="font-weight-bold">
+                                <?= $row['judul'] ?>
+							</h3>
+							<p class="zzzx">
+								<?= substr_replace($row['isi'], "...", 150); ?>
 							</p>
-							<cite>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas excepturi id doloremque nam. Reiciendis ad omnis sunt distinctio delectus rerum harum molestiae architecto iste. Illo, commodi illum. Asperiores, explicabo dignissimos.
-                            </cite>
+							<br>
+							<a href="" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
 						</div>
                     </div>
-					<div class="item">
-                        <div class="block shadow">
-							<img src="https://picsum.photos/seed/picsum/450/200" class="d-block w-100">
-							<p style="font-size: 18px;">
-                                Judul 2
-							</p>
-							<cite>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas excepturi id doloremque nam. Reiciendis ad omnis sunt distinctio delectus rerum harum molestiae architecto iste. Illo, commodi illum. Asperiores, explicabo dignissimos.
-                            </cite>
-						</div>
-                    </div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>

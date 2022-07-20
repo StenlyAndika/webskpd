@@ -11,6 +11,8 @@
 
     <script>
         $(document).ready(function() {
+            CKEDITOR.replace('isi');
+
             $("#tgl").datepicker({
                 format: 'dd-mm-yyyy',
                 autoclose: true,
