@@ -54,7 +54,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Informasi Publik</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/anggaran">Dokumen Publik</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

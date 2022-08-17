@@ -12,6 +12,7 @@ class Beranda extends CI_Controller {
 		$this->load->model('Sejarah_model', 'sejarah');
 		$this->load->model('Visimisi_model', 'visimisi');
 		$this->load->model('Struktur_model', 'struktur');
+		$this->load->model('Dokumen_model', 'dokumen');
 	}
 
 	public function dashboard() 
@@ -58,5 +59,13 @@ class Beranda extends CI_Controller {
 		$this->load->view('template/scroll.php');
 		$this->load->view('template/footer.php');
 	}
+
+	public function dokumen()
+    {
+        $data['dokumen'] = $this->dokumen->getAllDokumenSort();
+        $this->load->view('template/header.php');
+        $this->load->view('menu-informasi/dokumen.php', $data);
+        $this->load->view('template/footer.php');
+    }
 
 }

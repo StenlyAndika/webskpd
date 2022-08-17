@@ -22,7 +22,7 @@
         </h1>
         <ul class="nav">
             <li class="list">
-                <a href="<?= base_url() ?>berita" style="color: red;">
+                <a href="<?= base_url() ?>berita">
                     <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
                     <span class="title">Berita</span>
                 </a>
@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>anggaran">
+                <a href="<?= base_url() ?>dokumen">
                     <span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
                     <span class="title">Dokumen Publik</span>
                 </a>
