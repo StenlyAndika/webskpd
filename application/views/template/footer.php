@@ -23,8 +23,13 @@
     <script>
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:3000,
                 loop:true,
-                items: 1
+                margin:10,
+                nav:true,
+                items:1,
+                lazyLoad: true,
             });
 
             $('#datatable').DataTable({

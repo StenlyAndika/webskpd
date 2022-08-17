@@ -11,7 +11,10 @@
 
     <script>
         $(document).ready(function() {
-            CKEDITOR.replace('isi');
+            CKEDITOR.replace('sejarah');
+            CKEDITOR.replace('visi');
+            CKEDITOR.replace('misi');
+            CKEDITOR.replace('tugas');
 
             $("#tgl").datepicker({
                 format: 'dd-mm-yyyy',

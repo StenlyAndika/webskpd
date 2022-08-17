@@ -36,15 +36,11 @@
                     <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Tentang Kami</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Profil Lembaga</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/sejarah">Sejarah Kota Sungai Penuh</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/pendidikan">Pusat Pendidikan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/kesehatan">Layanan Kesehatan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/keuangan">Perbankan dan Layanan Keuangan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/perbelanjaan">Pusat Perbelanjaan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/hotel">Hotel</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>tentang/wisata">Tempat Wisata</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/sejarah">Sejarah</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/visimisi">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/struktur">Struktur Organisasi</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -56,11 +52,9 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Dokumen Daerah</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Informasi Publik</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/anggaran">Transparansi Anggaran</a></li>
-                        <li><a class="dropdown-item" href="http://jdih.sungaipenuhkota.go.id/" target="_blank">Peraturan</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/rpjmd">RPJMD</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>dokumen/anggaran">Dokumen Publik</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

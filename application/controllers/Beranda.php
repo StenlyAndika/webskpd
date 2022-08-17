@@ -9,6 +9,9 @@ class Beranda extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Pengumuman_model', 'pengumuman');
 		$this->load->model('Berita_model', 'berita');
+		$this->load->model('Sejarah_model', 'sejarah');
+		$this->load->model('Visimisi_model', 'visimisi');
+		$this->load->model('Struktur_model', 'struktur');
 	}
 
 	public function dashboard() 
@@ -22,6 +25,36 @@ class Beranda extends CI_Controller {
 		$data['berita'] = $this->berita->getAllBerita();
 		$this->load->view('template/header.php');
 		$this->load->view('landing/menu.php', $data);
+		$this->load->view('template/scroll.php');
+		$this->load->view('template/footer.php');
+	}
+
+	public function sejarah()
+	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['sejarah'] = $this->sejarah->getAllSejarah();
+		$this->load->view('template/header.php');
+		$this->load->view('menu-profil/sejarah.php', $data);
+		$this->load->view('template/scroll.php');
+		$this->load->view('template/footer.php');
+	}
+
+	public function visimisi()
+	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['visimisi'] = $this->visimisi->getAllVisiMisi();
+		$this->load->view('template/header.php');
+		$this->load->view('menu-profil/visimisi.php', $data);
+		$this->load->view('template/scroll.php');
+		$this->load->view('template/footer.php');
+	}
+
+	public function struktur()
+	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['struktur'] = $this->struktur->getAllStruktur();
+		$this->load->view('template/header.php');
+		$this->load->view('menu-profil/struktur.php', $data);
 		$this->load->view('template/scroll.php');
 		$this->load->view('template/footer.php');
 	}

@@ -36,25 +36,25 @@
             <li class="list">
                 <a href="<?= base_url() ?>anggaran">
                     <span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
-                    <span class="title">Transparasi Anggaran</span>
+                    <span class="title">Dokumen Publik</span>
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>rpjmd">
+                <a href="<?= base_url() ?>sejarah">
                     <span class="icon"><i class="fa-brands fa-accusoft"></i></span>
-                    <span class="title">RPJMD</span>
+                    <span class="title">Sejarah</span>
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>services">
+                <a href="<?= base_url() ?>visimisi">
                     <span class="icon"><i class="fa-solid fa-hands-asl-interpreting"></i></span>
-                    <span class="title">Smart Services</span>
+                    <span class="title">Visi & Misi</span>
                 </a>
             </li>
             <li class="list">
-                <a href="<?= base_url() ?>domain">
+                <a href="<?= base_url() ?>struktur">
                     <span class="icon"><i class="fa-solid fa-link"></i></span>
-                    <span class="title">Domain SKPD</span>
+                    <span class="title">Struktur Organisasi</span>
                 </a>
             </li>
             <li class="list">

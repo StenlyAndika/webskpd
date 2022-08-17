@@ -84,7 +84,7 @@ p, li, blockquote, label {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 25px;
-  color: #808080;
+  /* color: #808080; */
   margin-bottom: 0;
 }
 
@@ -411,6 +411,7 @@ button:focus,
 
 .main-nav {
   background-color: #3A5BA0;
+  /* background-color: #fff; */
   z-index: 999;
   box-shadow: 0 3px 10px rgba(41, 42, 43, 5);
 }
