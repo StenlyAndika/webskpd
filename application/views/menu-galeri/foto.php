@@ -1,7 +1,13 @@
 <section class="section">
     <div class="container">
         <br>
-        <h2 class="font-weight-bold mb-2" style="text-align: left;">Galeri Foto Kota Sungai Penuh</h2>
+        <h2 class="font-weight-bold mb-2" style="text-align: left;">Galeri Foto 
+        <?php if(count($instansi)<=0) : ?>
+            Instansi
+        <?php else: ?>
+            <?= $instansi[0]['nama'] ?>
+        <?php endif; ?>
+        </h2>
         <div class="row">
             <?php foreach ($foto as $row) : ?>
                 <div class="col-lg-4">

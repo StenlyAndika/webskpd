@@ -32,7 +32,7 @@ class Beranda extends CI_Controller {
 
 	public function sejarah()
 	{
-		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$data['sejarah'] = $this->sejarah->getAllSejarah();
 		$this->load->view('template/header.php');
 		$this->load->view('menu-profil/sejarah.php', $data);
@@ -42,7 +42,7 @@ class Beranda extends CI_Controller {
 
 	public function visimisi()
 	{
-		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$data['visimisi'] = $this->visimisi->getAllVisiMisi();
 		$this->load->view('template/header.php');
 		$this->load->view('menu-profil/visimisi.php', $data);
@@ -52,7 +52,7 @@ class Beranda extends CI_Controller {
 
 	public function struktur()
 	{
-		$data['instansi'] =  $this->db->get('instansi')->result_array()[0];
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$data['struktur'] = $this->struktur->getAllStruktur();
 		$this->load->view('template/header.php');
 		$this->load->view('menu-profil/struktur.php', $data);

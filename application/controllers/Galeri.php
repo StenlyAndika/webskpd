@@ -11,23 +11,9 @@ class Galeri extends CI_Controller {
         $this->load->model('Foto_model', 'foto');
     }
 
-    public function video()
-    {
-        $this->load->view('template/header.php');
-        $this->load->view('menu-galeri/video.php');
-        $this->load->view('template/footer.php');
-    }
-
-    public function penghargaan()
-    {
-        $data['penghargaan'] = $this->penghargaan->getAllPenghargaan();
-        $this->load->view('template/header.php');
-        $this->load->view('menu-galeri/penghargaan.php', $data);
-        $this->load->view('template/footer.php');
-    }
-
     public function foto()
     {
+        $data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['foto'] = $this->foto->getAllFoto();
         $this->load->view('template/header.php');
         $this->load->view('menu-galeri/foto.php', $data);

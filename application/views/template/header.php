@@ -46,8 +46,6 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/video">Video</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/penghargaan">Penghargaan</a></li>
                         <li><a class="dropdown-item" href="<?= base_url() ?>galeri/foto">Foto</a></li>
                     </ul>
                 </li>

@@ -27,7 +27,13 @@
         </div>
     <div class="aac">
         <br>
-        <h2 class="font-weight-bold mb-4" style="text-align: center;">Sejarah<br><?= $instansi['nama'] ?></h2>
+        <h2 class="font-weight-bold mb-4" style="text-align: center;">Sejarah<br>
+        <?php if(count($instansi)<=0) : ?>
+            Instansi
+        <?php else: ?>
+            <?= $instansi[0]['nama'] ?>
+        <?php endif; ?>
+        </h2>
         <style>
             .asd {
                 padding-top: 10px;

@@ -18,22 +18,12 @@
 								<textarea class="form-control" name="isi" id="isi" rows="8" cols="80">
 									<?= set_value('isi'); ?>
 								</textarea>
-								<small class="form-text text-danger"><?= form_error('judul'); ?></small>
+								<small class="form-text text-danger"><?= form_error('isi'); ?></small>
 							</div>
                             <div class="form-group">
-								<label>Gambar 1</label>
-								<input type="file" class="form-control" name="gambar1" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('gambar1'); ?></small>
-							</div>
-							<div class="form-group">
-								<label>Gambar 2</label>
-								<input type="file" class="form-control" name="gambar2" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('gambar2'); ?></small>
-							</div>
-							<div class="form-group">
-								<label>Gambar 3</label>
-								<input type="file" class="form-control" name="gambar3" class="form-control-file">
-								<small class="form-text text-danger"><?= form_error('gambar3'); ?></small>
+								<label>Gambar</label>
+								<input type="file" class="form-control" name="gambar" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('gambar'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>

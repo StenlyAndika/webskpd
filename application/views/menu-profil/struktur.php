@@ -8,7 +8,13 @@
 </style>
 <section class="section bg-white" id="visi-misi">
     <div class="aac">
-        <h2 class="font-weight-bold mb-4" style="text-align: center;">Struktur Organisasi<br><?= $instansi['nama'] ?></h2>
+        <h2 class="font-weight-bold mb-4" style="text-align: center;">Struktur Organisasi<br>
+        <?php if(count($instansi)<=0) : ?>
+            Instansi
+        <?php else: ?>
+            <?= $instansi[0]['nama'] ?>
+        <?php endif; ?>
+        </h2>
         <style>
             .asd {
                 padding-top: 10px;

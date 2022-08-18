@@ -40,6 +40,12 @@
                 </a>
             </li>
             <li class="list">
+                <a href="<?= base_url() ?>profil">
+                    <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
+                    <span class="title">Profil Instansi</span>
+                </a>
+            </li>
+            <li class="list">
                 <a href="<?= base_url() ?>sejarah">
                     <span class="icon"><i class="fa-brands fa-accusoft"></i></span>
                     <span class="title">Sejarah</span>
