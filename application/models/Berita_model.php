@@ -7,7 +7,17 @@
 		{
 			$this->db->from('berita');
 			$this->db->order_by("tgl", "desc");
-			$query = $this->db->get(); 
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+
+		public function getBeritaRandom()
+		{
+			$this->db->from('berita');
+			$this->db->order_by("tgl", "desc");
+			$this->db->order_by('rand()');
+			$this->db->limit(3);
+			$query = $this->db->get();
 			return $query->result_array();
 		}
 
@@ -35,6 +45,7 @@
 			}
 
 			$this->db->set("tgl", date('d-m-Y'));
+			$this->db->set("nama", $this->session->userdata('nama'));
 			$this->db->set("judul", $this->input->post('judul'));
 			$this->db->set("isi", $this->input->post('isi'));
 			$this->db->insert('berita');
@@ -60,6 +71,7 @@
 			
 			$this->db->set("tgl", date('d-m-Y'));
 			$this->db->set("judul", $this->input->post('judul'));
+			$this->db->set("nama", $this->session->userdata('nama'));
 			$this->db->set("isi", $this->input->post('isi'));
 			$this->db->where('id', $this->input->post('id'));
 			$this->db->update('berita');

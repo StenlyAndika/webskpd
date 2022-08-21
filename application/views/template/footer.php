@@ -1,7 +1,6 @@
-       
     <footer>
         <div class="text-center bg-dark py-4">
-            <h3 class="text-white font-weight-bold">Copyright &#169; <?= date('Y'); ?> Pemerintah Kota Sungai Penuh. All rigths reserved</h3 class="text-secondary">
+            <small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Pemerintah Kota Sungai Penuh. All rigths reserved</small class="text-secondary">
         </div>
     </footer>
   
@@ -24,11 +23,10 @@
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel({
                 autoplay:true,
-                autoplayTimeout:3000,
+                autoplayTimeout:5000,
                 loop:true,
                 margin:10,
-                nav:true,
-                items:1,
+                items:3,
                 lazyLoad: true,
             });
 

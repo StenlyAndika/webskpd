@@ -1,7 +1,31 @@
-<section class="section">
-    <div class="container">
+<style>
+    .aac {
+        border-radius: 10px;
+        position: relative;
+    }
+</style>
+<section class="section gradient-banner">
+    <div class="shapes-container">
+        <div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+        <div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+        <div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+        <div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+        <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+        <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+        <div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+        <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+        <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+        <div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+        <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+        <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+        <div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+        <div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+        <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+        <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+    </div>
+    <div class="container aac">
         <br>
-        <h2 class="font-weight-bold mb-2" style="text-align: left;">Galeri Foto 
+        <h2 class="font-weight-bold mb-2 text-white" style="text-align: center;">Galeri Foto 
         <?php if(count($instansi)<=0) : ?>
             Instansi
         <?php else: ?>

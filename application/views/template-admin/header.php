@@ -76,7 +76,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="#">
+                <a href="<?= base_url() ?>auth/logout">
                     <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
                     <span class="title">Keluar</span>
                 </a>

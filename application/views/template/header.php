@@ -46,20 +46,17 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>galeri/foto">Foto</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/foto">Foto</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Informasi Publik</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Masuk</a>
+                    <a class="nav-link" href="<?= base_url() ?>auth">Masuk</a>
                 </li>
             </ul>
         </div>

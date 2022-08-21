@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<strong>INPUT DATA INSTANSI</strong>
+						<strong>INPUT PROFIL INSTANSI</strong>
 					</div>
 					<div class="card-body card-block">
 						<?= form_open_multipart('profil/tambah'); ?>
@@ -12,6 +12,21 @@
 								<label>Nama Instansi</label>
 								<input type="text" class="form-control" name="nama" value="<?= set_value('nama'); ?>">
 								<small class="form-text text-danger"><?= form_error('nama'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Facebook</label>
+								<input type="text" class="form-control" name="fb" value="<?= set_value('fb'); ?>">
+								<small class="form-text text-danger"><?= form_error('fb'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Twitter</label>
+								<input type="text" class="form-control" name="tw" value="<?= set_value('tw'); ?>">
+								<small class="form-text text-danger"><?= form_error('tw'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Instagram</label>
+								<input type="text" class="form-control" name="ig" value="<?= set_value('ig'); ?>">
+								<small class="form-text text-danger"><?= form_error('ig'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Simpan</button>

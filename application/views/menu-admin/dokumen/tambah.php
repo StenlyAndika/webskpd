@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<strong>TAMBAH DATA ANGGARAN</strong>
+						<strong>TAMBAH DATA</strong>
 					</div>
 					<div class="card-body card-block">
 						<?= form_open_multipart('anggaran/tambah'); ?>

@@ -12,6 +12,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.home__social-icon {
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 30px;
+  color: red;
+}
+
+.home__social-icon:hover {
+  color: #2e7eed;
+}
+
 .wave {
   position: absolute;
   top: 0;
@@ -155,7 +166,11 @@ body {
   overflow-x: hidden;
 }
 
-.shadow, .coming-soon .block .count-down .syotimer-cell, .user-login .block .image img, .privacy .block, .job-list .block, .team-sm .image img, .founder img, .service .service-box {
+/* .shadow, .coming-soon .block .count-down .syotimer-cell, .user-login .block .image img, .privacy .block, .job-list .block, .team-sm .image img, .founder img, .service .service-box {
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
+} */
+
+.shadow, .coming-soon .block .count-down .syotimer-cell, .privacy .block, .job-list .block, .team-sm .image img, .founder img, .service .service-box {
   box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -999,7 +1014,7 @@ button:focus,
 
 /* homepage 3 */
 .gradient-banner {
-  /* padding: 50px 0 100px; */
+  padding: 80px 0 30px;
   position: relative;
   overflow: hidden;
 }
@@ -1010,8 +1025,8 @@ button:focus,
   left: 50%;
   transform: translateX(-50%);
   width: 200%;
-  height: 200%;
-  border-radius: 50%;
+  height: 100%;
+  /* border-radius: 150%; */
   background-image: linear-gradient(45deg, #009EC5 0%, #009EC5 20%, #3A5BA0 50%);
   /* background-image: linear-gradient(45deg, #009EC5 0%, #2e7eed 20%, #02225B 50%); */
 }

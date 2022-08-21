@@ -31,6 +31,9 @@
 										<tr>
 											<th style="text-align: center;">No</th>
 											<th style="text-align: center;">Nama Instansi</th>
+											<th style="text-align: center;">Facebook</th>
+											<th style="text-align: center;">Twitter</th>
+											<th style="text-align: center;">Instagram</th>
 											<th style="text-align: center;">Opsi</th>
 										</tr>
 									</thead>
@@ -39,6 +42,9 @@
 										<tr>
 											<td style="text-align: center;"><?= $no; ?></td>
 											<td style="text-align: left;"><?= $row['nama']; ?></td>
+											<td style="text-align: left;"><?= $row['fb']; ?></td>
+											<td style="text-align: left;"><?= $row['tw']; ?></td>
+											<td style="text-align: left;"><?= $row['ig']; ?></td>
 											<td>
 												<a href="<?= base_url() ?>profil/ubah/<?= $row['id'] ?>" class="btn btn-block btn-sm btn-primary">Ubah</a>
 												<a href="<?= base_url() ?>profil/hapus/<?= $row['id'] ?>" class="btn btn-block btn-sm btn-danger" onclick="return confirm('Hapus data ini?');">Hapus</a>

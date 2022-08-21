@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<strong>UPDATE DATA INSTANSI</strong>
+						<strong>UPDATE PROFIL INSTANSI</strong>
 					</div>
 					<div class="card-body card-block">
 						<form action="" method="POST" enctype="multipart/form-data">
@@ -13,6 +13,21 @@
 								<label>Nama Instansi</label>
 								<input type="text" class="form-control" name="nama" value="<?= $profil['nama'] ?>">
 								<small class="form-text text-danger"><?= form_error('nama'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Facebook</label>
+								<input type="text" class="form-control" name="fb" value="<?= $profil['fb'] ?>">
+								<small class="form-text text-danger"><?= form_error('fb'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Twitter</label>
+								<input type="text" class="form-control" name="tw" value="<?= $profil['tw'] ?>">
+								<small class="form-text text-danger"><?= form_error('tw'); ?></small>
+							</div>
+							<div class="form-group">
+								<label>Link Instagram</label>
+								<input type="text" class="form-control" name="ig" value="<?= $profil['ig'] ?>">
+								<small class="form-text text-danger"><?= form_error('ig'); ?></small>
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Simpan</button>

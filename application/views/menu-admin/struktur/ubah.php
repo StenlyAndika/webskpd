@@ -4,7 +4,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<strong>UPDATE DATA RPJMD</strong>
+						<strong>UPDATE STRUKTUR ORGANISASI</strong>
 					</div>
 					<div class="card-body card-block">
 						<form action="" method="POST" enctype="multipart/form-data">
