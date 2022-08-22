@@ -30,24 +30,36 @@
             <div class="col-md-6 text-center order-2 order-md-2 pop-left">
                 <ul class="social-icon">
                     <li class="list-inline-item">
-                        <?php if($instansi[0]['fb'] == null) : ?>
+                        <?php if(count($instansi)<=0) : ?>
                             <a href="https://www.facebook.com/" target="_blank" class="home__social-icon"><i class="ti-facebook"></i></a>
                         <?php else: ?>
-                            <a href="<?= $instansi[0]['fb'] ?>" target="_blank" class="home__social-icon"><i class="ti-facebook"></i></a>
+                            <?php if($instansi[0]['fb'] == null) : ?>
+                                <a href="https://www.facebook.com/" target="_blank" class="home__social-icon"><i class="ti-facebook"></i></a>
+                            <?php else: ?>
+                                <a href="<?= $instansi[0]['fb'] ?>" target="_blank" class="home__social-icon"><i class="ti-facebook"></i></a>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </li>
                     <li class="list-inline-item">
-                        <?php if($instansi[0]['tw'] == null) : ?>
+                        <?php if(count($instansi)<=0) : ?>
                             <a href="https://twitter.com/" target="_blank" class="home__social-icon"><i class="ti-twitter"></i></a>
                         <?php else: ?>
-                            <a href="<?= $instansi[0]['tw'] ?>" target="_blank" class="home__social-icon"><i class="ti-twitter"></i></a>
+                            <?php if($instansi[0]['tw'] == null) : ?>
+                                <a href="https://twitter.com/" target="_blank" class="home__social-icon"><i class="ti-twitter"></i></a>
+                            <?php else: ?>
+                                <a href="<?= $instansi[0]['tw'] ?>" target="_blank" class="home__social-icon"><i class="ti-twitter"></i></a>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </li>
                     <li class="list-inline-item">
-                        <?php if($instansi[0]['ig'] == null) : ?>
+                        <?php if(count($instansi)<=0) : ?>
                             <a href="https://instagram.com/" target="_blank" class="home__social-icon"><i class="ti-instagram"></i></a>
                         <?php else: ?>
-                            <a href="<?= $instansi[0]['ig'] ?>" target="_blank" class="home__social-icon"><i class="ti-instagram"></i></a>
+                            <?php if($instansi[0]['ig'] == null) : ?>
+                                <a href="https://instagram.com/" target="_blank" class="home__social-icon"><i class="ti-instagram"></i></a>
+                            <?php else: ?>
+                                <a href="<?= $instansi[0]['ig'] ?>" target="_blank" class="home__social-icon"><i class="ti-instagram"></i></a>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </li>
                 </ul>

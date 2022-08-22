@@ -35,44 +35,44 @@
             </li>
             <li class="list">
                 <a href="<?= base_url() ?>dokumen">
-                    <span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                    <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                     <span class="title">Dokumen Publik</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="<?= base_url() ?>profil">
-                    <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
-                    <span class="title">Profil Instansi</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="<?= base_url() ?>sejarah">
-                    <span class="icon"><i class="fa-brands fa-accusoft"></i></span>
-                    <span class="title">Sejarah</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="<?= base_url() ?>visimisi">
-                    <span class="icon"><i class="fa-solid fa-hands-asl-interpreting"></i></span>
-                    <span class="title">Visi & Misi</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="<?= base_url() ?>struktur">
-                    <span class="icon"><i class="fa-solid fa-link"></i></span>
-                    <span class="title">Struktur Organisasi</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="<?= base_url() ?>penghargaan">
-                    <span class="icon"><i class="fa-solid fa-ribbon"></i></span>
-                    <span class="title">Penghargaan</span>
                 </a>
             </li>
             <li class="list">
                 <a href="<?= base_url() ?>foto">
                     <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
                     <span class="title">Foto</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="<?= base_url() ?>profil">
+                    <span class="icon"><i class="fa-solid fa-book-journal-whills"></i></span>
+                    <span class="title">Profil Instansi</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="<?= base_url() ?>sejarah">
+                    <span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                    <span class="title">Sejarah</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="<?= base_url() ?>visimisi">
+                    <span class="icon"><i class="fa-solid fa-users-viewfinder"></i></span>
+                    <span class="title">Visi & Misi</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="<?= base_url() ?>struktur">
+                    <span class="icon"><i class="fa-solid fa-sitemap"></i></span>
+                    <span class="title">Struktur Organisasi</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="<?= base_url() ?>admin">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <span class="title">Data Admin</span>
                 </a>
             </li>
             <li class="list">
