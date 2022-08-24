@@ -14,7 +14,7 @@ class Sejarah extends CI_Controller {
     public function index()
     {
         $data['sejarah'] = $this->sejarah->getAllSejarah();
-		$this->load->view('template-admin/header.php');
+		$this->load->view('template-admin/header.php',["data"=>"sejarah"]);
         $this->load->view('menu-admin/sejarah/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

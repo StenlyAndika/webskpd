@@ -29,6 +29,7 @@
 										<tr>
 											<th style="text-align: center;">No</th>
 											<th style="text-align: center;">Tahun</th>
+											<th style="text-align: center;">Kategori</th>
 											<th style="text-align: center;">Keterangan</th>
 											<th style="text-align: center;">Opsi</th>
 										</tr>
@@ -38,6 +39,7 @@
 										<tr>
 											<td style="text-align: center;"><?= $no; ?></td>
 											<td style="text-align: left;"><?= $row['tahun']; ?></td>
+											<td style="text-align: left;"><?= $row['kategori']; ?></td>
 											<td style="text-align: left;"><?= $row['keterangan']; ?></td>
 											<td>
 												<a href="<?= base_url() ?>dokumen/ubah/<?= $row['id'] ?>" class="btn btn-block btn-sm btn-primary">Ubah</a>

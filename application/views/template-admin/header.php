@@ -21,55 +21,91 @@
             <a href="<?= base_url() ?>"><img style=" width: 220px;" src="<?= base_url() ?>assets/img/logo.png"></a>
         </h1>
         <ul class="nav">
-            <li class="list">
+            <?php if((isset($data))&&($data=='berita')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>berita">
                     <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
                     <span class="title">Berita</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='pengumuman')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>pengumuman">
                     <span class="icon"><i class="fa-solid fa-bullhorn"></i></span>
                     <span class="title">Pengumuman</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='dokumen')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>dokumen">
                     <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                     <span class="title">Dokumen Publik</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='foto')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>foto">
                     <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
                     <span class="title">Foto</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='profil')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>profil">
                     <span class="icon"><i class="fa-solid fa-book-journal-whills"></i></span>
                     <span class="title">Profil Instansi</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='sejarah')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>sejarah">
                     <span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
                     <span class="title">Sejarah</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='visimisi')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>visimisi">
                     <span class="icon"><i class="fa-solid fa-users-viewfinder"></i></span>
                     <span class="title">Visi & Misi</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='struktur')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>struktur">
                     <span class="icon"><i class="fa-solid fa-sitemap"></i></span>
                     <span class="title">Struktur Organisasi</span>
                 </a>
             </li>
-            <li class="list">
+            <?php if((isset($data))&&($data=='admin')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
                 <a href="<?= base_url() ?>admin">
                     <span class="icon"><i class="fa-solid fa-user"></i></span>
                     <span class="title">Data Admin</span>

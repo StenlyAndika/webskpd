@@ -14,7 +14,7 @@ class Foto extends CI_Controller {
     public function index()
     {
         $data['foto'] = $this->foto->getAllFoto();
-        $this->load->view('template-admin/header.php');
+        $this->load->view('template-admin/header.php',["data"=>"foto"]);
         $this->load->view('menu-admin/foto/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

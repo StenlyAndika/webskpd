@@ -14,7 +14,7 @@ class Struktur extends CI_Controller {
     public function index()
     {
         $data['struktur'] = $this->struktur->getAllStruktur();
-        $this->load->view('template-admin/header.php');
+        $this->load->view('template-admin/header.php',["data"=>"struktur"]);
         $this->load->view('menu-admin/struktur/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

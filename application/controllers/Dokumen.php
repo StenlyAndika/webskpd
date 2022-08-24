@@ -14,7 +14,7 @@ class Dokumen extends CI_Controller {
     public function index()
     {
         $data['dokumen'] = $this->dokumen->getAllDokumen();
-        $this->load->view('template-admin/header.php');
+        $this->load->view('template-admin/header.php',["data"=>"dokumen"]);
         $this->load->view('menu-admin/dokumen/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

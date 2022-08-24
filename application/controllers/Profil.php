@@ -14,7 +14,7 @@ class Profil extends CI_Controller {
     public function index()
     {
         $data['profil'] = $this->profil->getAllProfil();
-		$this->load->view('template-admin/header.php');
+		$this->load->view('template-admin/header.php',["data"=>"profil"]);
         $this->load->view('menu-admin/profil/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

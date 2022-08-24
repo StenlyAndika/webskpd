@@ -14,7 +14,7 @@ class Visimisi extends CI_Controller {
     public function index()
     {
         $data['visimisi'] = $this->visimisi->getAllVisiMisi();
-		$this->load->view('template-admin/header.php');
+		$this->load->view('template-admin/header.php',["data"=>"visimisi"]);
         $this->load->view('menu-admin/visimisi/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }

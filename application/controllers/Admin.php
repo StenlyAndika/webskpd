@@ -11,17 +11,6 @@ class Admin extends CI_Controller {
 		$this->load->model('Admin_model', 'admin');
 	}
 
-	// public function index()
-	// {
-	// 	$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
-	// 	if ($data['admin']['username'] == null) {
-	// 		redirect(base_url());
-	// 	} else {
-	// 		$this->load->view('template-admin/header', $data);
-	// 		$this->load->view('template-admin/footer');
-	// 	}
-	// }
-
 	public function index()
     {
 		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
@@ -29,7 +18,7 @@ class Admin extends CI_Controller {
 			redirect(base_url());
 		} else {
 			$data['admin'] = $this->admin->getAllAdmin();
-			$this->load->view('template-admin/header.php');
+			$this->load->view('template-admin/header.php',["data"=>"admin"]);
 			$this->load->view('menu-admin/admin/index.php', $data);
 			$this->load->view('template-admin/footer.php');
 		}

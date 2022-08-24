@@ -14,7 +14,7 @@ class Berita extends CI_Controller {
     public function index()
     {
         $data['berita'] = $this->berita->getAllBerita();
-        $this->load->view('template-admin/header.php');
+        $this->load->view('template-admin/header.php',["data"=>"berita"]);
         $this->load->view('menu-admin/berita/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
