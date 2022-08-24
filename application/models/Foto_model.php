@@ -5,7 +5,10 @@
 		
 		public function getAllFoto()
 		{
-			return $this->db->get('foto')->result_array();
+			$this->db->from('foto');
+			$this->db->order_by("kegiatan", "desc");
+			$query = $this->db->get(); 
+			return $query->result_array();
 		}
 
 		public function getFotoById($id)
@@ -37,6 +40,7 @@
 						$uploadData = $this->upload->data();
 						$data['namafile'] = $uploadData['file_name'];
 						$data['tgl'] = $this->input->post('tgl');
+						$data['kegiatan'] = $this->input->post('kegiatan');
 						$this->db->insert('foto',$data);
 					} else {
 						var_dump($this->upload->display_errors());
@@ -64,7 +68,8 @@
 				}
 			}
 			
-			$this->db->set('ket', $this->input->post('ket'));
+			$this->db->set('tgl', $this->input->post('tgl'));
+			$this->db->set('kegiatan', $this->input->post('kegiatan'));
 			$this->db->where('id', $this->input->post('id'));
 			$this->db->update('foto');
 		}

@@ -110,8 +110,9 @@ class Beranda extends CI_Controller {
             $this->load->view('template-admin/header', $data);
 			$this->load->view('template-admin/footer');
 		} else {
-            $data['instansi'] =  $this->db->get('instansi')->result_array();
+			$data['instansi'] =  $this->db->get('instansi')->result_array();
             $data['foto'] = $this->foto->getAllFoto();
+			
             $this->load->view('template/header.php');
             $this->load->view('menu-galeri/foto.php', $data);
             $this->load->view('template/footer.php');

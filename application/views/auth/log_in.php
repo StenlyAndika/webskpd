@@ -32,9 +32,6 @@
 							<input class="form-control main" type="password" name="password" placeholder="Password" required>
 							<button type="submit" class="btn btn-main-md">Daftar</button>
 						</form>
-						<div class="new-acount">
-							<p>Belum punya akun? <a href="<?= base_url() ?>auth/daftar">Daftar</a></p>
-						</div>
 					</div>
 				</div>
 			</div>

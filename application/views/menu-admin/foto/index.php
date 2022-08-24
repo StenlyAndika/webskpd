@@ -29,6 +29,7 @@
 										<tr>
 											<th style="text-align: center;">No</th>
 											<th style="text-align: center;">Tanggal Upload</th>
+											<th style="text-align: center;">Nama Kegiatan</th>
 											<th style="text-align: center;">Nama File</th>
 											<th style="text-align: center;">Opsi</th>
 										</tr>
@@ -38,6 +39,7 @@
 										<tr>
 											<td style="text-align: center;"><?= $no; ?></td>
 											<td style="text-align: left;"><?= $row['tgl']; ?></td>
+											<td style="text-align: left;"><?= $row['kegiatan']; ?></td>
 											<td style="text-align: left;"><?= $row['namafile']; ?></td>
 											<td>
 												<!-- <a href="<?= base_url() ?>foto/ubah/<?= $row['id'] ?>" class="btn btn-sm btn-primary">Ubah</a> -->

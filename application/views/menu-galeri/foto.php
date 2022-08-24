@@ -32,14 +32,29 @@
             <?= $instansi[0]['nama'] ?>
         <?php endif; ?>
         </h2>
-        <div class="row">
-            <?php foreach ($foto as $row) : ?>
+    <?php
+        $tmpkegiatan = [];
+        $a = "";
+        foreach ($foto as $row) {
+            if($a!=$row['kegiatan']) {
+                array_push($tmpkegiatan,$row['kegiatan']);
+                $a=$row['kegiatan'];
+            }
+        }
+        foreach ($tmpkegiatan as $rowx) : ?>
+            <div class="col-lg-12">
+                <h4 class="font-weight-bold mb-4 text-white" style="text-align: center;"><?= $rowx ?></h4>
+            </div>
+            <div class="row">
+            <?php $data['foto2'] = $this->db->get_where('foto', ['kegiatan' => $rowx])->result_array();
+                foreach ($data['foto2'] as $rowz) : ?>
                 <div class="col-lg-4">
                     <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail w-100" src="<?= base_url('./upload/foto/') .$row['tgl']."/".$row['namafile'] ?>"/>
+                        <img class="img-fluid img-thumbnail w-100" src="<?= base_url('./upload/foto/') .$rowz['tgl']."/".$rowz['namafile'] ?>"/>
                     </a>
                 </div>
             <?php endforeach; ?>
-        </div>
+            </div>
+    <?php endforeach; ?>        
     </div>
 </section>

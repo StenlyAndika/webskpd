@@ -14,6 +14,11 @@
 								<small class="form-text text-danger"><?= form_error('tgl'); ?></small>
 							</div>
 							<div class="form-group">
+								<label>Nama Kegiatan</label>
+								<input type="text" class="form-control" name="kegiatan" value="">
+								<small class="form-text text-danger"><?= form_error('kegiatan'); ?></small>
+							</div>
+							<div class="form-group">
 								<label>File</label>
 								<input type="file" class="form-control" name="namafile[]" multiple="" class="form-control-file">
 								<small class="form-text text-danger"><?= form_error('namafile'); ?></small>
