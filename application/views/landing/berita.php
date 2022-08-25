@@ -5,13 +5,11 @@
                 <style>
                     .aaz {
                         color: #000;
-                        /* font-size: 40px; */
                     }
                     .aas {
-                        color: #2e7eed;
+                        color: #fff;
                         font-size: 40px;
-                        /* text-shadow: 0.5px 1px #000; */
-                        /* -webkit-text-stroke: 3px #2e7eed; */
+                        -webkit-text-stroke: 2px #2e7eed;
                     }
                     .ffd {
                         color: #fff !important;
@@ -112,4 +110,8 @@
             <?php endforeach; ?>
         </div>
 	</div>
+    <div class="wave" id="wave1" style="--i:1;"></div>
+    <div class="wave" id="wave2" style="--i:2;"></div>
+    <div class="wave" id="wave3" style="--i:3;"></div>
+    <div class="wave" id="wave4" style="--i:4;"></div>
 </section>

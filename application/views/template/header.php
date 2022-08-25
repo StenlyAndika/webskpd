@@ -29,6 +29,9 @@
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-top">
         <div class="container">
             <style>
+                .menu-border {
+                    -webkit-text-stroke: 0.5px #fff !important;
+                }
                 .acidsa {
                     font-family: "Mistral", sans-serif;
                     font-weight: 500;
@@ -78,10 +81,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
+                    <a class="nav-link menu-border" href="<?= base_url() ?>">Beranda</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Profil Lembaga</a>
+                    <a class="nav-link menu-border dropdown-toggle" href="#" data-toggle="dropdown">Profil Lembaga</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/sejarah">Sejarah</a></li>
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/visimisi">Visi & Misi</a></li>
@@ -89,19 +92,19 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
+                    <a class="nav-link menu-border dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/foto">Foto</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a>
+                    <a class="nav-link menu-border" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
+                    <a class="nav-link menu-border" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>auth">Masuk</a>
+                    <a class="nav-link menu-border" href="<?= base_url() ?>auth">Masuk</a>
                 </li>
             </ul>
         </div>
