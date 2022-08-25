@@ -13,18 +13,22 @@ class Berita extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "berita";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['berita'] = $this->berita->getAllBerita();
-        $this->load->view('template-admin/header.php',["data"=>"berita"]);
+        $this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/berita/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "berita";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('judul', 'Judul', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/berita/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Berita extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "berita";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['berita'] = $this->berita->getBeritaById($id);
         
 		$this->form_validation->set_rules('judul', 'Judul', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/berita/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

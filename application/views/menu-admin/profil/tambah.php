@@ -14,6 +14,11 @@
 								<small class="form-text text-danger"><?= form_error('nama'); ?></small>
 							</div>
 							<div class="form-group">
+								<label>Logo Instansi</label>
+								<input type="file" class="form-control" name="logo" class="form-control-file">
+								<small class="form-text text-danger"><?= form_error('logo'); ?></small>
+							</div>
+							<div class="form-group">
 								<label>Link Facebook</label>
 								<input type="text" class="form-control" name="fb" value="<?= set_value('fb'); ?>">
 								<small class="form-text text-danger"><?= form_error('fb'); ?></small>

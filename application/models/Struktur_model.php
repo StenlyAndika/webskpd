@@ -17,6 +17,10 @@
 		{
 			$struktur = $_FILES['struktur']['name'];
 
+			if (!is_dir('./upload/struktur/')) {
+				mkdir('./upload/struktur/', 0777, true);
+			}
+
 			if ($struktur) {
 				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 				$config['upload_path'] = './upload/struktur/';

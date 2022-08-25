@@ -1,11 +1,11 @@
 <section class="section page-title">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 order-1 order-md-1 text-center text-md-left pop-right">
+            <div class="col-md-10 order-1 order-md-1 text-center text-md-left pop-right">
                 <style>
                     .aaz {
                         color: #000;
-                        font-size: 40px;
+                        /* font-size: 40px; */
                     }
                     .aas {
                         color: #2e7eed;
@@ -27,7 +27,7 @@
                     </p>
                 </h2>
             </div>
-            <div class="col-md-6 text-center order-2 order-md-2 pop-left">
+            <div class="col-md-2 text-center order-2 order-md-2 pop-left">
                 <ul class="social-icon">
                     <li class="list-inline-item">
                         <?php if(count($instansi)<=0) : ?>
@@ -67,7 +67,7 @@
         </div>
     </div>
 	<div class="container">
-        <h2 class="font-weight-bold mb-4 aaz">Berita Terbaru</h2>
+        <h4 class="font-weight-bold mb-4 mt-2 aaz">Berita Terbaru</h4>
         <div class="owl-carousel owl-theme">
             <?php foreach ($berita as $row) : ?>
                 <article class="post-sm">

@@ -13,12 +13,14 @@ class Admin extends CI_Controller {
 
 	public function index()
     {
+		$data['data'] = "admin";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
 		if ($data['admin']['username'] == null) {
 			redirect(base_url());
 		} else {
 			$data['admin'] = $this->admin->getAllAdmin();
-			$this->load->view('template-admin/header.php',["data"=>"admin"]);
+			$this->load->view('template-admin/header.php', $data);
 			$this->load->view('menu-admin/admin/index.php', $data);
 			$this->load->view('template-admin/footer.php');
 		}
@@ -26,12 +28,14 @@ class Admin extends CI_Controller {
 
     public function tambah()
 	{
+		$data['data'] = "admin";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('username', 'username', 'required');
 		$this->form_validation->set_rules('nama', 'nama', 'required');
 		$this->form_validation->set_rules('password', 'password', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/admin/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -43,12 +47,13 @@ class Admin extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "admin";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['admin'] = $this->admin->getAdminById($id);
-        
 		$this->form_validation->set_rules('nama', 'nama', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/admin/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

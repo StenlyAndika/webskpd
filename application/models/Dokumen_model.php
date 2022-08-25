@@ -25,6 +25,10 @@
 		{
 			$upload_image = $_FILES['namafile']['name'];
 
+			if (!is_dir('./upload/dokumen/')) {
+				mkdir('./upload/dokumen/', 0777, true);
+			}
+
 			if ($upload_image) {
 				$config['allowed_types'] = 'pdf';
 				$config['upload_path'] = './upload/dokumen/';

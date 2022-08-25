@@ -14,6 +14,11 @@
 								<small class="form-text text-danger"><?= form_error('tahun'); ?></small>
 							</div>
 							<div class="form-group">
+								<label>Kategori</label>
+								<input type="text" class="form-control" name="kategori" value="<?= set_value('kategori'); ?>">
+								<small class="form-text text-danger"><?= form_error('kategori'); ?></small>
+							</div>
+							<div class="form-group">
 								<label>Keterangan</label>
 								<input type="text" class="form-control" name="keterangan" value="<?= set_value('keterangan'); ?>">
 								<small class="form-text text-danger"><?= form_error('keterangan'); ?></small>

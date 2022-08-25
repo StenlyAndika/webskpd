@@ -13,13 +13,14 @@ class Auth extends CI_Controller {
 
     public function index()
 	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$data['admin'] = $this->admin->getAllAdmin();
 		if(count($data['admin'])<=0) {
-			$this->load->view('template/header.php');
+			$this->load->view('template/header.php', $data);
 			$this->load->view('auth/sign_up.php');
 			$this->load->view('template/footer.php');
 		} else {
-			$this->load->view('template/header.php');
+			$this->load->view('template/header.php', $data);
 			$this->load->view('auth/log_in.php');
 			$this->load->view('template/footer.php');
 		}
@@ -27,12 +28,13 @@ class Auth extends CI_Controller {
 
 	public function daftar()
 	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('nama', 'nama', 'required');
 		$this->form_validation->set_rules('username', 'username', 'required');
 		$this->form_validation->set_rules('password', 'password', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template/header');
+			$this->load->view('template/header', $data);
 			$this->load->view('auth/sign_up');
 			$this->load->view('template/footer');
 		} else {
@@ -44,32 +46,44 @@ class Auth extends CI_Controller {
 
 	public function login()
 	{
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('username', 'username', 'required');
 		$this->form_validation->set_rules('password', 'password', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template/header');
+			$this->load->view('template/header', $data);
 			$this->load->view('auth/log_in');
 			$this->load->view('template/footer');
 		} else {
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 			$loginadmin = $this->db->get_where('admin', ['username' => $username])->row_array();
-			if ($loginadmin['username'] != NULL) {
-				if ($password == $loginadmin['password']) {
-					$data = [
-					'username' => $username,
-					'nama' => $loginadmin['nama']
-				];
-				$this->session->set_userdata($data);
-				redirect(base_url());
-				} else {
-					$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Password Salah</div>');
+			if ($loginadmin != NULL) {
+				if ($loginadmin['username'] != NULL) {
+					if ($password == $loginadmin['password']) {
+						$data = [
+						'username' => $username,
+						'nama' => $loginadmin['nama']
+					];
+					$this->session->set_userdata($data);
 					redirect(base_url());
+					} else {
+						$this->session->set_flashdata('flosh','username atau password salah.');
+						$this->load->view('template/header', $data);
+						$this->load->view('auth/log_in');
+						$this->load->view('template/footer');
+					}
+				} else {
+					$this->session->set_flashdata('flosh','username atau password salah.');
+					$this->load->view('template/header', $data);
+					$this->load->view('auth/log_in');
+					$this->load->view('template/footer');
 				}
 			} else {
-				$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Password Salah</div>');
-				redirect(base_url());
+				$this->session->set_flashdata('flosh','username atau password salah.');
+				$this->load->view('template/header', $data);
+				$this->load->view('auth/log_in');
+				$this->load->view('template/footer');
 			}
 		}
 	}

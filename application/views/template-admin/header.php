@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Website Resmi Pemerintah Kota Sungai Penuh</title>
+    <?php if(count($instansi)<=0) : ?>
+        <link rel="icon" href="<?= base_url('./assets/img/tablogo.png') ?>">
+        <title>Website Resmi Instansi Pemerintah</title>
+    <?php else: ?>
+        <title>Website Resmi <?= $instansi[0]['nama'] ?></title>
+        <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+    <?php endif; ?>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?= base_url() ?>assets/img/tablogo.png">
+    <?php if(count($instansi)<=0) : ?>
+    <?php else: ?>
+        <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+    <?php endif; ?>
 
     <!-- PLUGINS CSS STYLE -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/bootstrap/bootstrap.min.css">
@@ -21,6 +30,16 @@
             <a href="<?= base_url() ?>"><img style=" width: 220px;" src="<?= base_url() ?>assets/img/logo.png"></a>
         </h1>
         <ul class="nav">
+            <?php if((isset($data))&&($data=='dashboard')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
+                <a href="<?= base_url() ?>">
+                    <span class="icon"><i class="fa-solid fa-house"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
             <?php if((isset($data))&&($data=='berita')){?>
                 <li class="list active">
             <?php }else{?>
@@ -125,7 +144,7 @@
 				<i class="fa-solid fa-bars"></i>
 			</div>
 			<div class="menu-title">
-                <h4>ADMIN AREA</h4>
+                <a class="text-white" href="<?= base_url() ?>"><h4>DASHBOARD</h4></a>
 			</div>
 		</div>
 	</div>

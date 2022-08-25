@@ -17,6 +17,10 @@
 		{
 			$upload_image = $_FILES['namafile']['name'];
 
+			if (!is_dir('./upload/pengumuman/')) {
+				mkdir('./upload/pengumuman/', 0777, true);
+			}
+
 			if ($upload_image) {
 				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 				$config['upload_path'] = './upload/pengumuman/';

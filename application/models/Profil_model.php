@@ -15,6 +15,26 @@
 
 		public function add()
 		{
+			$logo = $_FILES['logo']['name'];
+			
+			if (!is_dir('./upload/logo/')) {
+				mkdir('./upload/logo/', 0777, true);
+			}
+
+			if ($logo) {
+				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+				$config['upload_path'] = './upload/logo/';
+
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('logo')) {
+					$new_image = $this->upload->data('file_name');
+					$this->db->set('logo', $new_image);
+				} else {
+					echo $this->upload->display_errors();
+				}
+			}
+
 			$this->db->set('nama', $this->input->post('nama'));
 			$this->db->set('fb', $this->input->post('fb'));
 			$this->db->set('tw', $this->input->post('tw'));
@@ -24,6 +44,26 @@
 
 		public function update()
 		{
+			$logo = $_FILES['logo']['name'];
+			
+			if (!is_dir('./upload/logo/')) {
+				mkdir('./upload/logo/', 0777, true);
+			}
+
+			if ($logo) {
+				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+				$config['upload_path'] = './upload/logo/';
+
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('logo')) {
+					$new_image = $this->upload->data('file_name');
+					$this->db->set('logo', $new_image);
+				} else {
+					echo $this->upload->display_errors();
+				}
+			}
+			
 			$this->db->set('nama', $this->input->post('nama'));
 			$this->db->set('fb', $this->input->post('fb'));
 			$this->db->set('tw', $this->input->post('tw'));

@@ -13,19 +13,23 @@ class Dokumen extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "dokumen";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['dokumen'] = $this->dokumen->getAllDokumen();
-        $this->load->view('template-admin/header.php',["data"=>"dokumen"]);
+        $this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/dokumen/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "dokumen";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('tahun', 'Tahun', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/dokumen/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -37,13 +41,15 @@ class Dokumen extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "dokumen";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['dokumen'] = $this->dokumen->getDokumenById($id);
 		
 		$this->form_validation->set_rules('tahun', 'Tahun', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/dokumen/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

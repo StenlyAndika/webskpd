@@ -13,18 +13,22 @@ class Profil extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "profil";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['profil'] = $this->profil->getAllProfil();
-		$this->load->view('template-admin/header.php',["data"=>"profil"]);
+		$this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/profil/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "profil";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('nama', 'nama', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/profil/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Profil extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "profil";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['profil'] = $this->profil->getProfilById($id);
         
 		$this->form_validation->set_rules('nama', 'nama', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/profil/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

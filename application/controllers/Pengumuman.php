@@ -13,18 +13,22 @@ class Pengumuman extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "pengumuman";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['pengumuman'] = $this->pengumuman->getAllPengumuman();
-        $this->load->view('template-admin/header.php',["data"=>"pengumuman"]);
+        $this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/pengumuman/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "pengumuman";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('judul', 'Judul', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/pengumuman/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Pengumuman extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "pengumuman";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['pengumuman'] = $this->pengumuman->getPengumumanById($id);
         
 		$this->form_validation->set_rules('judul', 'Judul', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/pengumuman/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

@@ -13,18 +13,22 @@ class Struktur extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "struktur";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['struktur'] = $this->struktur->getAllStruktur();
-        $this->load->view('template-admin/header.php',["data"=>"struktur"]);
+        $this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/struktur/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "struktur";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('tugas', 'tugas', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/struktur/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Struktur extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "struktur";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['struktur'] = $this->struktur->getStrukturById($id);
         
 		$this->form_validation->set_rules('tugas', 'tugas', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/struktur/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

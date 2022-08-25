@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Website Resmi Pemerintah Kota Sungai Penuh</title>
     
-    <!-- Favicon -->
-    <link rel="icon" href="<?= base_url() ?>assets/img/tablogo.png">
+    <?php if(count($instansi)<=0) : ?>
+        <link rel="icon" href="<?= base_url('./assets/img/tablogo.png') ?>">
+        <title>Website Resmi Instansi Pemerintah</title>
+    <?php else: ?>
+        <title>Website Resmi <?= $instansi[0]['nama'] ?></title>
+        <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+    <?php endif; ?>
 
     <!-- PLUGINS CSS STYLE -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/bootstrap/bootstrap.min.css">
@@ -24,8 +28,49 @@
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-top">
         <div class="container">
+            <style>
+                .acidsa {
+                    font-family: "Mistral", sans-serif;
+                    font-weight: 500;
+                    color: #ff0000;
+                    font-size: 32px;
+                    position: relative;
+                    top: 10px;
+                    text-shadow: 0.5px 1px #000;
+                    -webkit-text-stroke: 0.5px #fff !important;
+                }
+                .acidsb {
+                    font-family: "Poppins", sans-serif;
+                    font-weight: bold;
+                    color: #00D4FF;
+                    font-size: 20px;
+                    position: relative;
+                    text-shadow: 0.5px 1px #000;
+                    -webkit-text-stroke: 0.08px #fff !important;
+                }
+            </style>
             <a class="navbar-brand" href="<?= base_url() ?>">
-                <img src="<?= base_url(); ?>/assets/img/logo.png" alt="logo" width="350px">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                    <?php if(count($instansi)<=0) : ?>
+                        <img src="<?= base_url('./assets/img/logo.png') ?>" alt="logo" width="50px">
+                    <?php else: ?>
+                        <img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="logo" width="50px">
+                    <?php endif; ?>
+                    </td>
+                    <td>
+                        <?php if(count($instansi)<=0) : ?>
+                            <h3 class="acidsa" style="text-align: left;">Instansi Pemerintah</h3>
+                            <h5 class="acidsb" style="text-align: left;">Pemerintah Kota Sungai Penuh</h5>
+                        <?php else: ?>
+                            <h3 class="acidsa" style="text-align: left;"><?= $instansi[0]['nama'] ?></h3>
+                            <h5 class="acidsb" style="text-align: left;">Pemerintah Kota Sungai Penuh</h5>
+                        <?php endif; ?>
+                        </td>
+                    </td>
+                </tr>
+            </table>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="ti-menu"></span>

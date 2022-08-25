@@ -30,6 +30,10 @@
 		{
 			$gambar = $_FILES['gambar']['name'];
 
+			if (!is_dir('./upload/berita/')) {
+				mkdir('./upload/berita/', 0777, true);
+			}
+
 			if ($gambar) {
 				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
 				$config['upload_path'] = './upload/berita/';

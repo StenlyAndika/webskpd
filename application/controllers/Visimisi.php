@@ -13,18 +13,22 @@ class Visimisi extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "visimisi";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['visimisi'] = $this->visimisi->getAllVisiMisi();
-		$this->load->view('template-admin/header.php',["data"=>"visimisi"]);
+		$this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/visimisi/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "visimisi";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('visi', 'visi', 'required');
 		$this->form_validation->set_rules('misi', 'misi', 'required');
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/visimisi/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Visimisi extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "visimisi";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['visimisi'] = $this->visimisi->getVisiMisiById($id);
         
 		$this->form_validation->set_rules('visi', 'visi', 'required');
 		$this->form_validation->set_rules('misi', 'misi', 'required');
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/visimisi/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

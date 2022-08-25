@@ -13,18 +13,22 @@ class Foto extends CI_Controller {
 
     public function index()
     {
+		$data['data'] = "foto";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['foto'] = $this->foto->getAllFoto();
-        $this->load->view('template-admin/header.php',["data"=>"foto"]);
+        $this->load->view('template-admin/header.php', $data);
         $this->load->view('menu-admin/foto/index.php', $data);
         $this->load->view('template-admin/footer.php');
     }
 
     public function tambah()
 	{
+		$data['data'] = "foto";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		$this->form_validation->set_rules('tgl', 'Tanggal', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/foto/tambah');
 			$this->load->view('template-admin/footer');
 		} else {
@@ -36,12 +40,14 @@ class Foto extends CI_Controller {
 
     public function ubah($id)
 	{
+		$data['data'] = "foto";
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
         $data['foto'] = $this->foto->getFotoById($id);
         
 		$this->form_validation->set_rules('tgl', 'Tanggal', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header');
+			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/foto/ubah', $data);
 			$this->load->view('template-admin/footer');
 		} else {

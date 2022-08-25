@@ -23,6 +23,17 @@
 								</div>
 							</div>
 						</div>
+					<?php elseif ( $this->session->flashdata('flosh') ) : ?>
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="alert alert-danger alert-dismissible fade show" role="alert">
+									Login <strong>Gagal</strong> <?= $this->session->flashdata('flosh'); ?>.
+									<button type="button" class="close" data-dismiss="alert" aria-label="close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					<?php endif; ?>
 						<div class="title-text">
 							<h3>Masuk</h3>

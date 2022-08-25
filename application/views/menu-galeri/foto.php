@@ -34,6 +34,7 @@
         </h2>
     <?php
         $tmpkegiatan = [];
+        $tmptgl = [];
         $a = "";
         foreach ($foto as $row) {
             if($a!=$row['kegiatan']) {
@@ -43,7 +44,7 @@
         }
         foreach ($tmpkegiatan as $rowx) : ?>
             <div class="col-lg-12">
-                <h4 class="font-weight-bold mb-4 text-white" style="text-align: center;"><?= $rowx ?></h4>
+                <h4 class="font-weight-bold mt-5 text-white" style="text-align: left;"><?= $rowx ?></h4>
             </div>
             <div class="row">
             <?php $data['foto2'] = $this->db->get_where('foto', ['kegiatan' => $rowx])->result_array();
