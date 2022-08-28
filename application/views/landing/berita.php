@@ -68,17 +68,14 @@
         <div class="owl-carousel owl-theme">
             <?php foreach ($berita as $row) : ?>
                 <article class="post-sm">
-                    <div class="post-thumb">
-                        <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><img class="w-100" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" alt="Post-Image"></a>
+                    <div class="post-thumb" style="height:150px; width:300px;overflow:hidden;">
+                        <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><img class="image-responsive w-100" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" alt="Post-Image"></a>
                     </div>
                     <div class="post-title">
-                        <h3 class=""><a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold"><?= $row['judul'] ?></a></h3>
+                        <h4 class=""><a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold"><?= $row['judul'] ?></a></h4>
                     </div>
                     <div class="post-meta">
                         <ul class="list-inline post-tag">
-                            <li class="list-inline-item">
-                                <img src="<?= base_url(); ?>/assets/img/avatar.png">
-                            </li>
                             <li class="list-inline-item">
                                 <a href="#"><?= $row['nama'] ?></a>
                             </li>
@@ -88,7 +85,7 @@
                         </ul>
                     </div>
                     <div class="post-details">
-                        <p>
+                        <p style="font-size: 14px">
                             <?php
                                 $string = strip_tags($row['isi']);
                                 if (strlen($string) > 150) {
@@ -107,4 +104,42 @@
             <?php endforeach; ?>
         </div>
 	</div>
+    <hr>
+    <div class="container">
+        <style>
+            .cardx {
+                flex-direction: row;
+                border: none;
+            }
+            .cardx img {
+                width: 30%;
+            }
+        </style>
+        <h3 class="font-weight-bold mb-4" style="text-align: left;">Berita Terbaru<br></h3>
+        <?php foreach ($berita as $row) : ?>
+            <div class="card cardx col-lg-12">
+                <img src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5>
+                    <p class="card-text" style="text-align: left;">
+                        <?php
+                            $string = strip_tags($row['isi']);
+                            if (strlen($string) > 150) {
+                                // truncate string
+                                $stringCut = substr($string, 0, 150);
+                                $endPoint = strrpos($stringCut, ' ');
+                                //if the string doesn't contain any space then it will cut without word basis.
+                                $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                $string .= '...';
+                            }
+                            echo $string;
+                        ?>
+                        <br>
+                        <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold">Baca selengkapnya...</a>
+                    </p>
+                </div>
+            </div>
+            <hr>
+        <?php endforeach; ?>
+    </div>
 </section>

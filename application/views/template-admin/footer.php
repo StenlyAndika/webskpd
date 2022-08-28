@@ -16,6 +16,7 @@
             CKEDITOR.replace('misi');
             CKEDITOR.replace('tugas');
             CKEDITOR.replace('isi');
+            CKEDITOR.replace('standar');
 
             $("#tgl").datepicker({
                 format: 'dd-mm-yyyy',

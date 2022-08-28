@@ -59,15 +59,15 @@
                         <tr>
                         <td colspan="2" class="text-danger text-center font-weight-bold"><?= $rowz; ?></td>
                         <?php
-                        $this->db->where('tahun', $rowx);
-                        $this->db->where('kategori', $rowz);
-                        $query = $this->db->get('dokumen');
-                        $data['dokumen'] = $query->result_array();
-                        foreach ($data['dokumen'] as $row) : ?>
-                            <tr>
-                                <td class="text-center">-</td>
-                                <td><a class="font-weight-bold" target="_blank" href="<?= base_url('upload/dokumen/') .$row['namafile'] ?>"><?= $row['keterangan'] ?></a></td>
-                            </tr>
+                            $this->db->where('tahun', $rowx);
+                            $this->db->where('kategori', $rowz);
+                            $query = $this->db->get('dokumen');
+                            $data['dokumen'] = $query->result_array();
+                            foreach ($data['dokumen'] as $row) : ?>
+                                <tr>
+                                    <td class="text-center">-</td>
+                                    <td><a class="font-weight-bold" target="_blank" href="<?= base_url('upload/dokumen/') .$row['namafile'] ?>"><?= $row['keterangan'] ?></a></td>
+                                </tr>
                         <?php endforeach; ?>
                         </tr>
                     <?php endforeach; ?>

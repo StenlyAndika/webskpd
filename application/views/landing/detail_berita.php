@@ -1,43 +1,35 @@
-<section class="section blog-single">
+<section class="col-md-9 section blog-single">
 	<div class="container">
-        <div class="col-md-10 m-auto">
-            <article class="single-post">
-                <div class="post-title text-center">
-                    <h1><?= $berita['judul'] ?></h1>
-                    <ul class="list-inline post-tag">
-                        <li class="list-inline-item">
-                            <img src="<?= base_url(); ?>/assets/img/avatar.png" alt="author-thumb">
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><?= $berita['nama'] ?></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><?= date('d F Y', strtotime($berita['tgl'])); ?></a>
-                        </li>
-                    </ul>
+        <article class="single-post">
+            <div class="post-title text-center">
+                <h1><?= $berita3['judul'] ?></h1>
+                <ul class="list-inline post-tag">
+                    <li class="list-inline-item">
+                        <img src="<?= base_url(); ?>/assets/img/avatar.png" alt="author-thumb">
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><?= $berita3['nama'] ?></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><?= date('d F Y', strtotime($berita3['tgl'])); ?></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="post-body">
+                <div class="feature-image">
+                    <img class="img-fluid" src="<?= base_url('./upload/berita/').$berita3['gambar'] ?>" alt="feature-image">
                 </div>
-                <div class="post-body">
-                    <div class="feature-image">
-                        <img class="img-fluid" src="<?= base_url('./upload/berita/').$berita['gambar'] ?>" alt="feature-image">
-                    </div>
-                    <p><?= $berita['isi'] ?></p>
-                </div>
-            </article>
-        </div>
+                <p><?= $berita3['isi'] ?></p>
+            </div>
+        </article>
 	</div>
-</section>
-<!--====  End of Single Article  ====-->
-
-<!--======================================
-=            Related Article            =
-=======================================-->
-<section class="col-md-9 section related-articles bg-gray">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 title">
-				<h2>Baca juga</h2>
+				<h2 class="text-white">Baca juga</h2>
 			</div>
 		</div>
+        <br>
 		<div class="row">
             <?php foreach ($berita2 as $row2) : ?>
                 <div class="col-lg-4 col-md-6">

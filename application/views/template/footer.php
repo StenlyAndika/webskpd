@@ -1,12 +1,3 @@
-        <section class="col-md-3 section page-title right-panel">
-            <hr>
-            <?php if(count($instansi)<=0) : ?>
-                <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" width="250px"></a>
-            <?php else: ?>
-                <a href="#"><img src="<?= base_url('./upload/fotokepala/').$instansi[0]['fotokepala'] ?>" alt="footer-logo" width="250px"></a>
-                <h5 style="font-size: 14px;" class="ccz font-weight-bold mb-4 mt-2"><?= $instansi[0]['kepala'] ?></h5>
-            <?php endif; ?>
-        </section>
     </div>
     <div class="scroll-top-to">
         <i class="ti-home"></i>
@@ -138,8 +129,18 @@
                 autoplayTimeout:5000,
                 loop:true,
                 margin:10,
-                items:3,
                 lazyLoad: true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
             });
 
             $('#datatable').DataTable({

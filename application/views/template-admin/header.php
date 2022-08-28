@@ -80,6 +80,26 @@
                     <span class="title">Foto</span>
                 </a>
             </li>
+            <?php if((isset($data))&&($data=='pelayanan')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
+                <a href="<?= base_url() ?>pelayanan">
+                    <span class="icon"><i class="fa-solid fa-list-check"></i></span>
+                    <span class="title">Standar Pelayanan</span>
+                </a>
+            </li>
+            <?php if((isset($data))&&($data=='kepuasan')){?>
+                <li class="list active">
+            <?php }else{?>
+                <li class="list">
+            <?php }?>
+                <a href="<?= base_url() ?>kepuasan">
+                    <span class="icon"><i class="fa-solid fa-square-poll-vertical"></i></span>
+                    <span class="title">Kepuasan Layanan</span>
+                </a>
+            </li>
             <?php if((isset($data))&&($data=='profil')){?>
                 <li class="list active">
             <?php }else{?>
