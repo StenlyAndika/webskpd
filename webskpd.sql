@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2022 at 02:08 PM
+-- Generation Time: Aug 28, 2022 at 07:05 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username`, `password`, `nama`) VALUES
-('budi', 'budi', 'Budi Kontolodon');
+('andi', 'andi', 'andi');
 
 -- --------------------------------------------------------
 
@@ -60,10 +60,10 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `tgl`, `judul`, `isi`, `gambar`, `nama`) VALUES
-(4, '21-08-2022', 'asdasd', '<p>Setelah melewati berbagai proses, akhirnya seluruh sekolah di Kabupaten <a href=\"https://jambi.tribunnews.com/tag/muaro-jambi\">Muaro&nbsp;Jambi</a> sudah melakukan <a href=\"https://jambi.tribunnews.com/tag/pembelajaran-tatap-muka\">pembelajaran&nbsp;tatap&nbsp;muka</a>.</p>\r\n\r\n<p>Pembelajaran tatap muka ini sudah dilakukan sejak beberapa waktu lalu. Hal itu diungkapkan oleh Kepala Dinas Pendidikan dan Kebudayaan (Disdikbud) <a href=\"https://jambi.tribunnews.com/tag/muaro-jambi\">Muaro&nbsp;Jambi</a>, Firdaus.</p>\r\n\r\n<p>Dikatakan Firdaus, dari hasil monitoring yang dilakukan, tak ada kendala untuk proses <a href=\"https://jambi.tribunnews.com/tag/pembelajaran-tatap-muka\">pembelajaran&nbsp;tatap&nbsp;muka</a> ini.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Lakukan Pembelajaran Tatap Muka, Sekolah di Muaro Jambi Diwajibkan Terapkan Protokol Kesehatan, <a href=\"https://jambi.tribunnews.com/2022/08/21/lakukan-pembelajaran-tatap-muka-sekolah-di-muaro-jambi-diwajibkan-terapkan-protokol-kesehatan\">https://jambi.tribunnews.com/2022/08/21/lakukan-pembelajaran-tatap-muka-sekolah-di-muaro-jambi-diwajibkan-terapkan-protokol-kesehatan</a>.<br />\r\nPenulis: Muzakkir | Editor: Rian Aidilfi Afriandi</p>\r\n', '61.jpg', 'Budi Kontolodon'),
-(5, '21-08-2022', 'Abdullah Sani Harap Forikan Tingkatkan Konsumsi Ikan di Masyarakat', '<p>Wakil Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, Drs H <a href=\"https://jambi.tribunnews.com/tag/abdullah-sani\">Abdullah&nbsp;Sani</a>,M.Pd.I., mengharapkan pengurus Forum Peningkatan Konsumsi Ikan (FORIKAN) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> bisa lebih meningkatkan konsumsi ikan ditengah masyarakat.</p>\r\n\r\n<p>Hal tersebut disampaikan <a href=\"https://jambi.tribunnews.com/tag/abdullah-sani\">Abdullah&nbsp;Sani</a> pada Pengukuhan Pengurus FORIKAN Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> Periode 2022-2024, bertempat di Rumah Kito Resort Hotel, Jum&#39;at (19/8/2022).</p>\r\n\r\n<p>&ldquo;Saya mengharapkan pengurus FORIKAN yang telah dikukuhkan untuk bekerja dengan baik, penuh tanggung jawab, dan berperan serta dengan aktif dalam wadah FORIKAN ini, sehingga minat masyarakat di Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> untuk mengkonsumsi ikan semakin meningkat agar angka konsumsi ikan perkapita di Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> semakin meningkat pula,&rdquo; ujarnya.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Abdullah Sani Harap Forikan Tingkatkan Konsumsi Ikan di Masyarakat, <a href=\"https://jambi.tribunnews.com/2022/08/21/abdullah-sani-harap-forikan-tingkatkan-konsumsi-ikan-di-masyarakat\">https://jambi.tribunnews.com/2022/08/21/abdullah-sani-harap-forikan-tingkatkan-konsumsi-ikan-di-masyarakat</a>.<br />\r\n&nbsp;</p>\r\n', 'Sani-forikan.jpg', 'Budi Kontolodon'),
-(3, '21-08-2022', 'Gubernur Jambi Lepas Lomba Lari 10K, Beri Semangat Pada Peserta', '<p>Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> H <a href=\"https://jambi.tribunnews.com/tag/al-haris\">Al&nbsp;Haris</a> melepas peserta <a href=\"https://jambi.tribunnews.com/tag/lari\">lari</a> 10K, Minggu (28/8/2022) pagi.</p>\r\n\r\n<p>Lomba <a href=\"https://jambi.tribunnews.com/tag/lari\">lari</a> 10K tingkat nasional ini diikuti oleh ribuan peserta, baik dari Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> sendiri, maupun dari provinsi lainnya.</p>\r\n\r\n<p>Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> melepas kegiatan ini bersama wakil Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> H Abdullah Sani dan didampingi oleh Forkompinda Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Gubernur Jambi Lepas Lomba Lari 10K, Beri Semangat Pada Peserta, <a href=\"https://jambi.tribunnews.com/2022/08/21/gubernur-jambi-lepas-lomba-lari-10k-beri-semangat-pada-peserta\">https://jambi.tribunnews.com/2022/08/21/gubernur-jambi-lepas-lomba-lari-10k-beri-semangat-pada-peserta</a>.<br />\r\nPenulis: Muzakkir | Editor: Rahimin</p>\r\n', 'Al-haris10k.jpg', 'Budi Kontolodon'),
-(6, '21-08-2022', 'Sekda Sudirman Harap PGIW Jambi Turut Berkontribusi Tingkatkan Kesejahteraan Masyarakat', '<p>Sekretaris Daerah (Sekda) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, H Sudirman SH MG mengharapkan pengurus Persekutuan Gereja Gereja Indonesia Wilayah (PGIW) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> terus meningkatkan peran dalam pembangunan masyarakat, khususnya dalam meningkatkan kesejahteraan masyarakat <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>.</p>\r\n\r\n<p>Hal tersebut disampaikan <a href=\"https://jambi.tribunnews.com/tag/sekda-sudirman\">Sekda&nbsp;Sudirman</a> pada Pelantikan Majelis Pengurus Harian (MPH) PGIW Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> Periode 2021-2026, bertempat di Auditorium Rumah Dinas Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, Jum&rsquo;at (19/08/2022).</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Sekda Sudirman Harap PGIW Jambi Turut Berkontribusi Tingkatkan Kesejahteraan Masyarakat, <a href=\"https://jambi.tribunnews.com/2022/08/21/sekda-sudirman-harap-pgiw-jambi-turut-berkontribusi-tingkatkan-kesejahteraan-masyarakat\">https://jambi.tribunnews.com/2022/08/21/sekda-sudirman-harap-pgiw-jambi-turut-berkontribusi-tingkatkan-kesejahteraan-masyarakat</a>.<br />\r\n&nbsp;</p>\r\n', 'Sekda-sudirman-yaa-pgiw.jpg', 'Budi Kontolodon');
+(4, '22-08-2022', 'Tes Berita 1', '<p>Setelah melewati berbagai proses, akhirnya seluruh sekolah di Kabupaten <a href=\"https://jambi.tribunnews.com/tag/muaro-jambi\">Muaro&nbsp;Jambi</a> sudah melakukan <a href=\"https://jambi.tribunnews.com/tag/pembelajaran-tatap-muka\">pembelajaran&nbsp;tatap&nbsp;muka</a>.</p>\r\n\r\n<p>Pembelajaran tatap muka ini sudah dilakukan sejak beberapa waktu lalu. Hal itu diungkapkan oleh Kepala Dinas Pendidikan dan Kebudayaan (Disdikbud) <a href=\"https://jambi.tribunnews.com/tag/muaro-jambi\">Muaro&nbsp;Jambi</a>, Firdaus.</p>\r\n\r\n<p>Dikatakan Firdaus, dari hasil monitoring yang dilakukan, tak ada kendala untuk proses <a href=\"https://jambi.tribunnews.com/tag/pembelajaran-tatap-muka\">pembelajaran&nbsp;tatap&nbsp;muka</a> ini.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Lakukan Pembelajaran Tatap Muka, Sekolah di Muaro Jambi Diwajibkan Terapkan Protokol Kesehatan, <a href=\"https://jambi.tribunnews.com/2022/08/21/lakukan-pembelajaran-tatap-muka-sekolah-di-muaro-jambi-diwajibkan-terapkan-protokol-kesehatan\">https://jambi.tribunnews.com/2022/08/21/lakukan-pembelajaran-tatap-muka-sekolah-di-muaro-jambi-diwajibkan-terapkan-protokol-kesehatan</a>.<br />\r\nPenulis: Muzakkir | Editor: Rian Aidilfi Afriandi</p>\r\n', '61.jpg', 'Budi Bakwan'),
+(5, '22-08-2022', 'Abdullah Sani Harap Forikan Tingkatkan Konsumsi Ikan di Masyarakat', '<p>Wakil Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, Drs H <a href=\"https://jambi.tribunnews.com/tag/abdullah-sani\">Abdullah&nbsp;Sani</a>,M.Pd.I., mengharapkan pengurus Forum Peningkatan Konsumsi Ikan (FORIKAN) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> bisa lebih meningkatkan konsumsi ikan ditengah masyarakat.</p>\r\n\r\n<p>Hal tersebut disampaikan <a href=\"https://jambi.tribunnews.com/tag/abdullah-sani\">Abdullah&nbsp;Sani</a> pada Pengukuhan Pengurus FORIKAN Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> Periode 2022-2024, bertempat di Rumah Kito Resort Hotel, Jum&#39;at (19/8/2022).</p>\r\n\r\n<p>&ldquo;Saya mengharapkan pengurus FORIKAN yang telah dikukuhkan untuk bekerja dengan baik, penuh tanggung jawab, dan berperan serta dengan aktif dalam wadah FORIKAN ini, sehingga minat masyarakat di Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> untuk mengkonsumsi ikan semakin meningkat agar angka konsumsi ikan perkapita di Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> semakin meningkat pula,&rdquo; ujarnya.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Abdullah Sani Harap Forikan Tingkatkan Konsumsi Ikan di Masyarakat, <a href=\"https://jambi.tribunnews.com/2022/08/21/abdullah-sani-harap-forikan-tingkatkan-konsumsi-ikan-di-masyarakat\">https://jambi.tribunnews.com/2022/08/21/abdullah-sani-harap-forikan-tingkatkan-konsumsi-ikan-di-masyarakat</a>.<br />\r\n&nbsp;</p>\r\n', 'Sani-forikan.jpg', 'Budi Bakwan'),
+(3, '22-08-2022', 'Gubernur Jambi Lepas Lomba Lari 10K, Beri Semangat Pada Peserta', '<p>Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> H <a href=\"https://jambi.tribunnews.com/tag/al-haris\">Al&nbsp;Haris</a> melepas peserta <a href=\"https://jambi.tribunnews.com/tag/lari\">lari</a> 10K, Minggu (28/8/2022) pagi.</p>\r\n\r\n<p>Lomba <a href=\"https://jambi.tribunnews.com/tag/lari\">lari</a> 10K tingkat nasional ini diikuti oleh ribuan peserta, baik dari Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> sendiri, maupun dari provinsi lainnya.</p>\r\n\r\n<p>Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> melepas kegiatan ini bersama wakil Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> H Abdullah Sani dan didampingi oleh Forkompinda Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>.</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Gubernur Jambi Lepas Lomba Lari 10K, Beri Semangat Pada Peserta, <a href=\"https://jambi.tribunnews.com/2022/08/21/gubernur-jambi-lepas-lomba-lari-10k-beri-semangat-pada-peserta\">https://jambi.tribunnews.com/2022/08/21/gubernur-jambi-lepas-lomba-lari-10k-beri-semangat-pada-peserta</a>.<br />\r\nPenulis: Muzakkir | Editor: Rahimin</p>\r\n', 'Al-haris10k.jpg', 'Udin Kacang'),
+(6, '22-08-2022', 'Sekda Sudirman Harap PGIW Jambi Turut Berkontribusi Tingkatkan Kesejahteraan Masyarakat', '<p>Sekretaris Daerah (Sekda) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, H Sudirman SH MG mengharapkan pengurus Persekutuan Gereja Gereja Indonesia Wilayah (PGIW) Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> terus meningkatkan peran dalam pembangunan masyarakat, khususnya dalam meningkatkan kesejahteraan masyarakat <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>.</p>\r\n\r\n<p>Hal tersebut disampaikan <a href=\"https://jambi.tribunnews.com/tag/sekda-sudirman\">Sekda&nbsp;Sudirman</a> pada Pelantikan Majelis Pengurus Harian (MPH) PGIW Provinsi <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a> Periode 2021-2026, bertempat di Auditorium Rumah Dinas Gubernur <a href=\"https://jambi.tribunnews.com/tag/jambi\">Jambi</a>, Jum&rsquo;at (19/08/2022).</p>\r\n\r\n<p><br />\r\n<br />\r\nArtikel ini telah tayang di <a href=\"https://\">TribunJambi.com</a> dengan judul Sekda Sudirman Harap PGIW Jambi Turut Berkontribusi Tingkatkan Kesejahteraan Masyarakat, <a href=\"https://jambi.tribunnews.com/2022/08/21/sekda-sudirman-harap-pgiw-jambi-turut-berkontribusi-tingkatkan-kesejahteraan-masyarakat\">https://jambi.tribunnews.com/2022/08/21/sekda-sudirman-harap-pgiw-jambi-turut-berkontribusi-tingkatkan-kesejahteraan-masyarakat</a>.<br />\r\n&nbsp;</p>\r\n', 'Sekda-sudirman-yaa-pgiw.jpg', 'Udin Kacang');
 
 -- --------------------------------------------------------
 
@@ -74,6 +74,7 @@ INSERT INTO `berita` (`id`, `tgl`, `judul`, `isi`, `gambar`, `nama`) VALUES
 CREATE TABLE `dokumen` (
   `id` int(11) NOT NULL,
   `tahun` varchar(4) NOT NULL,
+  `kategori` varchar(100) NOT NULL,
   `keterangan` text NOT NULL,
   `namafile` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
@@ -82,58 +83,11 @@ CREATE TABLE `dokumen` (
 -- Dumping data for table `dokumen`
 --
 
-INSERT INTO `dokumen` (`id`, `tahun`, `keterangan`, `namafile`) VALUES
-(1, '2018', 'PERDA NO 7 TAHUN 2018', 'PERDA-NO-7-TAHUN-2018.pdf'),
-(2, '2018', 'PERDA TTG PERUBAHAN APBD 2018', 'PERDA-TTG-PERUBAHAN-APBD-2018.pdf'),
-(3, '2018', 'PERWAKO PENJABARAN APBD TA 2018', 'PERWAKO-PENJABARAN-APBD-TA-2018.pdf'),
-(4, '2018', 'PERWAKO PENJABARAN PERUBAHAN 2018 APBD-P', 'PERWAKO-PENJABARAN-PERUBAHAN-2018-APBD-P.pdf'),
-(5, '2018', 'CATATAN ATAS LAPORAN KEUANGAN 2018', 'CATATAN-ATAS-LAPORAN-KEUANGAN-2018.pdf'),
-(6, '2018', 'LAPORAN ARUS KAS 2018', 'LAPORAN-ARUS-KAS-2018.pdf'),
-(7, '2018', 'LAPORAN OPERASIONAL 2018', 'LAPORAN-OPERASIONAL-2018.pdf'),
-(8, '2018', 'LAPORAN PERUBAHAN EKUITAS 2018', 'LAPORAN-PERUBAHAN-EKUITAS-2018.pdf'),
-(9, '2018', 'LPSAL 2018', 'LPSAL-2018.pdf'),
-(10, '2018', 'LRA 2018', 'LRA-2018.pdf'),
-(11, '2018', 'NERACA 2018', 'NERACA-2018.pdf'),
-(12, '2018', 'OPINI BPK 2018', 'OPINI-BPK-2018-1.pdf'),
-(13, '2018', 'PERDA PERTANNGUNGJAWABAN APBD 2018', 'PERDA-PERTANNGUNGJAWABAN-APBD-2018.pdf'),
-(14, '2019', 'PERDA NO 8 TAHUN 2019', 'PERDA-NO-8-TAHUN-2019.pdf'),
-(15, '2019', 'PERDA TTG PERUBAHAN APBD 2019', 'PERDA-TTG-PERUBAHAN-APBD-2019.pdf'),
-(16, '2019', 'PERWAKO PENJABARAN APBD TA 2019', 'PERWAKO-PENJABARAN-APBD-TA-2019.pdf'),
-(17, '2019', 'PERWAKO NO 42 TAHUN 2019 TTG PERUBAHAN PERWAKO NO 21 TAHUN 2017 KEBIJAKAN AKUNTANSI PEMKO SUNGAI PENUH', 'PERWAKO-NO-42-TAHUN-2019-TTG-PERUBAHAN-PERWAKO-NO-21-TAHUN-2017-KEBIJAKAN-AKUNTANSI-PEMKO-SUNGAI-PENUH.pdf'),
-(18, '2019', 'PERUBAHAN PERWAKO PENJABARAN 2019', 'PERUBAHAN-PERWAKO-PENJABARAN-2019.pdf'),
-(19, '2019', 'PERUBAHAN KEDUA PERWAKO PENJABARAN 2019', 'PERUBAHAN-KEDUA-PERWAKO-PENJABARAN-2019.pdf'),
-(20, '2019', 'PERWAKO PENJABARAN PERUBAHAN 2019 APBD', 'PERWAKO-PENJABARAN-PERUBAHAN-2019-APBD.pdf'),
-(21, '2019', 'CATATAN ATAS LAPORAN KEUANGAN 2019', 'CATATAN-ATAS-LAPORAN-KEUANGAN-2019.pdf'),
-(22, '2019', 'LAPORAN ARUS KAS TAHUN 2019', 'LAPORAN-ARUS-KAS-TAHUN-2019.pdf'),
-(23, '2019', 'LAPORAN OPERASIONAL TAHUN 2019', 'LAPORAN-OPERASIONAL-TAHUN-2019.pdf'),
-(24, '2019', 'LAPORAN PERUBAHAN SALDO ANGGARAN LEBIH TAHUN 2019', 'LAPORAN-PERUBAHAN-SALDO-ANGGARAN-LEBIH-TAHUN-2019.pdf'),
-(25, '2019', 'LAPORAN REALISASI ANGGARAN TAHUN 2019', 'LAPORAN-REALISASI-ANGGARAN-TAHUN-2019.pdf'),
-(26, '2019', 'NERACA TAHUN 2019', 'NERACA-TAHUN-2019.pdf'),
-(27, '2019', 'OPINI BPK 2019', 'OPINI-BPK-2019.pdf'),
-(28, '2019', 'Laporan Keuangan PDAM Tirta Khayangan 2019_', 'Laporan-Keuangan-PDAM-Tirta-Khayangan-2019_.pdf'),
-(29, '2019', 'PERDA PERTANGGUNGJAWABAN APBD 2019', 'PERDA-PERTANGGUNGJAWABAN-APBD-2019.pdf'),
-(30, '2020', 'PERDA NO 1 TAHUN 2020', 'PERDA-NO-1-TAHUN-2020.pdf'),
-(31, '2020', 'PERDA TTG PERUBAHAN APBD 2020', 'PERDA-TTG-PERUBAHAN-APBD-2020.pdf'),
-(32, '2020', 'KEBIJAKAN UMUM APBD TA 2020', 'KEBIJAKAN-UMUM-APBD-TA-2020.pdf'),
-(33, '2020', 'PRIORITAS DAN PLAFON ANGGARAN TA 2020', 'PRIORITAS-DAN-PLAFON-ANGGARAN-TA-2020.pdf'),
-(34, '2020', 'PERWAKO PENJABARAN APBD TA 2020', 'PERWAKO-PENJABARAN-APBD-TA-2020.pdf'),
-(35, '2020', 'PERWAKO NOMOR 12 TAHUN 2020 TTG PERUBAHAN ATAS PERWAKO SPN NOMOR 45 THN 2019', 'PERWAKO-NOMOR-12-TAHUN-2020-TTG-PERUBAHAN-ATAS-PERWAKO-SPN-NOMOR-45-THN-2019.pdf'),
-(36, '2020', 'PERWAKO NOMOR 19 TAHUN 2020 TTG PERUBAHAN KEDUA APBD 2020', 'PERWAKO-NOMOR-19-TAHUN-2020-TTG-PERUBAHAN-KEDUA-APBD-2020.pdf'),
-(37, '2020', 'Perwako No 23 TAhun 2020 Perubahan Ketiga Penjabaran APBDP 2020', 'Perwako-No-23-TAhun-2020-Perubahan-Ketiga-Penjabaran-APBDP-2020.pdf'),
-(38, '2020', 'PERWAKO NOMOR 27 TH 2020 TTG Penjabaran APBDP KE EMPAT', 'PERWAKO-NOMOR-27-TH-2020-TTG-Penjabaran-APBDP-KE-EMPAT.pdf'),
-(39, '2020', '1 PERWAKO NOMOR 31 TH 2020 TTG Penjabaran APBDP KELIMA TA 2020', '1-PERWAKO-NOMOR-31-TH-2020-TTG-Penjabaran-APBDP-KELIMA-TA-2020.pdf'),
-(40, '2020', 'PERWAKO NO 45 Tahun 2020 ttg Perubahan ke enam Penjabaran APBDP TA 2020', 'PERWAKO-NO-45-Tahun-2020-ttg-Perubahan-ke-enam-Penjabaran-APBDP-TA-2020.pdf'),
-(41, '2020', 'PERWAKO NOMOR 47 TH 2020 TTG Perubahan ke 7 Penjabaran APBDP 2020', 'PERWAKO-NOMOR-47-TH-2020-TTG-Perubahan-ke-7-Penjabaran-APBDP-2020.pdf'),
-(42, '2020', 'PERWAKO NOMOR 48 TH 2020 TTG Perubahan ke 8 Penjabaran APBDP 2020', 'PERWAKO-NOMOR-48-TH-2020-TTG-Perubahan-ke-8-Penjabaran-APBDP-2020.pdf'),
-(43, '2020', 'CALK AUDITED KOTA SUNGAI PENUH 2020', 'CALK-AUDITED-KOTA-SUNGAI-PENUH-2020.pdf'),
-(44, '2020', 'NERACA 2020', 'NERACA-2020.pdf'),
-(45, '2020', 'LO 2020', 'LO-2020.pdf'),
-(46, '2020', 'LPE 2020', 'LPE-2020.pdf'),
-(47, '2020', 'LPSAL 2020', 'LPSAL-2020.pdf'),
-(48, '2020', 'LRA 2020', 'LRA-2020.pdf'),
-(49, '2020', 'OPINI BPK 2020', 'OPINI-BPK-2020-1.pdf'),
-(50, '2020', 'Laporan Keuangan PDAM Tirta Khayangan 2020', 'Laporan-Keuangan-PDAM-Tirta-Khayangan-2020.pdf'),
-(51, '2020', 'PERDA PERTANGGUNGJAWABAN APBD 2020', 'PERDA-PERTANGGUNGJAWABAN-APBD-2020.pdf');
+INSERT INTO `dokumen` (`id`, `tahun`, `kategori`, `keterangan`, `namafile`) VALUES
+(1, '2022', 'Mancing', '1 PERWAKO NOMOR 31 TH 2020 TTG Penjabaran APBDP KELIMA TA 2020', '1-PERWAKO-NOMOR-31-TH-2020-TTG-Penjabaran-APBDP-KELIMA-TA-2020.pdf'),
+(2, '2022', 'Mancing', 'CALK AUDITED KOTA SUNGAI PENUH 2020', 'CALK-AUDITED-KOTA-SUNGAI-PENUH-2020.pdf'),
+(3, '2018', 'Koceng', 'CATATAN ATAS LAPORAN KEUANGAN 2018', 'CATATAN-ATAS-LAPORAN-KEUANGAN-2018.pdf'),
+(4, '2022', 'Koceng', 'LPE 2020', 'LPE-2020.pdf');
 
 -- --------------------------------------------------------
 
@@ -144,6 +98,7 @@ INSERT INTO `dokumen` (`id`, `tahun`, `keterangan`, `namafile`) VALUES
 CREATE TABLE `foto` (
   `id` int(11) NOT NULL,
   `tgl` varchar(10) NOT NULL,
+  `kegiatan` text NOT NULL,
   `namafile` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
@@ -151,15 +106,20 @@ CREATE TABLE `foto` (
 -- Dumping data for table `foto`
 --
 
-INSERT INTO `foto` (`id`, `tgl`, `namafile`) VALUES
-(30, '18-08-2022', '6.jpg'),
-(29, '18-08-2022', '5.jpg'),
-(28, '18-08-2022', '4.jpg'),
-(26, '18-08-2022', '2.jpg'),
-(27, '18-08-2022', '3.jpg'),
-(25, '18-08-2022', '1.jpg'),
-(31, '18-08-2022', '7.jpg'),
-(32, '18-08-2022', '8.jpg');
+INSERT INTO `foto` (`id`, `tgl`, `kegiatan`, `namafile`) VALUES
+(38, '24-08-2022', 'Mancing Mania', 'IMG_20210725_102328.jpg'),
+(37, '24-08-2022', 'Mancing Mania', 'f7d18430-8ae9-4c47-9f8f-25f3daa75b70_169.jpeg'),
+(36, '24-08-2022', 'Mancing Mania', '5d3d6cc483aed.jpg'),
+(39, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '1.jpg'),
+(40, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '2.jpg'),
+(41, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '3.jpg'),
+(42, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '4.jpg'),
+(43, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '5.jpg'),
+(44, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '6.jpg'),
+(45, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '7.jpg'),
+(46, '24-08-2022', 'Pelantikan Walikota Sungai Penuh', '8.jpg'),
+(47, '28-08-2022', 'Surfing', 'funny-surfing-surfer-swimmer-wallpaper-preview.jpg'),
+(48, '28-08-2022', 'Surfing', 'istockphoto-1131628989-612x612.jpg');
 
 -- --------------------------------------------------------
 
@@ -170,17 +130,66 @@ INSERT INTO `foto` (`id`, `tgl`, `namafile`) VALUES
 CREATE TABLE `instansi` (
   `id` int(11) NOT NULL,
   `nama` text NOT NULL,
+  `kepala` varchar(100) NOT NULL,
+  `alamat` text NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `wa` varchar(15) NOT NULL,
   `fb` varchar(100) NOT NULL,
   `ig` varchar(100) NOT NULL,
-  `tw` varchar(100) NOT NULL
+  `tw` varchar(100) NOT NULL,
+  `fotokepala` varchar(100) NOT NULL,
+  `logo` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `instansi`
 --
 
-INSERT INTO `instansi` (`id`, `nama`, `fb`, `ig`, `tw`) VALUES
-(3, 'Mulung International', 'https://www.facebook.com/stenly.andika24', 'https://www.instagram.com/rainych_ran/', '');
+INSERT INTO `instansi` (`id`, `nama`, `kepala`, `alamat`, `email`, `wa`, `fb`, `ig`, `tw`, `fotokepala`, `logo`) VALUES
+(7, 'Peternakan Lele Gembira', 'Oki Noza Putra', 'Jl. Yos Sudarso No.2 Kota Sungai Penuh', 'ternaklelegembira@gmail.com', '081293829109', 'www.facebook.com/ternak.lele.gembira', 'https://www.instagram.com/ternak_lele_gembira/', 'www.twitter.com/ternak.lele', 'adolf-hitler_16911.jpeg', 'pngwing_com(1).png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kepuasan`
+--
+
+CREATE TABLE `kepuasan` (
+  `id` int(11) NOT NULL,
+  `sp` int(11) NOT NULL,
+  `p` int(11) NOT NULL,
+  `cp` int(11) NOT NULL,
+  `kp` int(11) NOT NULL,
+  `tp` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kepuasan`
+--
+
+INSERT INTO `kepuasan` (`id`, `sp`, `p`, `cp`, `kp`, `tp`) VALUES
+(1, 87, 70, 80, 23, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pelayanan`
+--
+
+CREATE TABLE `pelayanan` (
+  `id` int(11) NOT NULL,
+  `jenis` text NOT NULL,
+  `standar` text NOT NULL,
+  `gambar` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pelayanan`
+--
+
+INSERT INTO `pelayanan` (`id`, `jenis`, `standar`, `gambar`) VALUES
+(1, 'PELAYANAN PENDAFTARAN', '<p><strong>A. Persyaratan Pelayanan</strong></p>\r\n\r\n<p>Pengguna layanan (Pasien) datang dengan membawa</p>\r\n\r\n<ul>\r\n	<li>Kartu identitas : KTP,SIM, KK, Kartu pelajar (Pasien baru)</li>\r\n	<li>Kartu pendaftaran pasien (pasien lama)</li>\r\n	<li>Kartu jaminan kesehatan (jika ada)</li>\r\n</ul>\r\n\r\n<p><strong>B. Sistem, Mekanisme dan Prosedur</strong></p>\r\n\r\n<p>1. Pasien baru</p>\r\n\r\n<ul>\r\n	<li>Pasien datang</li>\r\n	<li>Pasien melakukan pendaftaran melalui petugas informasi dibagian pendaftaran dengan menunjukkan kartu identitas dan kartu jaminan (jika ada) untuk mendapatkan nomor antrian</li>\r\n	<li>Pasien menunggu panggilan petugas pendaftaran</li>\r\n	<li>Petugas pendaftaran melakukan identifikasi poli tujuan pasien</li>\r\n	<li>Pasien menunggu panggilan poli</li>\r\n</ul>\r\n\r\n<p>2. Pasien lama</p>\r\n\r\n<ul>\r\n	<li>Pasien datang</li>\r\n	<li>Pasien melakukan pendaftaran melalui petugas informasi dibagian pendaftaran dengan menunjukkan kartu berobat pasien dan kartu jaminan (jika ada) untuk mendapatkan nomor antrian</li>\r\n	<li>Pasien menunggu panggilan petugas pendaftaran</li>\r\n	<li>Petugas pendaftaran melakukan identifikasi poli tujuan pasien</li>\r\n	<li>Pasien menunggu panggilan poli</li>\r\n</ul>\r\n\r\n<p><img alt=\"alur pelayanan pendaftaran\" src=\"http://drive.google.com/uc?export=view&amp;id=1AieRrtOmfzpjYnPB-w9wosv1m-rqdVkU\" /></p>\r\n\r\n<p><strong>C. Jangka Waktu Pelayanan /Jam Pelayanan</strong></p>\r\n\r\n<ul>\r\n	<li>Pasien baru : 8 Menit</li>\r\n	<li>Pasien lama : 4 menit&nbsp;</li>\r\n	<li>Senin &ndash; kamis : 08.00 &ndash; 13.30 WIB</li>\r\n	<li>Jumat : 08.00 - 11.00 WIB</li>\r\n	<li>Sabtu : 08.00 - 12.30 WIB</li>\r\n</ul>\r\n\r\n<p><strong>D. Biaya/Tarif</strong></p>\r\n\r\n<ul>\r\n	<li>Gratis</li>\r\n</ul>\r\n\r\n<p><strong>E. Produk Pelayanan&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>\r\n\r\n<ul>\r\n	<li>Pendaftaran pasien</li>\r\n	<li>Pelayanan rekam medis pasien</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>F.&nbsp;Penanganan Aduan, Saran Masukkan dan Informasi</strong></p>\r\n\r\n<ul>\r\n	<li>Kotak Saran</li>\r\n	<li>Web SP4N-LAPOR!: &nbsp;<a href=\"http://www.lapor.go.id\" target=\"_blank\">www.lapor.go.id</a></li>\r\n	<li>Web Puskesmas: <a href=\"http://pkmsekernanilir.muarojambikab.go.id\" target=\"_blank\">pkmsekernanilir.muarojambikab.go.id</a></li>\r\n	<li>Nomor Handphone: 089624600603</li>\r\n	<li>Email : puskesmas.sekernan@gmail.com</li>\r\n	<li>Alamat: Jl. Lintas Timur Desa Tunas Mudo Kec. Sekernan Kab. Muaro Jambi Kode Pos. 36364</li>\r\n</ul>\r\n', 'kisspng-health-uptd-gundih-logo-puskesmas-cdr-cdr-5abe4dd0b6b764_55497548152242120074841.png'),
+(2, 'PELAYANAN UMUM', '<h2>Pelayanan Umum</h2>\r\n\r\n<p><strong>A. Persyaratan Pelayanan&nbsp; </strong></p>\r\n\r\n<ul>\r\n	<li>Tersedianya Rekam Medis pasien</li>\r\n</ul>\r\n\r\n<p><strong>B. Sistem, Mekanisme dan Prosedur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>\r\n\r\n<p><img alt=\"alur pelayanan umum\" src=\"http://drive.google.com/uc?export=view&amp;id=134N_ZKWJD6O8fK-v5mv_wgHOMoE-M5XS\" /></p>\r\n\r\n<ol>\r\n	<li>Petugas memanggil pasien sesuai nomor antrian</li>\r\n	<li>Petugas memastikan identitas pasien berdasarkan rekam medis</li>\r\n	<li>Petugas melakukan anamnesis</li>\r\n	<li>Petugas melakukan pengukuran vital sign</li>\r\n	<li>Petugas melakukan pemeriksaan/tindakan sesuai prosedur</li>\r\n	<li>Petugas menetukan diagnosis</li>\r\n	<li>Petugas memberikan terapi/tindak lanjut yang sesuai</li>\r\n</ol>\r\n\r\n<p>Jika memerlukan konsultasi/pemeriksaan lanjut:</p>\r\n\r\n<ol>\r\n	<li>\r\n	<p>Rujuk internal: konsultasi antar poli/ruangan (Poli KIA, Gizi, Gigi, Labor, sanitasi)</p>\r\n	</li>\r\n	<li>\r\n	<p>Rujuk eksternal: pemeriksaan Lanjutan ke Rumah Sakit.</p>\r\n	</li>\r\n</ol>\r\n\r\n<p><strong>C. Jangka Waktu Pelayanan /Jam Pelayanan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>\r\n\r\n<ul>\r\n	<li>Konsultasi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 5 Menit</li>\r\n	<li>Rujukan&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 5 Menit</li>\r\n	<li>Kir Dokter&nbsp;&nbsp;&nbsp; &nbsp; : 15 Menit</li>\r\n	<li>Senin &ndash; kamis &nbsp;&nbsp;&nbsp;&nbsp; : 08.00 &ndash; 13.30 WIB</li>\r\n	<li>Jumat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 08.00 - 11.00 WIB</li>\r\n	<li>Sabtu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 08.00 - 12.30 WIB</li>\r\n</ul>\r\n\r\n<p><strong>D.&nbsp;Biaya/Tarif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>\r\n\r\n<ol>\r\n	<li>Pasien Umum : sesuai dengan peraturan Bupati Muaro Jambi No: 4 Tahun 2020 Tentang perubahan Tarif Retribusi Jasa Umum Pada Peraturan Daerah Kabupaten Muaro Jambi</li>\r\n	<li>Pasien JKN sesuai dengan Permenkes 21 Tahun 2016 tentang standar tarif JKN</li>\r\n</ol>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>No</th>\r\n			<th>Jenis Pelayanan</th>\r\n			<th>Jumlah</th>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>&nbsp;</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>1</td>\r\n			<td>Pelayanan Rawat Jalan</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>a</td>\r\n			<td>Rawat Jalan Umum</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>3. Tindakan medis ringan</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>a. Jahit luka/ Jahitan</td>\r\n			<td>Rp25,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>b. Jahit luka (jahitan ke- 2 dst/Jahitan)</td>\r\n			<td>Rp5,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>c. Pasang kateter</td>\r\n			<td>Rp70,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>d. Pasang infus</td>\r\n			<td>Rp55,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>e. Injeksi/ Kali</td>\r\n			<td>Rp13,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>f. Up infus</td>\r\n			<td>Rp5,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>4. Tindakan medis khusus</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>a. Sirkumsisi (sunat anak laki- laki)</td>\r\n			<td>Rp200,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>b. Eksplorasi benda asing</td>\r\n			<td>Rp25,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>c. Insisi abses</td>\r\n			<td>Rp35,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>d. Operasi kecil</td>\r\n			<td>Rp100,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>5. Tindakan perawatan lanjutan</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>a. Perawatan luka kecil</td>\r\n			<td>Rp15,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>b. Angkat jahitan (up heacting)</td>\r\n			<td>Rp15,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>c. Extraksi (Pembersihan kotoran telinga)</td>\r\n			<td>Rp25,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>6. Pelayanan khusus</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>a. Surat keterangan sehat (SKBS)</td>\r\n			<td>Rp15,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>b. Surat keterangan kelahiran</td>\r\n			<td>Rp15,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>c. Surat keterangan sakit</td>\r\n			<td>Rp5,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>d. Surat keterangan kematian</td>\r\n			<td>Rp20,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>e. Visum et repertum</td>\r\n			<td>Rp50,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>e</td>\r\n			<td>Pelayanan Ambulance</td>\r\n			<td>&nbsp;</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>a. Dalam kota &lt;10km jauh/ dekat</td>\r\n			<td>Rp60,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>b. Luar kota antara 10km s/d 100km/km pp</td>\r\n			<td>Rp8,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>c. Luar kota antara 101km s/d 500km/km pp</td>\r\n			<td>Rp8,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>d. Luar kota &gt;500km/km pp</td>\r\n			<td>Rp8,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>e. Jasa perawat pendamping pasien /org (pp 4&lt;12 jam)</td>\r\n			<td>Rp100,000</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>f. Jasa perawat pendamping pasien /org (pp&lt;12 jam)</td>\r\n			<td>Rp200,000</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p><strong>E.&nbsp; Produk Pelayanan</strong></p>\r\n\r\n<ul>\r\n	<li>Konsultasi Dokter,</li>\r\n	<li>Pemeriksaan Medis,</li>\r\n	<li>Tindakan Medis,</li>\r\n	<li>Surat Rujukan,</li>\r\n	<li>Surat Keterangan Kesehatan.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>F.&nbsp;Penanganan Aduan, Saran Masukkan dan Informasi</strong></p>\r\n\r\n<ul>\r\n	<li>Kotak Saran</li>\r\n	<li>Web SP4N-LAPOR!: &nbsp;<a href=\"http://www.lapor.go.id\" target=\"_blank\">www.lapor.go.id</a></li>\r\n	<li>Web Puskesmas: <a href=\"http://pkmsekernanilir.muarojambikab.go.id\" target=\"_blank\">pkmsekernanilir.muarojambikab.go.id</a></li>\r\n	<li>Nomor Handphone: 0813 6892 1832</li>\r\n	<li>Email : puskesmas.sekernan@gmail.com</li>\r\n	<li>Alamat: Jl. Lintas Timur Desa Tunas Mudo Kec. Sekernan Kab. Muaro Jambi Kode Pos. 36364</li>\r\n</ul>\r\n', 'pngwing_com(1).png');
 
 -- --------------------------------------------------------
 
@@ -223,6 +232,28 @@ INSERT INTO `pengumuman` (`id`, `judul`, `namafile`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pesan`
+--
+
+CREATE TABLE `pesan` (
+  `id` int(11) NOT NULL,
+  `tgl` varchar(10) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `pesan` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pesan`
+--
+
+INSERT INTO `pesan` (`id`, `tgl`, `nama`, `email`, `pesan`) VALUES
+(7, '28-08-2022', 'Budi Batman', 'budibatman@gmail.com', 'Recursion occurs when a thing is defined in terms of itself or of its type. Recursion is used in a variety of disciplines ranging from linguistics to logic. The most common application of recursion is in mathematics and computer science, where a function being defined is applied within its own definition.                                    '),
+(8, '28-08-2022', 'Udin Richard', 'udin_r@gmail.com', 'A regular expression is a sequence of characters that specifies a search pattern in text. Usually such patterns are used by string-searching algorithms for \"find\" or \"find and replace\" operations on strings, or for input validation. Regular expression techniques are developed in theoretical computer science and formal language theory.                                    ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sejarah`
 --
 
@@ -236,7 +267,7 @@ CREATE TABLE `sejarah` (
 --
 
 INSERT INTO `sejarah` (`id`, `sejarah`) VALUES
-(5, '<p><strong>Adolf Hitler</strong> (<small>bahasa Jerman:&nbsp;</small><a href=\"https://id.wikipedia.org/wiki/Wikipedia:IPA_untuk_bahasa_Jerman\">[ˈadɔlf ˈhɪtlɐ]</a>; 20 April 1889&nbsp;&ndash;&nbsp;30 April 1945) adalah seorang politisi <a href=\"https://id.wikipedia.org/wiki/Jerman\">Jerman</a> dan ketua <a href=\"https://id.wikipedia.org/wiki/Partai_Nazi\">Partai Nazi</a> (<a href=\"https://id.wikipedia.org/wiki/Bahasa_Jerman\">bahasa Jerman</a>: <em>Nationalsozialistische Deutsche Arbeiterpartei</em> (NSDAP); Partai Pekerja Jerman Sosialis Nasional) kelahiran <a href=\"https://id.wikipedia.org/wiki/Austria\">Austria</a>. Ia menjabat sebagai <a href=\"https://id.wikipedia.org/wiki/Kanselir_Jerman#Kanselir_Reich_Ketiga_(1933–1945)\">Kanselir Jerman</a> sejak 1933 sampai 1945 dan <a href=\"https://id.wikipedia.org/wiki/Diktator\">diktator</a> <a href=\"https://id.wikipedia.org/wiki/Jerman_Nazi\">Jerman Nazi</a> (bergelar <a href=\"https://id.wikipedia.org/wiki/F%C3%BChrer\">F&uuml;hrer und Reichskanzler</a>) mulai tahun 1934 sampai 1945. Hitler menjadi tokoh utama Jerman Nazi, <a href=\"https://id.wikipedia.org/wiki/Teater_Eropa_pada_Perang_Dunia_II\">Perang Dunia II di Eropa</a>, dan <a href=\"https://id.wikipedia.org/wiki/Holocaust\">Holocaust</a>.</p>\r\n\r\n<p>Hitler adalah veteran <a href=\"https://id.wikipedia.org/wiki/Perang_Dunia_I\">Perang Dunia I</a> dengan banyak gelar. Ia bergabung dengan <a href=\"https://id.wikipedia.org/wiki/Partai_Pekerja_Jerman\">Partai Pekerja Jerman</a> (pendahulu NSDAP) pada tahun 1919, dan menjadi ketua NSDAP tahun 1921. Tahun 1923, ia melancarkan <a href=\"https://id.wikipedia.org/wiki/Kudeta\">kudeta</a> di Munich yang dikenal dengan peristiwa <a href=\"https://id.wikipedia.org/wiki/Beer_Hall_Putsch\">Beer Hall Putsch</a>. Kudeta yang gagal tersebut berujung dengan ditahannya Hitler. Di penjara, Hitler menulis memoarnya, <em><a href=\"https://id.wikipedia.org/wiki/Mein_Kampf\">Mein Kampf</a></em> (<em>Perjuanganku</em>). Setelah bebas tahun 1924, Hitler mendapat dukungan rakyat dengan mengecam <a href=\"https://id.wikipedia.org/wiki/Perjanjian_Versailles\">Perjanjian Versailles</a> dan menjunjung <a href=\"https://id.wikipedia.org/wiki/Pan-Jermanisme\">Pan-Jermanisme</a>, <a href=\"https://id.wikipedia.org/wiki/Antisemitisme\">antisemitisme</a>, dan <a href=\"https://id.wikipedia.org/wiki/Anti-komunisme\">anti-komunisme</a> melalui pidatonya yang karismatik dan <a href=\"https://id.wikipedia.org/wiki/Propaganda_Nazi\">propaganda Nazi</a>. Setelah ditunjuk sebagai kanselir pada tahun 1933, ia mengubah <a href=\"https://id.wikipedia.org/wiki/Republik_Weimar\">Republik Weimar</a> menjadi <a href=\"https://id.wikipedia.org/wiki/Jerman_Nazi\">Reich Ketiga</a>, sebuah kediktatoran <a href=\"https://id.wikipedia.org/wiki/Negara_satu_partai\">satu partai</a> yang didasarkan pada ideologi Nazisme yang <a href=\"https://id.wikipedia.org/wiki/Totalitarianisme\">totalitarian</a> dan <a href=\"https://id.wikipedia.org/wiki/Autokrasi\">autokrasi</a>.</p>\r\n');
+(5, '<p>asdasdas</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -311,6 +342,18 @@ ALTER TABLE `instansi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kepuasan`
+--
+ALTER TABLE `kepuasan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pelayanan`
+--
+ALTER TABLE `pelayanan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `penghargaan`
 --
 ALTER TABLE `penghargaan`
@@ -320,6 +363,12 @@ ALTER TABLE `penghargaan`
 -- Indexes for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pesan`
+--
+ALTER TABLE `pesan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -354,18 +403,30 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `dokumen`
 --
 ALTER TABLE `dokumen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `foto`
 --
 ALTER TABLE `foto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `instansi`
 --
 ALTER TABLE `instansi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `kepuasan`
+--
+ALTER TABLE `kepuasan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pelayanan`
+--
+ALTER TABLE `pelayanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -379,6 +440,12 @@ ALTER TABLE `penghargaan`
 --
 ALTER TABLE `pengumuman`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pesan`
+--
+ALTER TABLE `pesan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sejarah`

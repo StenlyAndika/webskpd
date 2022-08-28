@@ -49,7 +49,7 @@
                 -webkit-text-stroke: 0.08px #fff !important;
             }
         </style>
-        <a class="navbar-brand" href="<?= base_url() ?>">
+        <a class="navbar-brand" style="padding-left: 15px;" href="<?= base_url() ?>">
         <table>
             <tr>
                 <td rowspan="2">
@@ -75,7 +75,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="ti-menu"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav" style="padding-right: 15px;">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>">Beranda</a>

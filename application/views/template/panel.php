@@ -5,23 +5,11 @@
         </div>
         <div class="card-body">
             <?php if(count($instansi)<=0) : ?>
-                <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" width="250px"></a>
+                <div><img style="object-fit: cover; height: 370px; width: 250px; overflow:hidden;" src="<?= base_url('./assets/img/tablogo.png') ?>" alt="footer-logo"></div>
             <?php else: ?>
-                <a href="#"><img src="<?= base_url('./upload/fotokepala/').$instansi[0]['fotokepala'] ?>" alt="footer-logo" width="250px"></a>
+                <div><img style="object-fit: cover; height: 370px; width: 250px; overflow:hidden;" src="<?= base_url('./upload/fotokepala/').$instansi[0]['fotokepala'] ?>" alt="footer-logo"></div>
                 <h5 style="font-size: 14px;" class="ccz font-weight-bold mb-4 mt-2"><?= strtoupper($instansi[0]['kepala']) ?></h5>
             <?php endif; ?>
-        </div>
-    </div>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold">PENGUMUMAN</h6>
-        </div>
-        <div class="card-body">
-            <?php
-                foreach($pengumuman as $row) :
-            ?>
-            <a href=""><?= $row['judul'] ?></a>
-            <?php endforeach; ?>
         </div>
     </div>
     <div class="card shadow mb-4">

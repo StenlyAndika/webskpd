@@ -14,8 +14,5 @@
                 </ul>
             </div>
         </div>
-        <div class="cont">
-            <h5><a href="" class="font-weight-bold text-white">Kontak Kami</a></h5>
-        </div>
     </div>
 </div>
