@@ -1,4 +1,4 @@
-<section class="section page-title">
+<section class="col-md-9 section page-title">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-10 order-1 order-md-1 text-center text-md-left pop-right">
@@ -7,9 +7,9 @@
                         color: #000;
                     }
                     .aas {
-                        color: #fff;
+                        color: #2e7eed;
                         font-size: 40px;
-                        -webkit-text-stroke: 2px #2e7eed;
+                        /* -webkit-text-stroke: 2px #2e7eed; */
                     }
                     .ffd {
                         color: #fff !important;
@@ -65,7 +65,6 @@
         </div>
     </div>
 	<div class="container">
-        <h4 class="font-weight-bold mb-4 mt-2 aaz">Berita Terbaru</h4>
         <div class="owl-carousel owl-theme">
             <?php foreach ($berita as $row) : ?>
                 <article class="post-sm">
@@ -93,25 +92,19 @@
                             <?php
                                 $string = strip_tags($row['isi']);
                                 if (strlen($string) > 150) {
-                                
                                     // truncate string
                                     $stringCut = substr($string, 0, 150);
                                     $endPoint = strrpos($stringCut, ' ');
-                                
                                     //if the string doesn't contain any space then it will cut without word basis.
                                     $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                     $string .= '...';
                                 }
                                 echo $string;
                             ?>
-                            </p>
+                        </p>
                     </div>
                 </article>
             <?php endforeach; ?>
         </div>
 	</div>
-    <div class="wave" id="wave1" style="--i:1;"></div>
-    <div class="wave" id="wave2" style="--i:2;"></div>
-    <div class="wave" id="wave3" style="--i:3;"></div>
-    <div class="wave" id="wave4" style="--i:4;"></div>
 </section>

@@ -44,6 +44,7 @@
 			}
 
 			$this->db->set("tahun", $this->input->post('tahun'));
+			$this->db->set("kategori", $this->input->post('kategori'));
 			$this->db->set("keterangan", $this->input->post('keterangan'));
 			$this->db->insert('dokumen');
 		}
@@ -67,6 +68,7 @@
 			}
 			
 			$this->db->set("tahun", $this->input->post('tahun'));
+			$this->db->set("kategori", $this->input->post('kategori'));
 			$this->db->set("keterangan", $this->input->post('keterangan'));
 			$this->db->where('id', $this->input->post('id'));
 			$this->db->update('dokumen');

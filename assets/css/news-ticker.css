@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+a {
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.ticker {
+	display: flex;
+	padding: 100px 0;
+	flex-wrap: wrap;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.news {
+	width: 80%;
+	background: #f8f8f8;
+	padding: 0 2%
+}
+.title {
+	width: 20%;
+	text-align: center;
+	background: #3A5BA0;
+	position: relative
+}
+.title h5 {
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 6% 0;
+}
+
+.marquee {
+	margin-top: 13px;
+    overflow: hidden;
+    color: rgb(202, 255, 195);
+}

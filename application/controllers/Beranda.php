@@ -29,7 +29,6 @@ class Beranda extends CI_Controller {
 			$data['berita'] = $this->berita->getAllBerita();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('landing/berita.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}
@@ -46,7 +45,6 @@ class Beranda extends CI_Controller {
 			$data['berita2'] = $this->berita->getBeritaRandom();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('landing/detail_berita.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}
@@ -62,7 +60,6 @@ class Beranda extends CI_Controller {
 			$data['sejarah'] = $this->sejarah->getAllSejarah();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('menu-profil/sejarah.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}
@@ -78,7 +75,6 @@ class Beranda extends CI_Controller {
 			$data['visimisi'] = $this->visimisi->getAllVisiMisi();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('menu-profil/visimisi.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}
@@ -94,7 +90,6 @@ class Beranda extends CI_Controller {
 			$data['struktur'] = $this->struktur->getAllStruktur();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('menu-profil/struktur.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}
@@ -122,7 +117,6 @@ class Beranda extends CI_Controller {
 			$this->load->view('template-admin/header', $data);
 			$this->load->view('template-admin/footer');
 		} else {
-			$data['dokumen'] = $this->dokumen->getAllDokumenSort();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('menu-informasi/dokumen.php', $data);
 			$this->load->view('template/footer.php');
@@ -140,7 +134,6 @@ class Beranda extends CI_Controller {
 			$data['pengumuman'] = $this->pengumuman->getAllPengumuman();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('landing/pengumuman.php', $data);
-			$this->load->view('template/scroll.php');
 			$this->load->view('template/footer.php');
 		}
 	}

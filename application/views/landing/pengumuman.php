@@ -1,4 +1,4 @@
-<section class="section">
+<section class="col-md-9 section">
     <div class="container">
         <br>
         <h2 class="font-weight-bold mb-2" style="text-align: left;">Pengumuman</h2>

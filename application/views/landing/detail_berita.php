@@ -31,17 +31,16 @@
 <!--======================================
 =            Related Article            =
 =======================================-->
-<section class="section related-articles bg-gray">
+<section class="col-md-9 section related-articles bg-gray">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 title">
-				<!-- Section Title -->
 				<h2>Baca juga</h2>
 			</div>
 		</div>
 		<div class="row">
             <?php foreach ($berita2 as $row2) : ?>
-			    <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="post-sm">
                         <div class="post-thumb">
                             <a href="<?= base_url() ?>beranda/detail/<?= $row2['id'] ?>"><img class="w-100" src="<?= base_url('./upload/berita/').$row2['gambar'] ?>" alt="Post-Image"></a>

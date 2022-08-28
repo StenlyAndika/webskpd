@@ -23,6 +23,16 @@ html {
   color: #2e7eed;
 }
 
+.custom-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.right-panel {
+  position: relative;
+  /* background-color : #f8f8f8; */
+}
+
 .wave {
   position: absolute;
   /* background-position: center bottom -20px; */
@@ -216,9 +226,9 @@ a:hover {
   background-position: bottom;
 }
 
-.section {
+/* .section {
   padding: 100px 0;
-}
+} */
 
 .section-title {
   text-align: center;
@@ -1898,7 +1908,6 @@ hr {
     height: 350px;
   }
 }
-/*# sourceMappingURL=style.css.map */
 
 .section-title {
   position: relative;

@@ -7,25 +7,7 @@
         position: relative;
     }
 </style>
-<section class="section bg-white gradient-banner" id="visi-misi">
-    <div class="shapes-container">
-        <div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
-        <div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-        <div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
-        <div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-        <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-        <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-        <div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
-        <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
-        <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
-        <div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
-        <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
-        <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
-        <div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-        <div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
-        <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
-        <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
-    </div>
+<section class="col-md-9 section bg-white" id="visi-misi">
     <div class="aac">
         <h2 class="font-weight-bold mb-4" style="text-align: center;">Struktur Organisasi<br>
         <?php if(count($instansi)<=0) : ?>
@@ -47,7 +29,7 @@
         </style>
         <?php foreach ($struktur as $row) : ?>
             <div class="table-responsive asd">
-                <img src="<?= base_url('./upload/struktur/').$row['struktur'] ?>" alt="">
+                <img src="<?= base_url('./upload/struktur/').$row['struktur'] ?>" alt="" width="800px">
             </div>
             <br>
             <p class="mb-2" style="text-align: center; font-size: 36px; font-weight: bold; color: black;">TUGAS DAN FUNGSI</p>

@@ -15,6 +15,11 @@
 								<small class="form-text text-danger"><?= form_error('tahun'); ?></small>
 							</div>
 							<div class="form-group">
+								<label>Kategori</label>
+								<input type="text" class="form-control" name="kategori" value="<?= $dokumen['kategori'] ?>">
+								<small class="form-text text-danger"><?= form_error('kategori'); ?></small>
+							</div>
+							<div class="form-group">
 								<label>Keterangan</label>
 								<input type="text" class="form-control" name="keterangan" value="<?= $dokumen['keterangan'] ?>">
 								<small class="form-text text-danger"><?= form_error('keterangan'); ?></small>
@@ -26,7 +31,7 @@
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>
-								<a class="btn btn-sm btn-success" href="<?= base_url() ?>anggaran">Kembali</a>
+								<a class="btn btn-sm btn-success" href="<?= base_url() ?>dokumen">Kembali</a>
 							</div>
 						</form>
 					</div>

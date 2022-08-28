@@ -7,7 +7,7 @@
 						<strong>TAMBAH DATA</strong>
 					</div>
 					<div class="card-body card-block">
-						<?= form_open_multipart('anggaran/tambah'); ?>
+						<?= form_open_multipart('dokumen/tambah'); ?>
 							<div class="form-group">
 								<label>Tahun</label>
 								<input type="text" class="form-control" name="tahun" value="<?= date('Y'); ?>">
@@ -30,7 +30,7 @@
 							</div>
 							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>
-								<a class="btn btn-sm btn-success" href="<?= base_url() ?>anggaran">Kembali</a>
+								<a class="btn btn-sm btn-success" href="<?= base_url() ?>dokumen">Kembali</a>
 							</div>
 						</form>
 					</div>

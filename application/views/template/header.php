@@ -24,14 +24,12 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/css/news-ticker.css">
 </head>
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-top">
         <div class="container">
             <style>
-                .menu-border {
-                    -webkit-text-stroke: 0.5px #fff !important;
-                }
                 .acidsa {
                     font-family: "Mistral", sans-serif;
                     font-weight: 500;
@@ -40,7 +38,7 @@
                     position: relative;
                     top: 10px;
                     text-shadow: 0.5px 1px #000;
-                    -webkit-text-stroke: 0.5px #fff !important;
+                    -webkit-text-stroke: 0.3px #fff !important;
                 }
                 .acidsb {
                     font-family: "Poppins", sans-serif;
@@ -81,10 +79,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link menu-border" href="<?= base_url() ?>">Beranda</a>
+                    <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link menu-border dropdown-toggle" href="#" data-toggle="dropdown">Profil Lembaga</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Profil Lembaga</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/sejarah">Sejarah</a></li>
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/visimisi">Visi & Misi</a></li>
@@ -92,19 +90,19 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link menu-border dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?= base_url() ?>beranda/foto">Foto</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-border" href="<?= base_url() ?>beranda/dokumen">Dokumen Publik</a>
+                    <a class="nav-link" href="<?= base_url() ?>beranda/dokumen">Publikasi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-border" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
+                    <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-border" href="<?= base_url() ?>auth">Masuk</a>
+                    <a class="nav-link" href="<?= base_url() ?>auth">Masuk</a>
                 </li>
             </ul>
         </div>
@@ -113,3 +111,24 @@
         <div class="wave" id="wave3" style="--i:3;"></div>
         <div class="wave" id="wave4" style="--i:4;"></div>
     </nav>
+    <style>
+    </style>
+    <div class="row custom-container">
+        <div class="section col-lg-12">
+            <div class="ticker">
+                <div class="title">
+                    <h5>Berita Terkini</h5>
+                </div>
+                <div class="news">
+                    <div class='marquee'>
+                        <ul style="list-style-type: none;">
+                            <li>
+                            <?php foreach ($berita as $row) : ?>
+                                <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><?= $row['judul'] ?>&emsp;&emsp;&emsp;&emsp;</a>
+                            <?php endforeach; ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
