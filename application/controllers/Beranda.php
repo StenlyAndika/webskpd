@@ -194,6 +194,26 @@ class Beranda extends CI_Controller {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->db->get('kepuasan')->result_array();
 			$data['pengumuman'] = $this->pengumuman->getAllPengumuman();
+			$data['keysearch'] = "";
+			$this->load->view('template/header.php', $data);
+			$this->load->view('template/news.php');
+			$this->load->view('menu-informasi/dokumen.php', $data);
+			$this->load->view('template/panel.php');
+			$this->load->view('template/footer.php');
+		}
+    }
+
+	public function cari()
+    {
+		$data['instansi'] =  $this->db->get('instansi')->result_array();
+		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->result_array();
+		if (count($data['admin']) > 0) {
+			$this->load->view('template-admin/header', $data);
+			$this->load->view('template-admin/footer');
+		} else {
+			$data['berita'] = $this->berita->getAllBerita();
+			$data['kepuasan'] =  $this->db->get('kepuasan')->result_array();
+			$data['keysearch'] = $this->input->post('cari');
 			$this->load->view('template/header.php', $data);
 			$this->load->view('template/news.php');
 			$this->load->view('menu-informasi/dokumen.php', $data);

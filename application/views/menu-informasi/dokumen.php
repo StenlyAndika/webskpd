@@ -10,14 +10,26 @@
                             <h4 class="font-weight-bold mb-4 mt-2 aaz">Klik untuk mengunduh dokumen</h4>
                         </div>
                         <div class="col-lg-4">
-                            <input type="text" class="form-control" placeholder="Cari">
+                            <form action="<?= base_url() ?>beranda/cari" method="post">
+                                <input type="text" name="cari" class="form-control" placeholder="Cari" value="<?php if(isset($keysearch)) { echo $keysearch; } ?>">
+                            </form>
                         </div>
                     </div>
                     <?php
-                        $this->db->from('dokumen');
-                        $this->db->order_by("tahun", "desc");
-                        $query = $this->db->get();
-                        $data['dokumen'] = $query->result_array();
+                        if($keysearch != "") {
+                            $this->db->from('dokumen');
+                            $this->db->like('keterangan', $keysearch);
+                            $this->db->or_like('tahun', $keysearch);
+                            $this->db->or_like('kategori', $keysearch);
+                            $query = $this->db->get();
+                            // print_r($query);
+                            $data['dokumen'] = $query->result_array();
+                        } else {
+                            $this->db->from('dokumen');
+                            $this->db->order_by('tahun', 'desc');
+                            $query = $this->db->get();
+                            $data['dokumen'] = $query->result_array();
+                        }
                         
                         $tmptahun = [];
                         $a = 0;
@@ -44,10 +56,20 @@
                                 <tr>
                                 <td colspan="2" class="text-danger text-center font-weight-bold"><?= $rowz; ?></td>
                                 <?php
-                                    $this->db->where('tahun', $rowx);
-                                    $this->db->where('kategori', $rowz);
-                                    $query = $this->db->get('dokumen');
-                                    $data['dokumen'] = $query->result_array();
+                                    if($keysearch != "") {
+                                        $this->db->where('tahun', $rowx);
+                                        $this->db->where('kategori', $rowz);
+                                        $this->db->like('keterangan', $keysearch);
+                                        $this->db->or_like('tahun', $keysearch);
+                                        $this->db->or_like('kategori', $keysearch);
+                                        $query = $this->db->get('dokumen');
+                                        $data['dokumen'] = $query->result_array();
+                                    } else {
+                                        $this->db->where('tahun', $rowx);
+                                        $this->db->where('kategori', $rowz);
+                                        $query = $this->db->get('dokumen');
+                                        $data['dokumen'] = $query->result_array();
+                                    }
                                     foreach ($data['dokumen'] as $row) : ?>
                                         <tr>
                                             <td class="text-center">-</td>
