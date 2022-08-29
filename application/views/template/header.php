@@ -33,24 +33,47 @@
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-top">
         <style>
-            .acidsa {
+            .stroke-single,
+            .stroke-double {
+                position: relative;
+                background: transparent;
+                z-index: 0;
+                color: red;
+                margin-left: 5px;
                 font-family: "Mistral", sans-serif;
                 font-weight: 500;
                 color: #ff0000;
                 font-size: 32px;
                 position: relative;
                 top: 10px;
-                text-shadow: 0.5px 1px #000;
-                -webkit-text-stroke: 0.3px #fff !important;
+            }
+            /* add a single stroke */
+            .stroke-single:before,
+            .stroke-double:before {
+                content: attr(title);
+                position: absolute;
+                -webkit-text-stroke: 0.11em #fff;
+                left: 0;
+                z-index: -1;
+            }
+            /* add a double stroke */
+            .stroke-double:after {
+                content: attr(title);
+                position: absolute;
+                -webkit-text-stroke: 0.25em black;
+                left: 0;
+                z-index: -2;
             }
             .acidsb {
                 font-family: "Poppins", sans-serif;
                 font-weight: bold;
                 color: #00D4FF;
                 font-size: 20px;
+                margin-left: 5px;
+                top: 5px;
                 position: relative;
-                text-shadow: 0.5px 1px #000;
-                -webkit-text-stroke: 0.08px #fff !important;
+                /* text-shadow: 0.5px 1px #000; */
+                -webkit-text-stroke: 1px #fff !important;
             }
         </style>
         <a class="navbar-brand" style="padding-left: 15px;" href="<?= base_url() ?>">
@@ -69,10 +92,10 @@
                 </td>
                 <td>
                     <?php if(count($instansi)<=0) : ?>
-                        <h3 class="acidsa" style="text-align: left;">Instansi Pemerintah</h3>
+                        <h3 class="stroke-double" title="Instansi Pemerintah" style="text-align: left;">Instansi Pemerintah</h3>
                         <h5 class="acidsb" style="text-align: left;">Pemerintah Kota Sungai Penuh</h5>
                     <?php else: ?>
-                        <h3 class="acidsa" style="text-align: left;"><?= $instansi[0]['nama'] ?></h3>
+                        <h3 class="stroke-double" title="<?= $instansi[0]['nama'] ?>" style="text-align: left;"><?= $instansi[0]['nama'] ?></h3>
                         <h5 class="acidsb" style="text-align: left;">Pemerintah Kota Sungai Penuh</h5>
                     <?php endif; ?>
                     </td>
