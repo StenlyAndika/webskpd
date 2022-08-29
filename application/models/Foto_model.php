@@ -23,7 +23,7 @@
 			}
 
 			$config['upload_path']          = './upload/foto/'.$this->input->post('tgl');
-			$config['allowed_types']        = 'gif|jpg|png|jpeg';
+			$config['allowed_types']        = 'jpg|png|jpeg';
 			$this->load->library('upload',$config);
 
 			for($i = 0; $i < count($_FILES['namafile']['name']); $i++)
@@ -50,30 +50,6 @@
 			}
 		}
 
-		public function update()
-		{
-			$upload_image = $_FILES['namafile']['name'];
-
-			if ($upload_image) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/foto/';
-
-				$this->load->library('upload', $config);
-
-				if ($this->upload->do_upload('namafile')) {
-					$new_image = $this->upload->data('file_name');
-					$this->db->set('namafile', $new_image);
-				} else {
-					echo $this->upload->display_errors();
-				}
-			}
-			
-			$this->db->set('tgl', $this->input->post('tgl'));
-			$this->db->set('kegiatan', $this->input->post('kegiatan'));
-			$this->db->where('id', $this->input->post('id'));
-			$this->db->update('foto');
-		}
-		
 		public function delete($id)
 		{
 			$this->db->delete('foto', ['id' => $id]);
