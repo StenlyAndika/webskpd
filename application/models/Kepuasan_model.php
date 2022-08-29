@@ -19,7 +19,6 @@
 			$this->db->set('p', $this->input->post('p'));
 			$this->db->set('cp', $this->input->post('cp'));
 			$this->db->set('kp', $this->input->post('kp'));
-			$this->db->set('tp', $this->input->post('tp'));
 			$this->db->insert('kepuasan');
 		}
 
@@ -29,7 +28,6 @@
 			$this->db->set('p', $this->input->post('p'));
 			$this->db->set('cp', $this->input->post('cp'));
 			$this->db->set('kp', $this->input->post('kp'));
-			$this->db->set('tp', $this->input->post('tp'));
 			$this->db->where('id', $this->input->post('id'));
 			$this->db->update('kepuasan');
 		}

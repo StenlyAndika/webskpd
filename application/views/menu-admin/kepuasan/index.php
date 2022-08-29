@@ -34,7 +34,6 @@
 											<th style="text-align: center;">Memuaskan</th>
 											<th style="text-align: center;">Cukup Memuaskan</th>
 											<th style="text-align: center;">Kurang Kepuasan</th>
-											<th style="text-align: center;">Tidak Kepuasan</th>
 											<th style="text-align: center;">Opsi</th>
 										</tr>
 									</thead>
@@ -46,7 +45,6 @@
 											<td style="text-align: left;"><?= $row['p']; ?></td>
 											<td style="text-align: left;"><?= $row['cp']; ?></td>
 											<td style="text-align: left;"><?= $row['kp']; ?></td>
-											<td style="text-align: left;"><?= $row['tp']; ?></td>
 											<td>
 												<a href="<?= base_url() ?>kepuasan/ubah/<?= $row['id'] ?>" class="btn btn-block btn-sm btn-primary">Ubah</a>
 												<a href="<?= base_url() ?>kepuasan/hapus/<?= $row['id'] ?>" class="btn btn-block btn-sm btn-danger" onclick="return confirm('Hapus data ini?');">Hapus</a>

@@ -30,11 +30,6 @@
 								<small class="form-text text-danger"><?= form_error('kp'); ?></small>
 							</div>
 							<div class="form-group">
-								<label>Tidak Memuaskan (%)</label>
-								<input type="text" class="form-control" name="tp" value="<?= $kepuasan['tp'] ?>">
-								<small class="form-text text-danger"><?= form_error('tp'); ?></small>
-							</div>
-							<div class="form-group">
 								<button type="submit" name="simpan" class="btn btn-sm btn-primary">Submit</button>
 								<a class="btn btn-sm btn-success" href="<?= base_url() ?>kepuasan">Kembali</a>
 							</div>

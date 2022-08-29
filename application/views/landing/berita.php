@@ -119,7 +119,7 @@
                     <div class="card cardx col-lg-12">
                         <img src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5>
+                            <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5></a>
                             <p class="card-text" style="text-align: left;">
                                 <?php
                                     $string = strip_tags($row['isi']);
