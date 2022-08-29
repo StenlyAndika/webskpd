@@ -7,7 +7,11 @@
         <title>Website Resmi Instansi Pemerintah</title>
     <?php else: ?>
         <title>Website Resmi <?= $instansi[0]['nama'] ?></title>
-        <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+        <?php if($instansi[0]['logo'] == null) : ?>
+            <link rel="icon" href="<?= base_url('./assets/img/tablogo.png') ?>">
+        <?php else: ?>
+            <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+        <?php endif; ?>
     <?php endif; ?>
 
     <!-- Favicon -->

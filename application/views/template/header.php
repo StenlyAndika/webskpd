@@ -8,7 +8,11 @@
         <title>Website Resmi Instansi Pemerintah</title>
     <?php else: ?>
         <title>Website Resmi <?= $instansi[0]['nama'] ?></title>
-        <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+        <?php if($instansi[0]['logo'] == null) : ?>
+            <link rel="icon" href="<?= base_url('./assets/img/tablogo.png') ?>">
+        <?php else: ?>
+            <link rel="icon" href="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>">
+        <?php endif; ?>
     <?php endif; ?>
 
     <!-- PLUGINS CSS STYLE -->
@@ -56,7 +60,11 @@
                 <?php if(count($instansi)<=0) : ?>
                     <img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="logo" width="50px">
                 <?php else: ?>
-                    <img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="logo" width="50px">
+                    <?php if($instansi[0]['logo'] == null) : ?>
+                        <img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="logo" width="50px">
+                    <?php else: ?>
+                        <img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="logo" width="50px">
+                    <?php endif; ?>
                 <?php endif; ?>
                 </td>
                 <td>

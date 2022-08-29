@@ -11,7 +11,11 @@
                         <?php if(count($instansi)<=0) : ?>
                             <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="footer-logo" width="150px"></a>
                         <?php else: ?>
-                            <a href="#"><img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="footer-logo" width="150px"></a>
+                            <?php if($instansi[0]['logo'] == null) : ?>
+                                <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="footer-logo" width="150px"></a>
+                            <?php else: ?>
+                                <a href="#"><img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="footer-logo" width="150px"></a>
+                            <?php endif; ?>
                         <?php endif; ?>
                             <ul class="social-icon list-inline">
                                 <li class="list-inline-item">
