@@ -48,7 +48,7 @@
 						<?= form_open_multipart('auth/login'); ?>
 							<input class="form-control main" type="username" name="username" placeholder="Username">
 							<input class="form-control main" type="password" name="password" placeholder="Password">
-							<button type="submit" class="btn btn-main-md">Daftar</button>
+							<button type="submit" class="btn btn-main-md">Masuk</button>
 						</form>
 					</div>
 				</div>

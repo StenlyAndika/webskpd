@@ -33,15 +33,15 @@
                 </div>
                 <h4 class="small font-weight-bold">Memuaskan<span class="float-right">0 %</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">Cukup Memuaskan<span class="float-right">0 %</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">Kurang Memuaskan<span class="float-right">0 %</span></h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             <?php else : ?>
                 <?php if($kepuasan[0]['sp'] == null) : ?>
