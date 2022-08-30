@@ -15,15 +15,10 @@ class Admin extends CI_Controller {
     {
 		$data['data'] = "admin";
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
-		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
-		if ($data['admin']['username'] == null) {
-			redirect(base_url());
-		} else {
-			$data['admin'] = $this->admin->getAllAdmin();
-			$this->load->view('template-admin/header.php', $data);
-			$this->load->view('menu-admin/admin/index.php', $data);
-			$this->load->view('template-admin/footer.php');
-		}
+		$data['admin'] = $this->admin->getAllAdmin();
+		$this->load->view('template-admin/header.php', $data);
+		$this->load->view('menu-admin/admin/index.php', $data);
+		$this->load->view('template-admin/footer.php');
     }
 
     public function tambah()

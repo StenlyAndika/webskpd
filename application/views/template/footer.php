@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="text-center bg-dark py-4">
-            <small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Pemerintah Kota Sungai Penuh. All rigths reserved</small class="text-secondary">
+            <small class="text-secondary">Copyright <a href="<?= base_url() ?>auth/root">&copy;</a> <script>document.write(new Date().getFullYear())</script>. Pemerintah Kota Sungai Penuh. All rigths reserved</small class="text-secondary">
         </div>
     </footer>
 

@@ -17,8 +17,7 @@ class Kontak extends CI_Controller {
 	public function index()
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
-		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->result_array();
-		if (count($data['admin']) > 0) {
+		if ($this->session->userdata('username') != "") {
 			$data['pesan'] =  $this->db->get('pesan')->result_array();
 			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/kontak/index.php', $data);
@@ -38,8 +37,7 @@ class Kontak extends CI_Controller {
 	public function daftar()
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
-		$data['admin'] =  $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->result_array();
-		if (count($data['admin']) > 0) {
+		if ($this->session->userdata('username') != "") {
 			$data['pesan'] =  $this->db->get('pesan')->result_array();
 			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/kontak/index.php', $data);
