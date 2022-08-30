@@ -29,18 +29,25 @@ class Auth extends CI_Controller {
 	public function daftar()
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
-		$this->form_validation->set_rules('nama', 'nama', 'required');
-		$this->form_validation->set_rules('username', 'username', 'required');
-		$this->form_validation->set_rules('password', 'password', 'required');
+		$data['admin'] = $this->admin->getAllAdmin();
+		if(count($data['admin'])<=0) {
+			$this->form_validation->set_rules('nama', 'nama', 'required');
+			$this->form_validation->set_rules('username', 'username', 'required');
+			$this->form_validation->set_rules('password', 'password', 'required');
 
-		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template/header', $data);
-			$this->load->view('auth/sign_up');
-			$this->load->view('template/footer');
+			if ( $this->form_validation->run() == FALSE ) {
+				$this->load->view('template/header', $data);
+				$this->load->view('auth/sign_up');
+				$this->load->view('template/footer');
+			} else {
+				$this->admin->add();
+				$this->session->set_flashdata('flash','Ditambahkan');
+				redirect('auth');
+			}
 		} else {
-			$this->admin->add();
-			$this->session->set_flashdata('flash','Ditambahkan');
-			redirect('auth');
+			$this->load->view('template/header.php', $data);
+			$this->load->view('auth/log_in.php');
+			$this->load->view('template/footer.php');
 		}
 	}
 
