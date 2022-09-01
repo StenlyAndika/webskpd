@@ -52,9 +52,7 @@ class Kontak extends CI_Controller {
 		$this->form_validation->set_rules('email', 'email', 'required');
 
 		if ( $this->form_validation->run() == FALSE ) {
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('menu-kontak/kontak.php');
-			$this->load->view('template-admin/footer');
+			redirect('kontak');
 		} else {
 			$this->kontak->add();
 			$this->session->set_flashdata('flash','Dikirimkan');
