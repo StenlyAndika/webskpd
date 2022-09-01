@@ -1920,57 +1920,6 @@ hr {
   text-align: center;
 }
 
-.skills__container {
-  row-gap: 2rem;
-  text-align: center;
-}
-
-.skills__subtitle {
-  margin-bottom: var(--mb-2);
-}
-
-.skills__text {
-  margin-bottom: var(--mb-4);
-}
-
-.skills__data {
-  display: inline-block;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  background-color: white;
-  color: black;
-  font-weight: var(--font-semi);
-  padding: .9rem 1rem;
-  margin-bottom: 5px;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-}
-
-.skills__data:hover {
-  background-image: linear-gradient(45deg, #3A5BA0 25%, #009EC5 50%);
-  color: #fff;
-}
-
-.skills__names {
-  display: flex;
-  align-items: center;
-}
-
-.skills__bar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(45deg, #3A5BA0 25%, #009EC5 50%);
-  height: .3rem;
-  border-radius: 5px 0 5px 0;
-  z-index: var(--z-back);
-}
-
-.skills__html {
-  width: 100%;
-}
-
 .custom-card {
   height: 100%;
   padding: 10px;
@@ -2030,4 +1979,4 @@ hr {
 }
 .footer-main .block-2 ul li a:hover {
   color: #fff;
-}
+} 

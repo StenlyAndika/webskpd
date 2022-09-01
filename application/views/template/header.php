@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <?php if(count($instansi)<=0) : ?>
         <link rel="icon" href="<?= base_url('./assets/img/tablogo.png') ?>">

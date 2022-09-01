@@ -212,3 +212,44 @@ body{
 }
 
 /* end main */
+
+/*responsive*/
+@media (max-width: 500px)
+{
+	.nav-bar
+	{
+		width: 70px;
+	}
+	.nav-bar.active
+	{
+		width: 230px;
+	}
+
+	.menu-bar
+	{
+		left: 83px;
+	}
+	.menu-bar.active
+	{
+		left: 243px;
+	}
+
+    .menu-title
+	{
+		left: 133px;
+	}
+	.menu-title.active
+	{
+		left: 283px;
+	}
+
+	.main-content
+	{
+		left: 83px;
+        width: calc(100% - 83px);
+	}
+	.main-content.active
+	{
+		left: 243px;
+	}
+}
