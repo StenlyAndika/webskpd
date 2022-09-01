@@ -3,26 +3,13 @@
         <div class="container">
             <div class="card-body row align-items-center">
                 <div class="col-md-10 order-1 order-md-1 text-center text-md-left pop-right">
-                    <style>
-                        .aaz {
-                            color: #000;
-                        }
-                        .aas {
-                            color: #2e7eed;
-                            font-size: 40px;
-                        }
-                        .ffd {
-                            color: #fff !important;
-                        }
-                    </style>
-                    <h2 class="font-weight-bold mb-4 aaz">Website Resmi
-                        <p class="font-weight-bold aas">
+                    <h2 class="font-weight-bold aaz" style="color: #000;">Website Resmi</h2>
+                    <h2 class="font-weight-bold aas" style="color: #2e7eed;">
                         <?php if(count($instansi)<=0) : ?>
                             Instansi
                         <?php else: ?>
                             <?= $instansi[0]['nama'] ?>
                         <?php endif; ?>
-                        </p>
                     </h2>
                 </div>
                 <div class="col-md-2 text-center order-2 order-md-2 pop-left">

@@ -17,8 +17,8 @@
                     }
                 </style>
                 <div class="table-responsive asd" style="text-align: left;">
-                    <h3 class="font-weight-bold mb-4" style="text-align: left;"><?= $pelayanan['jenis'] ?><br></h3>
-                    <a href="#"><img src="<?= base_url('./upload/pelayanan/').$pelayanan['gambar'] ?>" alt="footer-logo" width="250px"></a>
+                    <h2 class="font-weight-bold mb-2" style="text-align: center;"><?= $pelayanan['jenis'] ?><br></h2>
+                    <img class="img-fluid img-responsive center-block" src="<?= base_url('./upload/pelayanan/').$pelayanan['gambar'] ?>" width="500px">
                     <p class="ccx mt-4"><?= $pelayanan['standar'] ?></p>
                 </div>
                 <br class="mb-4">

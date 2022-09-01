@@ -11,7 +11,7 @@
                 </h2>
                 <?php foreach ($struktur as $row) : ?>
                     <div class="table-responsive" style="text-align: center;">
-                        <img src="<?= base_url('./upload/struktur/').$row['struktur'] ?>" alt="" width="800px">
+                        <img class="img-fluid img-responsive center-block" src="<?= base_url('./upload/struktur/').$row['struktur'] ?>" alt="" width="800px">
                     </div>
                     <br>
                     <p class="mb-2" style="text-align: center; font-size: 36px; font-weight: bold; color: black;">TUGAS DAN FUNGSI</p>

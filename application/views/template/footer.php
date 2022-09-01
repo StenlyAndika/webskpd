@@ -9,12 +9,12 @@
                     <div class="col-lg-4 col-md-12 m-md-auto align-self-center">
                         <div class="block">
                         <?php if(count($instansi)<=0) : ?>
-                            <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="footer-logo" width="150px"></a>
+                            <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" width="150px"></a>
                         <?php else: ?>
                             <?php if($instansi[0]['logo'] == null) : ?>
-                                <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" alt="footer-logo" width="150px"></a>
+                                <a href="#"><img src="<?= base_url('./assets/img/tablogo.png') ?>" width="150px"></a>
                             <?php else: ?>
-                                <a href="#"><img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="footer-logo" width="150px"></a>
+                                <a href="#"><img src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" width="150px"></a>
                             <?php endif; ?>
                         <?php endif; ?>
                             <ul class="social-icon list-inline">
