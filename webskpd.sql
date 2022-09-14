@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2022 at 11:57 AM
+-- Generation Time: Sep 14, 2022 at 01:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `setwan_sungaipen`
+-- Database: `webskpd`
 --
 
 -- --------------------------------------------------------
@@ -32,13 +32,6 @@ CREATE TABLE `admin` (
   `password` varchar(20) NOT NULL,
   `nama` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`username`, `password`, `nama`) VALUES
-('andi', 'andi', 'andi');
 
 -- --------------------------------------------------------
 
@@ -109,12 +102,9 @@ CREATE TABLE `instansi` (
 --
 
 CREATE TABLE `kepuasan` (
-  `id` int(11) NOT NULL,
-  `sp` int(11) NOT NULL,
-  `p` int(11) NOT NULL,
-  `cp` int(11) NOT NULL,
-  `kp` int(11) NOT NULL,
-  `tp` int(11) NOT NULL
+  `tahun` varchar(4) NOT NULL,
+  `nilai` varchar(5) NOT NULL,
+  `predikat` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -241,7 +231,7 @@ ALTER TABLE `instansi`
 -- Indexes for table `kepuasan`
 --
 ALTER TABLE `kepuasan`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`tahun`);
 
 --
 -- Indexes for table `pelayanan`
@@ -311,12 +301,6 @@ ALTER TABLE `foto`
 -- AUTO_INCREMENT for table `instansi`
 --
 ALTER TABLE `instansi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `kepuasan`
---
-ALTER TABLE `kepuasan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
