@@ -30,17 +30,18 @@
 		{
 			$gambar = $_FILES['gambar']['name'];
 
-			if (!is_dir('./upload/berita/')) {
-				mkdir('./upload/berita/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/berita/';
-
 			if ($gambar) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/berita/')) {
+					mkdir('./upload/berita/', 0777, true);
+				}
+				
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg';
+				$config['upload_path'] = './upload/berita/';
+
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('gambar')) {
 					$new_image = $this->upload->data('file_name');
@@ -61,17 +62,18 @@
 		{
 			$gambar = $_FILES['gambar']['name'];
 
-			if (!is_dir('./upload/berita/')) {
-				mkdir('./upload/berita/', 0777, true);
-			}
-			
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/berita/';
-
 			if ($gambar) {
+				
+				if (!is_dir('./upload/berita/')) {
+					mkdir('./upload/berita/', 0777, true);
+				}
+				
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg';
+				$config['upload_path'] = './upload/berita/';
 
-				$this->load->library('upload', $config);
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('gambar')) {
 					$new_image = $this->upload->data('file_name');

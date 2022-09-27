@@ -16,18 +16,18 @@
 		public function add()
 		{
 			$upload_image = $_FILES['namafile']['name'];
-
-			if (!is_dir('./upload/pengumuman/')) {
-				mkdir('./upload/pengumuman/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-			$config['upload_path'] = './upload/pengumuman/';
-
 			if ($upload_image) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/pengumuman/')) {
+					mkdir('./upload/pengumuman/', 0777, true);
+				}
+	
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+				$config['upload_path'] = './upload/pengumuman/';
+	
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');
@@ -44,18 +44,19 @@
 		public function update()
 		{
 			$upload_image = $_FILES['namafile']['name'];
-
-			if (!is_dir('./upload/pengumuman/')) {
-				mkdir('./upload/pengumuman/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-			$config['upload_path'] = './upload/pengumuman/';
 			
 			if ($upload_image) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/pengumuman/')) {
+					mkdir('./upload/pengumuman/', 0777, true);
+				}
+	
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+				$config['upload_path'] = './upload/pengumuman/';
+	
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');

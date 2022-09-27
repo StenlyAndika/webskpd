@@ -25,17 +25,18 @@
 		{
 			$upload_image = $_FILES['namafile']['name'];
 
-			if (!is_dir('./upload/dokumen/')) {
-				mkdir('./upload/dokumen/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'pdf';
-			$config['upload_path'] = './upload/dokumen/';
-
 			if ($upload_image) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/dokumen/')) {
+					mkdir('./upload/dokumen/', 0777, true);
+				}
+	
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'pdf';
+				$config['upload_path'] = './upload/dokumen/';
+	
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');
@@ -55,17 +56,18 @@
 		{
 			$upload_image = $_FILES['namafile']['name'];
 
-			if (!is_dir('./upload/dokumen/')) {
-				mkdir('./upload/dokumen/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'pdf';
-			$config['upload_path'] = './upload/dokumen/';
-			
 			if ($upload_image) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/dokumen/')) {
+					mkdir('./upload/dokumen/', 0777, true);
+				}
+	
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'pdf';
+				$config['upload_path'] = './upload/dokumen/';
+	
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('namafile')) {
 					$new_image = $this->upload->data('file_name');

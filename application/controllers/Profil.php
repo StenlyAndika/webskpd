@@ -16,12 +16,26 @@ class Profil extends CI_Controller {
     	if ($this->session->userdata('username') == "") {
 			redirect(base_url());
 		} else {
-			$data['data'] = "profil";
 			$data['instansi'] =  $this->db->get('instansi')->result_array();
-			$data['profil'] = $this->profil->getProfil();
-			$this->load->view('template-admin/header.php', $data);
-	        $this->load->view('menu-admin/profil/index.php', $data);
-	        $this->load->view('template-admin/footer.php');
+			$this->form_validation->set_rules('nama', 'nama', 'required');
+
+			if ( $this->form_validation->run() == FALSE ) {
+				$data['profil'] = $this->profil->getProfil();
+				$this->load->view('template-admin/header', $data);
+				$this->load->view('menu-admin/profil/index.php', $data);
+				$this->load->view('template-admin/footer');
+			} else {
+				$data['profil'] = $this->profil->getProfil();
+				if(count($data['profil'])<=0) {
+					$this->profil->add();
+					$this->session->set_flashdata('flash','Ditambahkan');
+					redirect('profil');
+				} else {
+					$this->profil->update();
+					$this->session->set_flashdata('flash','Diupdate');
+					redirect('profil');
+				}
+			}
 	    }
     }
 
@@ -30,7 +44,6 @@ class Profil extends CI_Controller {
 		if ($this->session->userdata('username') == "") {
 			redirect(base_url());
 		} else {
-			$data['data'] = "profil";
 			$data['instansi'] =  $this->db->get('instansi')->result_array();
 			$this->form_validation->set_rules('nama', 'nama', 'required');
 
@@ -40,26 +53,16 @@ class Profil extends CI_Controller {
 				$this->load->view('template-admin/footer');
 			} else {
 				$data['profil'] = $this->profil->getProfil();
-				if(count($profil)!=0) {
-					$this->profil->update();
-					$this->session->set_flashdata('flash','Diupdate');
-				} else {
+				if(count($profil)<=0) {
 					$this->profil->add();
 					$this->session->set_flashdata('flash','Ditambahkan');
+					redirect('profil');
+				} else {
+					$this->profil->update();
+					$this->session->set_flashdata('flash','Diupdate');
+					redirect('profil');
 				}
-				redirect('profil');
 			}
-		}
-	}
-
-    public function hapus($id)
-	{
-		if ($this->session->userdata('username') == "") {
-			redirect(base_url());
-		} else {
-			$this->profil->delete($id);
-			$this->session->set_flashdata('flash','Dihapus');
-			redirect('profil');
 		}
 	}
 }

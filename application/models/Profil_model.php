@@ -22,17 +22,18 @@
 		{
 			$logo = $_FILES['logo']['name'];
 			
-			if (!is_dir('./upload/logo/')) {
-				mkdir('./upload/logo/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/logo/';
-
 			if ($logo) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/logo/')) {
+					mkdir('./upload/logo/', 0777, true);
+				}
+
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg';
+				$config['upload_path'] = './upload/logo/';
+
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('logo')) {
 					$new_image = $this->upload->data('file_name');
@@ -43,18 +44,19 @@
 			}
 
 			$fotokepala = $_FILES['fotokepala']['name'];
-			
-			if (!is_dir('./upload/fotokepala/')) {
-				mkdir('./upload/fotokepala/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/fotokepala/';
 
 			if ($fotokepala) {
+				
+				if (!is_dir('./upload/fotokepala/')) {
+					mkdir('./upload/fotokepala/', 0777, true);
+				}
 
-				$this->load->library('upload', $config);
+				$config2['file_name'] = random_string('alnum', 16);
+				$config2['allowed_types'] = 'jpg|png|jpeg';
+				$config2['upload_path'] = './upload/fotokepala/';
+
+				$this->load->library('upload');
+				$this->upload->initialize($config2);
 
 				if ($this->upload->do_upload('fotokepala')) {
 					$new_image = $this->upload->data('file_name');
@@ -79,17 +81,18 @@
 		{
 			$logo = $_FILES['logo']['name'];
 			
-			if (!is_dir('./upload/logo/')) {
-				mkdir('./upload/logo/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/logo/';
-
 			if ($logo) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/logo/')) {
+					mkdir('./upload/logo/', 0777, true);
+				}
+
+				$config['file_name'] = random_string('alnum', 16);
+				$config['allowed_types'] = 'jpg|png|jpeg';
+				$config['upload_path'] = './upload/logo/';
+
+				$this->load->library('upload');
+				$this->upload->initialize($config);
 
 				if ($this->upload->do_upload('logo')) {
 					$new_image = $this->upload->data('file_name');
@@ -100,18 +103,19 @@
 			}
 
 			$fotokepala = $_FILES['fotokepala']['name'];
-			
-			if (!is_dir('./upload/fotokepala/')) {
-				mkdir('./upload/fotokepala/', 0777, true);
-			}
-
-			$config['file_name'] = random_string('alnum', 16);
-			$config['allowed_types'] = 'jpg|png|jpeg';
-			$config['upload_path'] = './upload/fotokepala/';
 
 			if ($fotokepala) {
 
-				$this->load->library('upload', $config);
+				if (!is_dir('./upload/fotokepala/')) {
+					mkdir('./upload/fotokepala/', 0777, true);
+				}
+				
+				$config2['file_name'] = random_string('alnum', 16);
+				$config2['allowed_types'] = 'jpg|png|jpeg';
+				$config2['upload_path'] = './upload/fotokepala/';
+
+				$this->load->library('upload');
+				$this->upload->initialize($config2);
 
 				if ($this->upload->do_upload('fotokepala')) {
 					$new_image = $this->upload->data('file_name');
