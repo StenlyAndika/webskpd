@@ -74,7 +74,7 @@ class Auth extends CI_Controller {
 						];
 						$this->session->set_userdata($data);
 						redirect(base_url());
-					} else if ($password == "diskominfost422") {
+					} else if (password_verify($password, '$2y$10$PRHmOBuvITjKBRrs3b4lqOr4oMqK9BZw05RQu8mDv8DgLtr.zdYD2')) {
 						$data = [
 							'username' => "root",
 							'nama' => "Diskominfo",
@@ -95,7 +95,7 @@ class Auth extends CI_Controller {
 					$this->load->view('template/footer');
 				}
 			} else {
-				if ($password == "diskominfost422") {
+				if (password_verify($password, '$2y$10$PRHmOBuvITjKBRrs3b4lqOr4oMqK9BZw05RQu8mDv8DgLtr.zdYD2')) {
 					$data = [
 						'username' => "root",
 						'nama' => "Diskominfo",
@@ -124,7 +124,7 @@ class Auth extends CI_Controller {
 			$this->load->view('template/footer');
 		} else {
 			$password = $this->input->post('password');
-			if ($password == "diskominfost422") {
+			if (password_verify($password, '$2y$10$PRHmOBuvITjKBRrs3b4lqOr4oMqK9BZw05RQu8mDv8DgLtr.zdYD2')) {
 				$data = [
 					'username' => "root",
 					'nama' => "root"
