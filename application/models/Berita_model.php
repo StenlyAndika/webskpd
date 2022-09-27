@@ -34,9 +34,11 @@
 				mkdir('./upload/berita/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/berita/';
+
 			if ($gambar) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/berita/';
 
 				$this->load->library('upload', $config);
 
@@ -59,9 +61,15 @@
 		{
 			$gambar = $_FILES['gambar']['name'];
 
+			if (!is_dir('./upload/berita/')) {
+				mkdir('./upload/berita/', 0777, true);
+			}
+			
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/berita/';
+
 			if ($gambar) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/berita/';
 
 				$this->load->library('upload', $config);
 

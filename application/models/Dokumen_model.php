@@ -29,9 +29,11 @@
 				mkdir('./upload/dokumen/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'pdf';
+			$config['upload_path'] = './upload/dokumen/';
+
 			if ($upload_image) {
-				$config['allowed_types'] = 'pdf';
-				$config['upload_path'] = './upload/dokumen/';
 
 				$this->load->library('upload', $config);
 
@@ -53,9 +55,15 @@
 		{
 			$upload_image = $_FILES['namafile']['name'];
 
+			if (!is_dir('./upload/dokumen/')) {
+				mkdir('./upload/dokumen/', 0777, true);
+			}
+
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'pdf';
+			$config['upload_path'] = './upload/dokumen/';
+			
 			if ($upload_image) {
-				$config['allowed_types'] = 'pdf';
-				$config['upload_path'] = './upload/dokumen/';
 
 				$this->load->library('upload', $config);
 

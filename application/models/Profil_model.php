@@ -13,6 +13,11 @@
 			return $this->db->get_where('instansi', ['id' => $id])->row_array();
 		}
 
+		public function getProfil()
+		{
+			return $this->db->get_where('instansi')->result_array();
+		}
+
 		public function add()
 		{
 			$logo = $_FILES['logo']['name'];
@@ -21,9 +26,11 @@
 				mkdir('./upload/logo/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/logo/';
+
 			if ($logo) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/logo/';
 
 				$this->load->library('upload', $config);
 
@@ -41,9 +48,11 @@
 				mkdir('./upload/fotokepala/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/fotokepala/';
+
 			if ($fotokepala) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/fotokepala/';
 
 				$this->load->library('upload', $config);
 
@@ -74,9 +83,11 @@
 				mkdir('./upload/logo/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/logo/';
+
 			if ($logo) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/logo/';
 
 				$this->load->library('upload', $config);
 
@@ -94,9 +105,11 @@
 				mkdir('./upload/fotokepala/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './upload/fotokepala/';
+
 			if ($fotokepala) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/fotokepala/';
 
 				$this->load->library('upload', $config);
 

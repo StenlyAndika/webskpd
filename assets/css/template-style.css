@@ -71,6 +71,7 @@
     height: 100%;
     padding: 5px 0 150px 0;
     overflow: auto;
+    scrollbar-width: none;
 }
 
 .sidebar.open .nav-links{

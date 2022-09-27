@@ -21,9 +21,11 @@
 				mkdir('./upload/pengumuman/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/pengumuman/';
+
 			if ($upload_image) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/pengumuman/';
 
 				$this->load->library('upload', $config);
 
@@ -46,10 +48,12 @@
 			if (!is_dir('./upload/pengumuman/')) {
 				mkdir('./upload/pengumuman/', 0777, true);
 			}
+
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/pengumuman/';
 			
 			if ($upload_image) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/pengumuman/';
 
 				$this->load->library('upload', $config);
 

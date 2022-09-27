@@ -21,9 +21,11 @@
 				mkdir('./upload/pelayanan/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/pelayanan/';
+
 			if ($upload_image) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/pelayanan/';
 
 				$this->load->library('upload', $config);
 
@@ -47,10 +49,12 @@
 			if (!is_dir('./upload/pelayanan/')) {
 				mkdir('./upload/pelayanan/', 0777, true);
 			}
+			
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/pelayanan/';
 
 			if ($upload_image) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/pelayanan/';
 
 				$this->load->library('upload', $config);
 

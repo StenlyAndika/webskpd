@@ -18,7 +18,7 @@ class Profil extends CI_Controller {
 		} else {
 			$data['data'] = "profil";
 			$data['instansi'] =  $this->db->get('instansi')->result_array();
-	        $data['profil'] = $this->profil->getAllProfil();
+			$data['profil'] = $this->profil->getProfil();
 			$this->load->view('template-admin/header.php', $data);
 	        $this->load->view('menu-admin/profil/index.php', $data);
 	        $this->load->view('template-admin/footer.php');
@@ -39,31 +39,14 @@ class Profil extends CI_Controller {
 				$this->load->view('menu-admin/profil/tambah');
 				$this->load->view('template-admin/footer');
 			} else {
-				$this->profil->add();
-				$this->session->set_flashdata('flash','Ditambahkan');
-				redirect('profil');
-			}
-		}
-	}
-
-    public function ubah($id)
-	{
-		if ($this->session->userdata('username') == "") {
-			redirect(base_url());
-		} else {
-			$data['data'] = "profil";
-			$data['instansi'] =  $this->db->get('instansi')->result_array();
-	        $data['profil'] = $this->profil->getProfilById($id);
-	        
-			$this->form_validation->set_rules('nama', 'nama', 'required');
-
-			if ( $this->form_validation->run() == FALSE ) {
-				$this->load->view('template-admin/header', $data);
-				$this->load->view('menu-admin/profil/ubah', $data);
-				$this->load->view('template-admin/footer');
-			} else {
-				$this->profil->update();
-				$this->session->set_flashdata('flash','Diupdate');
+				$data['profil'] = $this->profil->getProfil();
+				if(count($profil)!=0) {
+					$this->profil->update();
+					$this->session->set_flashdata('flash','Diupdate');
+				} else {
+					$this->profil->add();
+					$this->session->set_flashdata('flash','Ditambahkan');
+				}
 				redirect('profil');
 			}
 		}

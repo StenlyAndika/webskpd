@@ -21,9 +21,11 @@
 				mkdir('./upload/struktur/', 0777, true);
 			}
 
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/struktur/';
+
 			if ($struktur) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/struktur/';
 
 				$this->load->library('upload', $config);
 
@@ -46,11 +48,13 @@
 			if (!is_dir('./upload/struktur/')) {
 				mkdir('./upload/struktur/', 0777, true);
 			}
+
+			$config['file_name'] = random_string('alnum', 16);
+			$config['allowed_types'] = 'jpg|png|jpeg|pdf';
+			$config['upload_path'] = './upload/struktur/';
 			
 			if ($struktur) {
-				$config['allowed_types'] = 'jpg|png|jpeg|pdf';
-				$config['upload_path'] = './upload/struktur/';
-
+				
 				$this->load->library('upload', $config);
 
 				if ($this->upload->do_upload('struktur')) {

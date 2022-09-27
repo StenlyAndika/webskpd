@@ -54,7 +54,7 @@
                 <div class="owl-carousel owl-theme">
                     <?php foreach ($berita as $row) : ?>
                         <article class="post-sm">
-                            <div class="post-thumb" style="height:150px; width:300px;overflow:hidden;">
+                            <div class="post-thumb" style="height:150px; width:300px; overflow:hidden; border-radius: 5px;">
                                 <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><img class="image-responsive w-100" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" alt="Post-Image"></a>
                             </div>
                             <div class="post-title">
@@ -92,40 +92,27 @@
             </div>
             <hr>
             <div class="container">
-                <style>
-                    .cardx {
-                        flex-direction: row;
-                        border: none;
-                    }
-                    .cardx img {
-                        width: 30%;
-                    }
-                </style>
-                <h4 class="font-weight-bold mb-2" style="text-align: left;">Berita Terbaru<br></h4>
                 <?php foreach ($berita as $row) : ?>
-                    <div class="card cardx col-lg-12">
-                        <img src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5></a>
-                            <p class="card-text" style="text-align: left;">
-                                <?php
-                                    $string = strip_tags($row['isi']);
-                                    if (strlen($string) > 150) {
-                                        // truncate string
-                                        $stringCut = substr($string, 0, 150);
-                                        $endPoint = strrpos($stringCut, ' ');
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '...';
-                                    }
-                                    echo $string;
-                                ?>
-                                <br>
-                                <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold">Baca selengkapnya...</a>
-                            </p>
-                        </div>
+                <div class="card mb-4" style="flex-direction: row;">
+                    <img style="border-radius: 5px;" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5></a>
+                        <p class="card-text" style="text-align: left;">
+                            <?php
+                                $string = strip_tags($row['isi']);
+                                if (strlen($string) > 150) {
+                                    $stringCut = substr($string, 0, 150);
+                                    $endPoint = strrpos($stringCut, ' ');
+                                    $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                    $string .= '...';
+                                }
+                                echo $string;
+                            ?>
+                            <br>
+                            <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold">Baca selengkapnya...</a>
+                        </p>
                     </div>
-                    <hr>
+                </div>
                 <?php endforeach; ?>
             </div>
         </div>
