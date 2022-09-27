@@ -62,7 +62,7 @@
                                     <li><i class="fa-solid text-white fa-building"></i> <a href="#">Nama Instansi</a></li>
                                     <li><i class="fa-solid text-white fa-flag"></i> <a href="#">Alamat Instansi</a></li>
                                     <li><i class="fa-solid text-white fa-envelope"></i> <a href="#">Email Instansi</a></li>
-                                    <li><i class="fa-solid text-white fa-phone"></i> <a href="#">Nomor Whatsapp Instansi</a></li>
+                                    <li><i class="fa-solid text-white fa-phone"></i> <a href="#">Kontak Instansi</a></li>
                                 <?php else: ?>
                                     <?php if($instansi[0]['nama'] == null) : ?>
                                         <li><i class="fa-solid text-white fa-building"></i> <a href="#">Nama Instansi</a></li>
@@ -80,7 +80,7 @@
                                         <li><i class="fa-solid text-white fa-envelope"></i> <a href="#"><?= $instansi[0]['email'] ?></a></li>
                                     <?php endif; ?>
                                     <?php if($instansi[0]['wa'] == null) : ?>
-                                        <li><i class="fa-solid text-white fa-phone"></i> <a href="#">Nomor Whatsapp Instansi</a></li>
+                                        <li><i class="fa-solid text-white fa-phone"></i> <a href="#">Kontak Instansi</a></li>
                                     <?php else: ?>
                                         <li><i class="fa-solid text-white fa-phone"></i> <a href="#"><?= $instansi[0]['wa'] ?></a></li>
                                     <?php endif; ?>
