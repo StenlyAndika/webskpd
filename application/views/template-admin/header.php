@@ -25,152 +25,142 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables/datatables.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datepicker/css/bootstrap-datepicker.css">
-    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Custom Style -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/template-style.css">
 </head>
 <body>
-    <div class="nav-bar">
-        <h1 class="">
-            <a href="<?= base_url() ?>"><img style=" width: 220px;" src="<?= base_url() ?>assets/img/logo.png"></a>
-        </h1>
-        <ul class="nav">
-            <?php if((isset($data))&&($data=='dashboard')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>">
-                    <span class="icon"><i class="fa-solid fa-house"></i></span>
-                    <span class="title">Dashboard</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='berita')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>berita">
-                    <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
-                    <span class="title">Berita</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='pengumuman')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>pengumuman">
-                    <span class="icon"><i class="fa-solid fa-bullhorn"></i></span>
-                    <span class="title">Pengumuman</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='dokumen')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>dokumen">
-                    <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
-                    <span class="title">Dokumen Publik</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='foto')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>foto">
-                    <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
-                    <span class="title">Foto</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='pelayanan')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>pelayanan">
-                    <span class="icon"><i class="fa-solid fa-list-check"></i></span>
-                    <span class="title">Standar Pelayanan</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='kepuasan')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>kepuasan">
-                    <span class="icon"><i class="fa-solid fa-square-poll-vertical"></i></span>
-                    <span class="title">Kepuasan Layanan</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='profil')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>profil">
-                    <span class="icon"><i class="fa-solid fa-book-journal-whills"></i></span>
-                    <span class="title">Profil Instansi</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='sejarah')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>sejarah">
-                    <span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
-                    <span class="title">Sejarah</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='visimisi')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>visimisi">
-                    <span class="icon"><i class="fa-solid fa-users-viewfinder"></i></span>
-                    <span class="title">Visi & Misi</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='struktur')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>struktur">
-                    <span class="icon"><i class="fa-solid fa-sitemap"></i></span>
-                    <span class="title">Struktur Organisasi</span>
-                </a>
-            </li>
-            <?php if((isset($data))&&($data=='admin')){?>
-                <li class="list active">
-            <?php }else{?>
-                <li class="list">
-            <?php }?>
-                <a href="<?= base_url() ?>admin">
-                    <span class="icon"><i class="fa-solid fa-user"></i></span>
-                    <span class="title">Data Admin</span>
-                </a>
-            </li>
-            <li class="list">
+    <div class="sidebar">
+        <div class="logo-details">
+            <a href="<?= base_url() ?>">
+                <?php if(count($instansi)<=0) : ?>
+                    <img class="logo-img" src="<?= base_url() ?>assets/img/tablogo.png" alt="img">
+                <?php else: ?>
+                    <?php if($instansi[0]['logo'] == null) : ?>
+                        <img class="logo-img" src="<?= base_url() ?>assets/img/tablogo.png" alt="img">
+                    <?php else: ?>
+                        <img class="logo-img" src="<?= base_url('./upload/logo/').$instansi[0]['logo'] ?>" alt="img">
+                    <?php endif; ?>
+                <?php endif; ?>
+            </a>
+            <?php if(count($instansi)<=0) : ?>
+                <span class="logo_name">Nama Instansi</span>
+            <?php else: ?>
+                <span style="margin: 15px 0 0 0;" class="logo_name"><?= $instansi[0]['nama'] ?></span>
+            <?php endif; ?>
+        </div>
+        <hr style="margin-bottom: 0px">
+        <ul class="nav-links">
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img class="logo-img" src="<?= base_url('./assets/img/avatar.png') ?>" alt="profile">
+                </div>
+                <div class="name-job">
+                    <div class="profile-name"><?= $this->session->userdata('nama') ?></div>
+                    <div class="job">Operator</div>
+                </div>
                 <a href="<?= base_url() ?>auth/logout">
-                    <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
-                    <span class="title">Keluar</span>
+                    <i style="font-size: 28px; font-weight: 700; color: var(--primary);" class='bx bx-log-out'></i>
                 </a>
+            </div>
+            <hr style="margin-top: 0px">
+            <li class="list <?= $this->uri->segment(1) == '' ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="<?= base_url() ?>">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li class="list
+            <?php
+                if( $this->uri->segment(1) == 'berita' ||
+                    $this->uri->segment(1) == 'pengumuman' ||
+                    $this->uri->segment(1) == 'foto') {
+                        echo "showMenu";
+                } 
+            ?>">
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-upload'></i>
+                        <span class="link-name">Publikasi</span>
+                    </a>
+                    <i class='bx bxs-down-arrow arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="dropdown-menu-title" href="">Publikasi</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'berita' ? 'active' : '' ?>"><a href="<?= base_url() ?>berita">Berita</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'foto' ? 'active' : '' ?>"><a href="<?= base_url() ?>foto">Galeri Foto</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'pengumuman' ? 'active' : '' ?>"><a href="<?= base_url() ?>pengumuman">Pengumuman</a></li>
+                </ul>
+            </li>
+            <li class="list <?= $this->uri->segment(1) == 'dokumen' ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>dokumen">
+                    <i class='bx bxs-file-archive'></i>
+                    <span class="link-name">Transparansi Anggaran</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="<?= base_url() ?>dokumen">Transparansi Anggaran</a></li>
+                </ul>
+            </li>
+            <li class="list <?= $this->uri->segment(1) == 'pelayanan' ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>pelayanan">
+                    <i class='bx bx-book-content'></i>
+                    <span class="link-name">Standar Pelayanan</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="<?= base_url() ?>pelayanan">Standar Pelayanan</a></li>
+                </ul>
+            </li>
+            <li class="list
+            <?php
+                if( $this->uri->segment(1) == 'profil' ||
+                    $this->uri->segment(1) == 'sejarah' ||
+                    $this->uri->segment(1) == 'visimisi' ||
+                    $this->uri->segment(1) == 'struktur') {
+                        echo "showMenu"; 
+                } 
+            ?>">
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-buildings'></i>
+                        <span class="link-name">Data Instansi</span>
+                    </a>
+                    <i class='bx bxs-down-arrow arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="dropdown-menu-title" href="">Data Instansi</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'profil' ? 'active' : '' ?>"><a href="<?= base_url() ?>profil">Profil Instansi</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'sejarah' ? 'active' : '' ?>"><a href="<?= base_url() ?>sejarah">Sejarah Instansi</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'visimisi' ? 'active' : '' ?>"><a href="<?= base_url() ?>visimisi">Visi & Misi</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'struktur' ? 'active' : '' ?>"><a href="<?= base_url() ?>struktur">Struktur Organisasi</a></li>
+                </ul>
+            </li>
+            <li class="list <?= $this->uri->segment(1) == 'kepuasan' ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>kepuasan">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link-name">Index Kepuasan Masyarakat (IKM)</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="<?= base_url() ?>kepuasan">Index Kepuasan Masyarakat (IKM)</a></li>
+                </ul>
+            </li>
+            <li class="list <?= $this->uri->segment(1) == 'admin' ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>admin">
+                    <i class='bx bx-user' ></i>
+                    <span class="link-name">Data Operator</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="<?= base_url() ?>admin">Data Operator</a></li>
+                </ul>
             </li>
         </ul>
     </div>
-    <div class="menu-bar">
-		<div class="topbar">
-			<div class="toggle">
-				<i class="fa-solid fa-bars"></i>
-			</div>
-			<div class="menu-title">
-                <a class="text-white" href="<?= base_url() ?>"><h4>DASHBOARD</h4></a>
-			</div>
-		</div>
-	</div>
-    <div class="main-content">
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu' ></i>
+            <span class="text">ADMIN AREA</span>
+        </div>
+        <div class="main-content">

@@ -25,6 +25,7 @@ class Beranda extends CI_Controller {
 		if ($this->session->userdata('username') != "") {
 			$data['data'] = "dashboard";
 			$data['kontak'] = $this->kontak->getAllKontak();
+			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
 			$data['jmlkontak'] = $this->kontak->getJmlKontak();
 			$this->load->view('template-admin/header', $data);
 			$this->load->view('menu-admin/dashboard.php', $data);

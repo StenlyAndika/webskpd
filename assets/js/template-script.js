@@ -1,27 +1,19 @@
-const list = document.querySelectorAll('.list');
-
-function activeLink() {
-    list.forEach(
-        (item) => item.classList.remove('active')
-    );
-    this.classList.add('active');
+let arrow = document.querySelectorAll(".arrow");
+for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+    });
 }
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
+sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+});
 
-list.forEach(
-    (item) => item.addEventListener('click', activeLink),
-);
-
-
-
-let toggle = document.querySelector('.toggle');
-let menu = document.querySelector('.menu-bar');
-let menutitle = document.querySelector('.menu-title');
-let nav = document.querySelector('.nav-bar');
-let main = document.querySelector('.main-content');
-
-toggle.onclick = function() {
-    menu.classList.toggle('active');
-    menutitle.classList.toggle('active');
-    nav.classList.toggle('active');
-    main.classList.toggle('active');
-}
+$(document).ready(function() {
+    let sidebar = document.querySelector(".sidebar");
+    if ($(window).width() < 800) {
+        sidebar.classList.toggle("open");
+    }
+});

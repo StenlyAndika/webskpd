@@ -1,4 +1,5 @@
-    </div>
+        </div>
+    </section>
     </body>
     <!-- JAVASCRIPTS -->
     <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
