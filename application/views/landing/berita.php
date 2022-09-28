@@ -93,12 +93,23 @@
             <hr>
             <div class="container">
                 <?php foreach ($berita as $row) : ?>
-                <div class="card mb-4" style="flex-direction: row;">
+                <div class="card mb-4 news-card">
                     <img style="border-radius: 5px;" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5></a>
                         <p class="card-text berita-mini" style="text-align: left;">
-                            <?= strip_tags($row['isi']); ?>
+                            <?php
+                                $string = strip_tags($row['isi']);
+                                if (strlen($string) > 150) {
+                                    $stringCut = substr($string, 0, 150);
+                                    $endPoint = strrpos($stringCut, ' ');
+                                    $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                    $string .= '...';
+                                }
+                                echo $string;
+                            ?>
+                            <br>
+                            <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>" class="font-weight-bold">Baca selengkapnya...</a>
                         </p>
                     </div>
                 </div>
@@ -107,33 +118,3 @@
         </div>
     </div>
 </section>
-<script>
-    let isi=Array.from(document.getElementsByClassName('berita-mini'));
-    let temp_isi=[];
-    isi.forEach((ii)=>{
-        temp_isi.push(ii.innerHTML);
-    });
-
-    function text_content(tlen) {
-        let i=0;
-        temp_isi.forEach((ii)=>{
-            let new_content=ii.slice(0,tlen);
-            isi[i].innerHTML=new_content+"... "+"<a href=\"<?= base_url() ?>beranda/detail/<?= $row['id'] ?>\" class=\"font-weight-bold\">Baca selengkapnya...</a>";
-            i++;
-        });
-    }
-
-    function resetContent() {
-        if (window.innerWidth < 580) {
-            text_content(100);
-        } else {
-            text_content(200);
-        }
-    }
-
-    resetContent();
-
-    window.addEventListener("resize", () => {
-        resetContent();
-    });
-</script>

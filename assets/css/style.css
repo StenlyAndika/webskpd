@@ -36,7 +36,6 @@ html {
 
 .wave {
   position: absolute;
-  /* bottom: 0px; */
   top: 0;
   left: 0;
   object-fit: contain;
@@ -291,6 +290,7 @@ a:hover {
   line-height: 125px;
   text-align: center;
 }
+
 @media (max-width: 992px) {
   .video .video-box a i {
     height: 80px;
@@ -520,9 +520,15 @@ button:focus,
   display: block;
 }
 
+.news-card {
+  display: flex;
+  flex-direction: row;
+}
+
 .card img {
   width: 30%;
 }
+
 @media (max-width: 992px) {
   .main-nav .dropdown .dropdown-menu {
     text-align: center;
@@ -627,6 +633,14 @@ button:focus,
 }
 
 @media (max-width: 768px) {
+  .card img {
+    width: 100%;
+  }
+
+  .news-card {
+    display: block;
+  }
+  
   .scroll-top-to {
     bottom: 95px;
     right: 15px;
@@ -670,9 +684,6 @@ button:focus,
   .call-to-action-app ul li {
     margin-left: 0;
     margin-bottom: 10px;
-  }
-  .card img {
-    width: 50%;
   }
 }
 .call-to-action-app ul li:first-child {
