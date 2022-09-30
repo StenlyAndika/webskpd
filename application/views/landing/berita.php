@@ -65,7 +65,7 @@
                                     <li class="list-inline-item">
                                         <a href="#" class="label-primary" style="font-size: 12px; font-weight: bold;"><?= $row['nama'] ?></a>
                                     </li>
-                                    <li class="list-inline-item" style="color: red;font-size: 12px; font-weight: bold;">
+                                    <li class="list-inline-item" style="color: #ff0000;font-size: 12px; font-weight: bold;">
                                         <i class='bx bx-calendar' ></i> 
                                         <?= date('d F Y', strtotime($row['tgl'])); ?>
                                     </li>
@@ -88,15 +88,15 @@
                         </article>
                     <?php endforeach; ?>
                 </div>
+                <hr class="mt-0">
             </div>
-            <hr>
             <div class="container">
                 <?php foreach ($berita as $row) : ?>
-                <div class="card mb-4 news-card">
+                <div class="card mb-4 news-card pop-news">
                     <img style="border-radius: 5px; padding: 3px;" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold" style="text-align: left;"><a class="label-primary" style="font-size: 16px;" href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><?= $row['judul'] ?></a></h5>
-                        <p style="text-align: left; color: red; font-size: 14px; font-weight: bold;" class="mb-2"><i class='bx bx-calendar' ></i> <?= date('d F Y', strtotime($row['tgl'])); ?></p>
+                        <p style="text-align: left; color: #ff0000; font-size: 14px; font-weight: bold;" class="mb-2"><i class='bx bx-calendar' ></i> <?= date('d F Y', strtotime($row['tgl'])); ?></p>
                         <p class="card-text berita-mini" style="text-align: left; font-size: 14px;">
                             <?php
                                 $string = strip_tags($row['isi']);
@@ -113,6 +113,7 @@
                         </p>
                     </div>
                 </div>
+                <hr class="mt-0">
                 <?php endforeach; ?>
             </div>
         </div>

@@ -108,10 +108,6 @@
     <!-- JAVASCRIPTS -->
     <script src="<?= base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/slick/slick.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/fancybox/jquery.fancybox.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/syotimer/jquery.syotimer.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/aos/aos.js"></script>
     <script src="<?= base_url() ?>assets/plugins/datatables/datatables.min.js"></script>
     <script src="<?= base_url() ?>assets/plugins/datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="<?= base_url() ?>assets/plugins/owl-carousel/owl.carousel.min.js"></script>
@@ -122,12 +118,12 @@
     <script src="<?= base_url() ?>assets/js/script.js"></script>
 
     <script>
-        $(function () {
-            $('.marquee').marquee({
-                speed: 60
-            });
-        });
         $(document).ready(function() {
+            $('.marquee').marquee({
+                speed: 60,
+                pauseOnHover: true
+            });
+
             $(".owl-carousel").owlCarousel({
                 autoplay:true,
                 autoplayTimeout:5000,
@@ -146,6 +142,8 @@
                     }
                 }
             });
+
+            $('.owl-dots').remove();
 
             $('#datatable').DataTable({
                 'paging': true,

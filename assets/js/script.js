@@ -4,7 +4,16 @@
  * FACEBOOK: https://www.facebook.com/themefisher
  * GITHUB: https://github.com/themefisher/
  */
- const srl = ScrollReveal({
+const ppl = ScrollReveal({
+  origin: 'right',
+  distance: '50px',
+  duration: 1000,
+  delay: 400
+});
+
+ppl.reveal('.pop-news',{});
+
+const srl = ScrollReveal({
   origin: 'right',
   distance: '50px',
   duration: 1000,
@@ -61,7 +70,7 @@ sru.reveal('.pop-up',{});
   $('.scroll-top-to').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
-    }, 500);
+    }, 800);
     return false;
   });
 

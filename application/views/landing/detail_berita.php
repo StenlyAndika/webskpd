@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 title">
-                        <h2 class="text-white">Baca juga</h2>
+                        <h2 class="text-white mt-2">Baca juga</h2>
                     </div>
                 </div>
                 <br>
@@ -37,23 +37,21 @@
                         <div class="col-lg-4 col-md-6">
                             <article class="post-sm">
                                 <div class="post-thumb">
-                                    <a href="<?= base_url() ?>beranda/detail/<?= $row2['id'] ?>"><img class="w-100" src="<?= base_url('./upload/berita/').$row2['gambar'] ?>"  style="height:150px; width:300px;overflow:hidden;"></a>
+                                    <a href="<?= base_url() ?>beranda/detail/<?= $row2['id'] ?>"><img class="image-responsive w-100" src="<?= base_url('./upload/berita/').$row2['gambar'] ?>" alt="Post-Image"></a>
                                 </div>
                                 <div class="post-title">
                                     <h4 class=""><a href="<?= base_url() ?>beranda/detail/<?= $row2['id'] ?>" class="font-weight-bold"><?= $row2['judul'] ?></a></h4>
                                 </div>
                                 <div class="post-meta">
-                                    <ul class="list-inline post-tag">
-                                        <li class="list-inline-item">
-                                            <img src="<?= base_url(); ?>/assets/img/avatar.png">
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#"><?= $row2['nama'] ?></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <?= date('d F Y', strtotime($row2['tgl'])); ?>
-                                        </li>
-                                    </ul>
+                                <ul class="list-inline post-tag">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="label-primary" style="font-size: 12px; font-weight: bold;"><?= $row2['nama'] ?></a>
+                                    </li>
+                                    <li class="list-inline-item" style="color: #ff0000;font-size: 12px; font-weight: bold;">
+                                        <i class='bx bx-calendar' ></i> 
+                                        <?= date('d F Y', strtotime($row2['tgl'])); ?>
+                                    </li>
+                                </ul>
                                 </div>
                                 <div class="post-details">
                                     <p style="font-size: 14px">
