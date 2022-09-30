@@ -4,7 +4,7 @@
             <div class="card-body row align-items-center">
                 <div class="col-md-10 order-1 order-md-1 text-center text-md-left pop-right">
                     <h2 class="font-weight-bold aaz" style="color: #000;">Website Resmi</h2>
-                    <h2 class="font-weight-bold aas" style="color: #2e7eed;">
+                    <h2 class="font-weight-bold aas label-primary">
                         <?php if(count($instansi)<=0) : ?>
                             Instansi
                         <?php else: ?>
@@ -54,7 +54,7 @@
                 <div class="owl-carousel owl-theme">
                     <?php foreach ($berita as $row) : ?>
                         <article class="post-sm">
-                            <div class="post-thumb" style="height:150px; width:300px; overflow:hidden; border-radius: 5px;">
+                            <div class="post-thumb">
                                 <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><img class="image-responsive w-100" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" alt="Post-Image"></a>
                             </div>
                             <div class="post-title">
@@ -63,9 +63,10 @@
                             <div class="post-meta">
                                 <ul class="list-inline post-tag">
                                     <li class="list-inline-item">
-                                        <a href="#"><?= $row['nama'] ?></a>
+                                        <a href="#" class="label-primary" style="font-size: 12px; font-weight: bold;"><?= $row['nama'] ?></a>
                                     </li>
-                                    <li class="list-inline-item">
+                                    <li class="list-inline-item" style="color: red;font-size: 12px; font-weight: bold;">
+                                        <i class='bx bx-calendar' ></i> 
                                         <?= date('d F Y', strtotime($row['tgl'])); ?>
                                     </li>
                                 </ul>
@@ -75,10 +76,8 @@
                                     <?php
                                         $string = strip_tags($row['isi']);
                                         if (strlen($string) > 150) {
-                                            // truncate string
                                             $stringCut = substr($string, 0, 150);
                                             $endPoint = strrpos($stringCut, ' ');
-                                            //if the string doesn't contain any space then it will cut without word basis.
                                             $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                             $string .= '...';
                                         }
@@ -94,14 +93,15 @@
             <div class="container">
                 <?php foreach ($berita as $row) : ?>
                 <div class="card mb-4 news-card">
-                    <img style="border-radius: 5px;" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
+                    <img style="border-radius: 5px; padding: 3px;" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><h5 class="card-title" style="text-align: left;"><?= $row['judul'] ?></h5></a>
-                        <p class="card-text berita-mini" style="text-align: left;">
+                        <h5 class="card-title font-weight-bold" style="text-align: left;"><a class="label-primary" style="font-size: 16px;" href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><?= $row['judul'] ?></a></h5>
+                        <p style="text-align: left; color: red; font-size: 14px; font-weight: bold;" class="mb-2"><i class='bx bx-calendar' ></i> <?= date('d F Y', strtotime($row['tgl'])); ?></p>
+                        <p class="card-text berita-mini" style="text-align: left; font-size: 14px;">
                             <?php
                                 $string = strip_tags($row['isi']);
                                 if (strlen($string) > 150) {
-                                    $stringCut = substr($string, 0, 150);
+                                    $stringCut = substr($string, 0, 250);
                                     $endPoint = strrpos($stringCut, ' ');
                                     $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                                     $string .= '...';

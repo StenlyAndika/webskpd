@@ -4,7 +4,7 @@
         position: relative;
     }
 </style>
-<section class="user-login section" style="padding: 100px 0;">
+<section class="user-login section mb-4">
 	<div class="container aac">
 		<div class="row">
 			<div class="col-12">

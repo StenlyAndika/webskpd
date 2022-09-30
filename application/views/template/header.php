@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables/datatables.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datepicker/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/owl-carousel/assets/owl.carousel.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">

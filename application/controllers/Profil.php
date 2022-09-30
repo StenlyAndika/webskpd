@@ -53,7 +53,7 @@ class Profil extends CI_Controller {
 				$this->load->view('template-admin/footer');
 			} else {
 				$data['profil'] = $this->profil->getProfil();
-				if(count($profil)<=0) {
+				if(count($data['profil'])<=0) {
 					$this->profil->add();
 					$this->session->set_flashdata('flash','Ditambahkan');
 					redirect('profil');
