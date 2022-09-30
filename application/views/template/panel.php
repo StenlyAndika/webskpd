@@ -5,13 +5,13 @@
         </div>
         <div class="card-body">
             <?php if(count($instansi)<=0) : ?>
-                <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 370px;" src="<?= base_url('./assets/img/avatar.png') ?>"></div>
+                <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 350px;" src="<?= base_url('./assets/img/avatar.png') ?>"></div>
                 <h5 style="font-size: 14px;" class="ccz font-weight-bold mt-4">NAMA</h5>
             <?php else: ?>
                 <?php if($instansi[0]['fotokepala'] == null) : ?>
-                    <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 370px;" src="<?= base_url('./assets/img/avatar.png') ?>"></div>
+                    <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 350px;" src="<?= base_url('./assets/img/avatar.png') ?>"></div>
                 <?php else : ?>
-                    <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 370px;" src="<?= base_url('./upload/fotokepala/').$instansi[0]['fotokepala'] ?>"></div>
+                    <div  class="img-fluid img-responsive center-block"><img style="object-fit: cover; width: 100%; height: 350px;" src="<?= base_url('./upload/fotokepala/').$instansi[0]['fotokepala'] ?>"></div>
                 <?php endif; ?>
                 <?php if($instansi[0]['kepala'] == null) : ?>
                     <h5 style="font-size: 14px;" class="ccz font-weight-bold mt-4">NAMA</h5>
