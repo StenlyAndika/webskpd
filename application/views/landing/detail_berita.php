@@ -3,17 +3,14 @@
         <div class="card-body">
             <div class="container">
                 <article class="single-post">
-                    <div class="post-title text-center">
-                        <h1><?= $berita3['judul'] ?></h1>
+                    <div class="post-title text-center mb-3">
+                        <h1 class="font-weight-bold"><?= $berita3['judul'] ?></h1>
                         <ul class="list-inline post-tag">
                             <li class="list-inline-item">
-                                <img src="<?= base_url(); ?>/assets/img/avatar.png" alt="author-thumb">
+                                <a href="#" class="label-primary" style="font-size: 14px; font-weight: bold;"><i class='bx bxs-user'></i> <?= $berita3['nama'] ?></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#"><?= $berita3['nama'] ?></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#"><?= date('d F Y', strtotime($berita3['tgl'])); ?></a>
+                                <a href="#" style="color: #ff0000;font-size: 14px; font-weight: bold;"><i class='bx bx-calendar' ></i> <?= date('d F Y', strtotime($berita3['tgl'])); ?></a>
                             </li>
                         </ul>
                     </div>
@@ -45,7 +42,7 @@
                                 <div class="post-meta">
                                 <ul class="list-inline post-tag">
                                     <li class="list-inline-item">
-                                        <a href="#" class="label-primary" style="font-size: 12px; font-weight: bold;"><?= $row2['nama'] ?></a>
+                                        <a href="#" class="label-primary" style="font-size: 12px; font-weight: bold;"><i class='bx bxs-user'></i> <?= $row2['nama'] ?></a>
                                     </li>
                                     <li class="list-inline-item" style="color: #ff0000;font-size: 12px; font-weight: bold;">
                                         <i class='bx bx-calendar' ></i> 

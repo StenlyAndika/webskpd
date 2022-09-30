@@ -125,7 +125,7 @@
             });
 
             $(".owl-carousel").owlCarousel({
-                autoplay:true,
+                // autoplay:true,
                 autoplayTimeout:5000,
                 loop:true,
                 margin:10,
