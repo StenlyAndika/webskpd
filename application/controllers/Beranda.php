@@ -46,11 +46,7 @@ class Beranda extends CI_Controller {
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
 			$data['berita3'] = $this->berita->getBeritaById($id);
@@ -69,11 +65,7 @@ class Beranda extends CI_Controller {
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -91,11 +83,7 @@ class Beranda extends CI_Controller {
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -113,11 +101,7 @@ class Beranda extends CI_Controller {
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -135,11 +119,7 @@ class Beranda extends CI_Controller {
     {
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
         if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-            $this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -157,11 +137,7 @@ class Beranda extends CI_Controller {
     {
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
         if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-            $this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -179,11 +155,7 @@ class Beranda extends CI_Controller {
     {
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
         if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-            $this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -201,11 +173,7 @@ class Beranda extends CI_Controller {
     {
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -223,11 +191,7 @@ class Beranda extends CI_Controller {
     {
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
@@ -244,11 +208,7 @@ class Beranda extends CI_Controller {
 	{
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
-			$data['data'] = "dashboard";
-			$data['kontak'] = $this->kontak->getAllKontak();
-			$data['jmlkontak'] = $this->kontak->getJmlKontak();
-			$this->load->view('template-admin/header', $data);
-			$this->load->view('template-admin/footer');
+			redirect(base_url());
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();

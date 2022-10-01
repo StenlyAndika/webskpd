@@ -140,7 +140,7 @@
                 <a class="nav-link" href="<?= base_url() ?>kontak">Kontak Kami</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>auth">Masuk</a>
+                <a class="nav-link" href="<?= base_url() ?>login">Masuk</a>
             </li>
         </ul>
         <div class="wave" id="wave1" style="--i:1;"></div>
