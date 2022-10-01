@@ -312,6 +312,28 @@ a:hover {
   display: block;
 }
 
+.form-control.main {
+  background: #fff;
+  padding: 15px 20px;
+  height: 48px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}
+.form-control.main:focus {
+  border: 1px solid #2e7eed;
+  box-shadow: none;
+}
+
+textarea.form-control.main {
+  height: initial;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #808080;
+  font-size: 14px;
+}
+
 .news-card {
   display: flex;
   flex-direction: row;
