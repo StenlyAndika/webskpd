@@ -8,12 +8,12 @@ for (var i = 0; i < arrow.length; i++) {
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
 sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
+    sidebar.classList.toggle("minimize");
 });
 
 $(document).ready(function() {
     let sidebar = document.querySelector(".sidebar");
     if ($(window).width() < 800) {
-        sidebar.classList.toggle("open");
+        sidebar.classList.toggle("minimize");
     }
 });

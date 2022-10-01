@@ -31,10 +31,9 @@
     background: var(--sidebar-color);
     z-index: 100;
     transition: 0.5s;
-    overflow: hidden;
 }
 
-.sidebar.open{
+.sidebar.minimize{
     width: 78px;
 }
 
@@ -62,7 +61,7 @@
     transition: 0.5s;
 }
 
-.sidebar.open .logo-details .logo_name{
+.sidebar.minimize .logo-details .logo_name{
     opacity: 0;
     pointer-events: none;
 }
@@ -74,7 +73,7 @@
     scrollbar-width: none;
 }
 
-.sidebar.open .nav-links{
+.sidebar.minimize .nav-links{
     overflow: visible;
 }
 
@@ -94,7 +93,21 @@ nav::-webkit-scrollbar {
 .sidebar .nav-links li:hover{
     background: var(--primary);
     color: var(--sidebar-color);
+    border-radius: 5px;
+    /* border-left: 0.25rem solid #87A2FB !important; */
+}
+
+/* .sidebar .nav-links li.list.active {
     border-left: 0.25rem solid #87A2FB !important;
+} */
+
+.sidebar .nav-links li.list.showMenu {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 1;
+    background: var(--primary);
+    border-radius: 5px;
+    /* border-left: 0.25rem solid #87A2FB !important; */
 }
 
 .sidebar .nav-links li:hover .link-name,
@@ -124,24 +137,13 @@ nav::-webkit-scrollbar {
     color: var(--sidebar-color);
 }
 
-.sidebar .nav-links li.list.active {
-    border-left: 0.25rem solid #87A2FB !important;
-}
-
 .sidebar .nav-links li.list.active,
 .sidebar .nav-links li.list.active a {
     font-size: 14px;
     font-weight: 700;
     opacity: 1;
+    border-radius: 5px;
     background: var(--primary);
-}
-
-.sidebar .nav-links li.list.showMenu {
-    font-size: 14px;
-    font-weight: 700;
-    opacity: 1;
-    background: var(--primary);
-    border-left: 0.25rem solid #87A2FB !important;
 }
 
 .sidebar .nav-links li .icon-link{
@@ -150,7 +152,7 @@ nav::-webkit-scrollbar {
     justify-content: space-between;
 }
 
-.sidebar.open .nav-links li .icon-link{
+.sidebar.minimize .nav-links li .icon-link{
     display: block
 }
 
@@ -170,7 +172,7 @@ nav::-webkit-scrollbar {
 }
 
 
-.sidebar.open .nav-links i.arrow{
+.sidebar.minimize .nav-links i.arrow{
     display: none;
 }
 
@@ -187,7 +189,7 @@ nav::-webkit-scrollbar {
     transition: 0.5s;
 }
 
-.sidebar.open .nav-links li a .link-name{
+.sidebar.minimize .nav-links li a .link-name{
     opacity: 0;
     pointer-events: none;
     overflow: hidden;
@@ -202,6 +204,7 @@ nav::-webkit-scrollbar {
 
 .sidebar .nav-links li.showMenu .sub-menu{
     display: block;
+    border-radius: 5px;
 }
 
 .sidebar .nav-links li .sub-menu a{
@@ -218,7 +221,7 @@ nav::-webkit-scrollbar {
     opacity: 1;
 }
 
-.sidebar.open .nav-links li .sub-menu{
+.sidebar.minimize .nav-links li .sub-menu{
     position: absolute;
     left: 100%;
     top: -10px;
@@ -231,11 +234,12 @@ nav::-webkit-scrollbar {
     transition: 0s;
 }
 
-.sidebar.open .nav-links li:hover .sub-menu{
+.sidebar.minimize .nav-links li:hover .sub-menu{
     top: 0;
     opacity: 1;
     pointer-events: auto;
     transition: 0.5s;
+    border-radius: 5px;
 }
 
 .sidebar .nav-links li .sub-menu .link-name{
@@ -246,14 +250,14 @@ nav::-webkit-scrollbar {
     display: none;
 }
 
-.sidebar.open .nav-links li .sub-menu .link-name{
+.sidebar.minimize .nav-links li .sub-menu .link-name{
     font-size: 16px;
     font-weight: 700;
     opacity: 1;
     display: block; 
 }
 
-.sidebar.open .nav-links li .sub-menu .dropdown-menu-title{
+.sidebar.minimize .nav-links li .sub-menu .dropdown-menu-title{
     font-size: 16px;
     font-weight: 700;
     opacity: 1;
@@ -283,11 +287,11 @@ nav::-webkit-scrollbar {
     transition: 0.5s;
 }
 
-.sidebar.open .profile-details{
+.sidebar.minimize .profile-details{
     background: none;
 }
 
-.sidebar.open .profile-details{
+.sidebar.minimize .profile-details{
     left: 2px;
 }
 
@@ -316,13 +320,13 @@ nav::-webkit-scrollbar {
     white-space: nowrap;
 }
 
-.sidebar.open .profile-details i,
-.sidebar.open .profile-details .profile-name,
-.sidebar.open .profile-details .job{
+.sidebar.minimize .profile-details i,
+.sidebar.minimize .profile-details .profile-name,
+.sidebar.minimize .profile-details .job{
     display: none;
 }
 
-.sidebar.open .profile-details i:hover {
+.sidebar.minimize .profile-details i:hover {
     font-size: 24px;
 }
 
@@ -339,7 +343,7 @@ nav::-webkit-scrollbar {
     transition: 0.5s;
 }
 
-.sidebar.open ~ .home-section{
+.sidebar.minimize ~ .home-section{
     left: 78px;
     width: calc(100% - 78px);
 }
@@ -373,7 +377,7 @@ nav::-webkit-scrollbar {
 }
 
 @media (max-width: 400px) {
-    .sidebar.open .nav-links li .sub-menu{
+    .sidebar.minimize .nav-links li .sub-menu{
         display: none;
     }
 
@@ -381,7 +385,7 @@ nav::-webkit-scrollbar {
         width: 78px;
     }
 
-    .sidebar.open{
+    .sidebar.minimize{
         width: 0;
     }
 
@@ -391,7 +395,7 @@ nav::-webkit-scrollbar {
         z-index: 100;
     }
 
-    .sidebar.open ~ .home-section{
+    .sidebar.minimize ~ .home-section{
         width: 100%;
         left: 0;
     }
