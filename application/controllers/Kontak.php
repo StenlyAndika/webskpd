@@ -25,7 +25,7 @@ class Kontak extends CI_Controller {
 		} else {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['pengumuman'] = $this->pengumuman->getAllPengumuman();
-			$data['kepuasan'] =  $this->db->get('kepuasan')->result_array();
+			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('template/news.php');
 			$this->load->view('menu-kontak/kontak.php', $data);
