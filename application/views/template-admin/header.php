@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datatables/datatables.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/datepicker/css/bootstrap-datepicker.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <!-- Custom Style -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/template-style.css">
 </head>
@@ -77,6 +78,7 @@
             <li class="list
             <?php
                 if( $this->uri->segment(1) == 'berita' ||
+                    $this->uri->segment(1) == 'agenda' ||
                     $this->uri->segment(1) == 'pengumuman' ||
                     $this->uri->segment(1) == 'foto') {
                         echo "showMenu";
@@ -92,6 +94,7 @@
                 <ul class="sub-menu">
                     <li><a class="dropdown-menu-title" href="">Publikasi</a></li>
                     <li class="list <?= $this->uri->segment(1) == 'berita' ? 'active' : '' ?>"><a href="<?= base_url() ?>berita">Berita</a></li>
+                    <li class="list <?= $this->uri->segment(1) == 'agenda' ? 'active' : '' ?>"><a href="<?= base_url() ?>agenda">Agenda Kegiatan</a></li>
                     <li class="list <?= $this->uri->segment(1) == 'foto' ? 'active' : '' ?>"><a href="<?= base_url() ?>foto">Galeri Foto</a></li>
                     <li class="list <?= $this->uri->segment(1) == 'pengumuman' ? 'active' : '' ?>"><a href="<?= base_url() ?>pengumuman">Pengumuman</a></li>
                 </ul>
