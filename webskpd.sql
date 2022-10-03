@@ -37,6 +37,20 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `agenda`
+--
+
+CREATE TABLE `agenda` (
+  `id` int(11) NOT NULL,
+  `tgl` varchar(20) NOT NULL,
+  `jam` varchar(10) NOT NULL,
+  `kegiatan` varchar(100) NOT NULL,
+  `lokasi` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `berita`
 --
 
