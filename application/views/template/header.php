@@ -106,48 +106,44 @@
             <span class="ti-menu"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav" style="padding-right: 15px;">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Profil</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="<?= base_url() ?>beranda/sejarah">Sejarah</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url() ?>beranda/visimisi">Visi & Misi</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url() ?>beranda/struktur">Struktur Organisasi</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="<?= base_url() ?>beranda/foto">Foto</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pelayanan</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="<?= base_url() ?>beranda/pelayanan">Standar Pelayanan</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>beranda/dokumen">Publikasi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>kontak">Kontak Kami</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url() ?>login">Masuk</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Profil</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/sejarah">Sejarah</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/visimisi">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/struktur">Struktur Organisasi</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Galeri</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/foto">Foto</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pelayanan</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url() ?>beranda/pelayanan">Standar Pelayanan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>beranda/dokumen">Publikasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>beranda/pengumuman">Pengumuman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url() ?>kontak">Kontak Kami</a>
+                </li>
+            </ul>
+        </div>
         <div class="wave" id="wave1" style="--i:1;"></div>
         <div class="wave" id="wave2" style="--i:2;"></div>
         <div class="wave" id="wave3" style="--i:3;"></div>
         <div class="wave" id="wave4" style="--i:4;"></div>
     </nav>
-    <style>
-    </style>
     <div class="row custom-container">

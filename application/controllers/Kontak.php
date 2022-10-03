@@ -12,6 +12,7 @@ class Kontak extends CI_Controller {
 		$this->load->model('Kepuasan_model', 'kepuasan');
 		$this->load->model('Pengumuman_model', 'pengumuman');
 		$this->load->model('Berita_model', 'berita');
+		$this->load->model('Agenda_model', 'agenda');
     }
 
 	public function index()
@@ -26,6 +27,7 @@ class Kontak extends CI_Controller {
 			$data['berita'] = $this->berita->getAllBerita();
 			$data['pengumuman'] = $this->pengumuman->getAllPengumuman();
 			$data['kepuasan'] =  $this->kepuasan->getAllKepuasan();
+			$data['agenda'] = $this->agenda->getLimitAgenda();
 			$this->load->view('template/header.php', $data);
 			$this->load->view('template/news.php');
 			$this->load->view('menu-kontak/kontak.php', $data);

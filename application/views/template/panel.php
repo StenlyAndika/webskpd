@@ -23,7 +23,7 @@
     </div>
     <div class="card shadow mb-4">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold">Agenda</h6>
+            <h6 class="m-0 font-weight-bold">Agenda Kegiatan</h6>
         </div>
         <div class="card-body">
             <ul class="timeline">
@@ -50,7 +50,7 @@
                     <li>
                         <div class="timeline-time">
                             <?php if (strtotime(date('d F Y')) < strtotime(date('d F Y', strtotime($row['tgl'])))) : ?>
-                                <span class="date" style="color: #3A5BA0;"><?= tgl_indo($row['tgl']); ?> ( Akan Datang )</span>
+                                <span class="date label-primary"><?= tgl_indo($row['tgl']); ?> ( Akan Datang )</span>
                                 <span class="time"><?= $row['jam']; ?></span>
                             <?php elseif (strtotime(date('d F Y')) == strtotime(date('d F Y', strtotime($row['tgl'])))) : ?>
                                 <span class="date" style="color: red;"><?= tgl_indo($row['tgl']); ?> ( Hari ini )</span>
