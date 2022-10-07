@@ -28,35 +28,17 @@
         <div class="card-body">
             <ul class="timeline">
                 <?php
-                function tgl_indo($tanggal){
-                    $bulan = array (
-                        1 =>   'Januari',
-                        'Februari',
-                        'Maret',
-                        'April',
-                        'Mei',
-                        'Juni',
-                        'Juli',
-                        'Agustus',
-                        'September',
-                        'Oktober',
-                        'November',
-                        'Desember'
-                    );
-                    $pecahkan = explode('-', $tanggal);
-                    return $pecahkan[0] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[2];
-                }
-                foreach ($agenda as $row) : ?>
+                    foreach ($agenda as $row) : ?>
                     <li>
                         <div class="timeline-time">
                             <?php if (strtotime(date('d F Y')) < strtotime(date('d F Y', strtotime($row['tgl'])))) : ?>
-                                <span class="date label-primary"><?= tgl_indo($row['tgl']); ?> ( Akan Datang )</span>
+                                <span class="date label-primary"><?= $this->automata->tgl_indo($row['tgl']); ?> ( Akan Datang )</span>
                                 <span class="time"><?= $row['jam']; ?></span>
                             <?php elseif (strtotime(date('d F Y')) == strtotime(date('d F Y', strtotime($row['tgl'])))) : ?>
-                                <span class="date" style="color: red;"><?= tgl_indo($row['tgl']); ?> ( Hari ini )</span>
+                                <span class="date" style="color: red;"><?= $this->automata->tgl_indo($row['tgl']); ?> ( Hari ini )</span>
                                 <span class="time"><?= $row['jam']; ?></span>
                             <?php else : ?>
-                                <span class="date" style="color: #7F8487;"><?= tgl_indo($row['tgl']); ?></span>
+                                <span class="date" style="color: #7F8487;"><?= $this->automata->tgl_indo($row['tgl']); ?></span>
                                 <span class="time" style="color: #7F8487;"><?= $row['jam']; ?></span>
                             <?php endif; ?>
                         </div>

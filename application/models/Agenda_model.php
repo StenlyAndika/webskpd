@@ -6,7 +6,9 @@
 		public function getAllAgenda()
 		{
 			$this->db->from('agenda');
-			$this->db->order_by("tgl", "desc");
+			$this->db->select('*');
+			$this->db->select('str_to_date(tgl, "%d-%m-%Y") tgl',false);
+			$this->db->order_by('tgl', 'DESC');
 			$query = $this->db->get();
 			return $query->result_array();
 		}
@@ -14,7 +16,9 @@
 		public function getLimitAgenda()
 		{
 			$this->db->from('agenda');
-			$this->db->order_by('tgl', 'desc');
+			$this->db->select('*');
+			$this->db->select('str_to_date(tgl, "%d-%m-%Y") tgl',false);
+			$this->db->order_by('tgl', 'DESC');
 			$this->db->limit(3);
 			$query = $this->db->get();
 			return $query->result_array();

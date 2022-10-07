@@ -7,6 +7,7 @@ class Beranda extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		$this->load->library('automata');
 		$this->load->model('Pengumuman_model', 'pengumuman');
 		$this->load->model('Berita_model', 'berita');
 		$this->load->model('Sejarah_model', 'sejarah');

@@ -52,7 +52,9 @@
             </div>
             <div class="container">
                 <div class="owl-carousel owl-theme">
-                    <?php foreach ($berita as $row) : ?>
+                    <?php
+                        
+                        foreach ($berita as $row) : ?>
                         <article class="post-sm">
                             <div class="post-thumb">
                                 <a href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><img class="image-responsive w-100" src="<?= base_url('./upload/berita/').$row['gambar'] ?>" alt="Post-Image"></a>
@@ -67,7 +69,7 @@
                                     </li>
                                     <li class="list-inline-item" style="color: #ff0000;font-size: 12px; font-weight: bold;">
                                         <i class='bx bx-calendar' ></i> 
-                                        <?= date('d F Y', strtotime($row['tgl'])); ?>
+                                        <?= $this->automata->tgl_indo($row['tgl']); ?>
                                     </li>
                                 </ul>
                             </div>
@@ -97,7 +99,7 @@
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold" style="text-align: left;"><a class="label-primary" style="font-size: 16px;" href="<?= base_url() ?>beranda/detail/<?= $row['id'] ?>"><?= $row['judul'] ?></a></h5>
                         <p class="mb-2" style="text-align: left; color: #ff0000; font-size: 14px; font-weight: bold;">
-                            <i class='bx bx-calendar' ></i> <?= date('d F Y', strtotime($row['tgl'])); ?>&nbsp;
+                            <i class='bx bx-calendar' ></i> <?= $this->automata->tgl_indo($row['tgl']); ?>&nbsp;
                             <span class="label-primary" style="text-align: left; font-size: 14px; font-weight: bold;">
                                 <i class='bx bxs-user'></i> <?= $row['nama'] ?>
                             </span>
