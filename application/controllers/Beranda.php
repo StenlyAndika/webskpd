@@ -23,6 +23,7 @@ class Beranda extends CI_Controller {
 	
 	public function index()
 	{
+		$this->automata->Initialize();
 		$data['instansi'] =  $this->db->get('instansi')->result_array();
 		if ($this->session->userdata('username') != "") {
 			$data['data'] = "dashboard";
